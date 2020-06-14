@@ -1,0 +1,252 @@
+#map
+{
+    height: 500px;
+    width: 84vw;
+    margin-left: 8vw;
+    position: absolute!important;
+}
+
+.content .info {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    white-space: pre-line;
+    margin-top: -540px;
+    margin-right: calc(46vw - 500px);
+    color: #3E3E3E;
+    float: right;
+}
+
+.content .text
+{
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 60px;
+}
+
+.content .image {
+    margin-left: calc(44vw - 480px);
+    margin-top: 100px;
+}
+
+.content .mabBlock {
+    background: #F3F3F3;
+    width: 100%;
+    margin-top: 140px;
+    padding-bottom: 200px;
+}
+
+.mabBlock .sales
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: #313131;
+    padding-top: 150px;
+    padding-left: 8vw;
+    padding-bottom: 30px;
+}
+
+.mabBlock .color
+{
+    background: #C5EAF3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 500px;
+}
+
+@media(max-width:1400px)
+{
+    .content .info {
+        font-size: 25px;
+        line-height: 30px;
+        top: 125px;
+        margin-right: calc(56vw - 474px);
+    }
+    .content .text {
+        font-size: 15px;
+        line-height: 23px;
+        margin-top: 15px;
+    }
+    .content .image {
+        width: 424px;
+        margin-left: calc(53vw - 465px);
+    }
+
+    .content .image img
+    {
+        width: 424px;
+    }
+    .content .mabBlock {
+        margin-top: 90px;
+    }
+}
+
+@media(max-width: 1050px)
+{
+    .content .image {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 75px;
+    }
+    .content .image img
+    {
+        width: 500px;
+    }
+    .content .info {
+        width: 500px;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -100px;
+        padding-bottom: 70px;
+    }
+    .content .text {
+        white-space: normal;
+    }
+    .mabBlock .sales {
+        padding-left: 8vw;
+    }
+}
+@media(max-width: 670px)
+{
+    .content .image {
+        width: 74vw;
+    }
+    .content .image img
+    {
+        width: 74vw;
+    }
+    .content .info {
+        width: 74vw;
+    }
+}
+@media(max-width: 600px)
+{
+    #map
+    {
+        height: 75vw;
+    }
+    .mabBlock .color
+    {
+        height: 75vw;
+    }
+
+}
+@media(max-width: 503px)
+{
+    .ymaps-2-1-76-zoom__minus {
+        top: 35px;
+    }
+}
+
+ .ymaps-2-1-76-gotoymaps
+ {
+     display: none;
+ }
+
+#map .ymaps-2-1-76-zoom__runner
+{
+    padding-left: 18px!important;
+    width: 0px!important;
+    height: 20px!important;
+    left: -8px!important;
+}
+
+.ymaps-2-1-76-zoom__runner .ymaps-2-1-76-zoom__icon
+{
+    background: #FFFFFF!important;
+    opacity: 0!important;
+}
+
+.ymaps-2-1-76-zoom__scale {
+    background: rgba(58, 185, 218, 0.52)!important;
+    border: none!important;
+    box-shadow: none!important;
+    width: 4px!important;
+    left: 18px!important;
+}
+
+.ymaps-2-1-76-float-button
+{
+    background: #3AB9DA!important;
+    border-radius: 100%!important;
+}
+
+.ymaps-2-1-76-float-button-icon {
+    width: 28.5px!important;
+    height: 28px!important;
+}
+
+.ymaps-2-1-76-zoom__plus .ymaps-2-1-76-zoom__icon {
+    background-image: url('../img/plus.png')!important;
+}
+
+.ymaps-2-1-76-zoom__plus {
+    width: 40px!important;
+    height: 40px!important;
+    top: -11px!important;
+}
+
+
+.ymaps-2-1-76-zoom__minus .ymaps-2-1-76-zoom__icon {
+    background-image: url('../img/minus.png')!important;
+}
+
+.ymaps-2-1-76-zoom__minus {
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.ymaps-2-1-76-controls__control{
+    top: 25px!important;
+}
+
+.ymaps-2-1-76-balloon__tail
+{
+  display: none!important;
+}
+
+.ymaps-2-1-76-balloon{
+    top: -155px!important;
+    left: 9px!important;
+    background: #FFFFFF!important;
+    border: 3px solid #00B1DF!important;
+    box-sizing: border-box!important;
+    border-radius: 5px!important;
+}
+
+#map p
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 2px;
+
+    color: #3E3E3E;
+}
+
+#map .address
+{
+    font-size: 15px;
+    line-height: 18px;
+}
+
+#map .hours
+{
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.ymaps-2-1-76-balloon__content {
+    padding-right: 70px!important;
+}

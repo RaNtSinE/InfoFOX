@@ -1,0 +1,914 @@
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
+.content .first .owl-dots .owl-dot.active span,.content .first .owl-dots .owl-dot:hover span
+{
+    background: #3AB9DA;
+}
+
+.content .first .owl-dots .owl-dot span
+{
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    margin: 5px 22px;
+
+}
+
+.content .first .owl-nav button.owl-next,.content .first .owl-nav button.owl-prev,.content .first button.owl-dot
+{
+
+}
+
+.content .first .owl-stage-outer
+{
+    height: 45vw;
+}
+
+.content .first .owl-dots
+{
+    position: relative;
+    top: -6vw;
+}
+
+.content .first .owl-nav .owl-prev
+{
+    background: url("../img/left.svg");
+    background-repeat: no-repeat;
+    width: 53px;
+    height: 53px;
+    float: left;
+    margin-left: 3vw;
+}
+
+.content .first .owl-nav .owl-prev:hover
+{
+    background: url("../img/leftHover.svg");
+    background-repeat: no-repeat;
+}
+
+.content .first .owl-nav .owl-next
+{
+    background: url("../img/right.svg");
+    background-repeat: no-repeat;
+    width: 53px;
+    height: 53px;
+    float: right;
+    margin-right: 3vw;
+}
+
+.content .first .owl-nav .owl-next:hover
+{
+    background: url("../img/rightHover.svg");
+    background-repeat: no-repeat;
+}
+
+.first .item .image
+{
+    position: relative;
+    width: 29.95vw;
+    left: 200px;
+    top: 110px;
+}
+
+.first .item .image
+{
+    position: relative;
+    width: 29.95vw;
+    left: 200px;
+    top: 5vw;
+}
+
+
+
+.first .item .text
+{
+    float: right;
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.15vw;
+    color: #313131;
+    top: -19vw;
+    right: 18vw;
+}
+
+.first .item .text .name
+{
+
+    font-size: 1.7vw;
+    line-height: 1.8vw;
+    width: 28vw;
+}
+
+.first .item .text .text_content
+{
+    white-space: pre-line;
+    width: 30vw;
+}
+
+.first .item .item_more
+{
+    font-family: Roboto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.3vw;
+    line-height: 35px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    position: relative;
+    padding: 1.2vw 4vw;
+    background: #3AB9DA;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    left: 35px;
+    top: 1.6vw;
+    white-space: nowrap;
+}
+
+.first .item .item_more:hover
+{
+    background: #4AC9EA;
+}
+
+.content .first .owl-nav
+{
+    position: relative;
+    top: -23vw;
+}
+
+
+.products
+{
+    background: #F3F3F3;
+    padding-bottom: 40px;
+}
+
+.products .ourProducts
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    padding-top: 65px;
+    padding-left: 8vw;
+    color: #313131;
+}
+
+.products .second .item .image
+{
+    width: 19vw;
+}
+
+
+
+.prodCar
+{
+    width: 72.5%;
+    margin-left: auto;
+    margin-right: 12.5vw;
+    margin-top: 25px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+.products .info .text
+{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 1.1vw;
+
+    color: #3E3E3E;
+}
+
+.products .info .price
+{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+
+    color: #3E3E3E;
+    padding-bottom: 10px;
+}
+
+.products .second .item
+{
+    background: #FFFFFF;
+    width: 19vw;
+}
+
+.products .color
+{
+    width: 100%;
+    background: #00B1DF;
+    margin-top: 25px;
+}
+
+.products .second .item p
+{
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.content .second .owl-nav
+{
+    position: relative;
+    top: -14vw;
+}
+
+
+.content .second .owl-nav .owl-prev
+{
+    background: url("../img/left2.svg");
+    background-repeat: no-repeat;
+    background-size: 4.4vw;
+    width: 4.4vw;
+    height: 4.4vw;
+    float: left;
+    position: relative;
+    left: -8vw;
+}
+
+.content .second .owl-stage-outer
+{
+    width: 69vw;
+    overflow: hidden;
+}
+
+.content .second .owl-nav .owl-prev:hover
+{
+    background: url("../img/left2Hover.svg");
+    background-repeat: no-repeat;
+    background-size: 4.4vw;
+}
+
+.content .second .owl-nav .owl-next
+{
+    background: url("../img/right2.svg");
+    background-repeat: no-repeat;
+    background-size: 4.4vw;
+    width: 4.4vw;
+    height: 4.4vw;
+    float: right;
+    position: relative;
+    right: -4.5vw;
+
+}
+
+.content .second .owl-nav .owl-next:hover
+{
+    background: url("../img/right2Hover.svg");
+    background-repeat: no-repeat;
+    background-size: 4.4vw;
+}
+
+.content .where
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+
+    padding: 18px 57px;
+    background: #3AB9DA;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.content .where:hover
+{
+    background: #4AC9EA;
+}
+
+.content .whereDiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:212px;
+    margin-top: 40px;
+}
+
+.news
+{
+    background: #F3F3F3;
+    padding-bottom: 40px;
+}
+
+
+.news .ourNews
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    padding-top: 65px;
+    padding-left: 8vw;
+    padding-bottom: 20px;
+    color: #313131;
+}
+
+.news .color
+{
+    width: 100%;
+    background: #C5EAF3;
+}
+
+#blockWithNews
+{
+    width: 88vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.news .new
+{
+    background: #FFFFFF;
+    padding: 1.5vw;
+    margin: 1.8vw 2vw;
+    border-radius: 5px;
+}
+
+.news .new .newImage img
+{
+    width: 15vw;
+}
+
+.news .new .newImage
+{
+    height: 8.4vw;
+    overflow-y: hidden;
+}
+
+.news .new .newTitle
+{
+    width: 15vw;
+    padding-top: 5px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.news .new .newTitle p
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25vw;
+    line-height: 23px;
+
+    color: #000000;
+}
+.news .new .newText
+{
+    width: 15vw;
+    height: 4.2vw;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    padding-top: 0.3vw;
+
+}
+.news .new .newText p
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.95vw;
+    line-height: 1.1vw;
+
+    color: #3E3E3E;
+}
+
+.news .new .date
+{
+    margin-top: 25px;
+}
+
+.news .new .date p
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.6vw;
+    line-height: 12px;
+
+    color: #3E3E3E;
+}
+
+.content .moreNews
+{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+
+    padding: 18px 33px;
+    background: #3AB9DA;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.content .moreNews:hover
+{
+    background: #4AC9EA;
+}
+
+.content .moreNewsDiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:212px;
+    margin-top: 40px;
+}
+
+.jobs
+{
+    background: #F3F3F3;
+    padding-bottom: 170px;
+}
+
+.jobs .work
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    padding-top: 90px;
+    padding-left: 8vw;
+    padding-bottom: 20px;
+    color: #313131;
+}
+
+.jobs .jobsBG
+{
+    background: url("../img/jobsWork.png");
+    background-size: 100vw;
+    height: 24vw;
+    overflow: hidden;
+}
+
+.jobs .grad
+{
+    background: -o-linear-gradient(358.59deg, #3AB9DA 59.86%, rgba(196, 196, 196, 0) 94.72%);
+    background: linear-gradient(91.41deg, #3AB9DA 59.86%, rgba(196, 196, 196, 0) 94.72%);
+    width: 40vw;
+    height: 24vw;
+}
+.jobs .grad .info
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    padding-left: 8vw;
+    width: 17vw;
+    padding-top: 3vw;
+
+    color: #FFFFFF;
+}
+.jobs .grad .info p
+{
+    padding-top: 3vw;
+}
+
+.content .moree
+{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+
+    padding: 18px 44px;
+    background: #3AB9DA;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.content .moree:hover
+{
+    background: #4AC9EA;
+}
+
+.content .moreeDiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:212px;
+    margin-top: 65px;
+}
+
+@media(max-width: 1500px)
+{
+    .news .new .newTitle p {
+        font-size: 1.55vw;
+    }
+    .news .new .newText {
+        height: 5.3vw;
+    }
+    .news .new .newText p {
+        font-size: 1.25vw;
+        line-height: 1.4vw;
+    }
+    .news .new .date p {
+        font-size: 0.9vw;
+    }
+}
+
+@media(max-width: 1300px)
+{
+    .first .item .text {
+        right: 14vw;
+    }
+    .content .second .owl-nav .owl-next {
+        right: -6.5vw;
+    }
+}
+
+@media(max-width:1000px)
+{
+    .content .first .owl-stage-outer {
+        height: 100vw;
+    }
+
+    .first .item .image {
+        width: 40.95vw;
+        left: 31vw;
+        top: 5vw;
+    }
+
+    .first .item .text {
+        font-size: 2.15vw;
+        margin-top: 10vw;
+        margin-left: 31vw;
+        position: inherit;
+        top: 0;
+        right: 0;
+        float: none;
+    }
+
+    .first .item .text .name {
+        font-size: 2.7vw;
+        line-height: 2.8vw;
+        width: 40.95vw;
+    }
+
+    .first .item .text .text_content {
+        width: 40.95vw;
+    }
+
+    .first .item .item_more {
+        font-size: 2.9vw;
+        padding: 1.2vw 3vw;
+        left: 3.5vw;
+        top: 1.6vw;
+    }
+
+    .content .first .owl-nav {
+        top: -58vw;
+    }
+
+    .content .first .owl-dots {
+        position: relative;
+        top: -5vw;
+    }
+
+    .products .second .item {
+        width: 25vw;
+    }
+
+    .products .second .item .image {
+        width: 25vw;
+    }
+
+    .products .second .item p {
+        padding-top: 5px;
+        padding-left: 15px;
+    }
+    .products .info .text {
+        font-size: 2vw;
+        line-height: 2.1vw;
+    }
+
+    .products .info .price {
+        font-size: 2.1vw;
+        line-height: 2.1vw;
+        padding-bottom: 10px;
+    }
+
+    .content .second .owl-nav {
+        top: -24vw;
+    }
+
+    .content .second .owl-nav .owl-prev
+    {
+        background-size: 8.4vw;
+        width: 8.4vw;
+        height: 8.4vw;
+        left: -11vw;
+    }
+
+    .content .second .owl-nav .owl-prev:hover
+    {
+        background-size: 8.4vw;
+    }
+
+    .content .second .owl-nav .owl-next
+    {
+        background-size: 8.4vw;
+        width: 8.4vw;
+        height: 8.4vw;
+        right: -4vw;
+    }
+
+    .content .second .owl-nav .owl-next:hover
+    {
+        background-size: 8.4vw;
+    }
+
+    .prodCar {
+        margin-right: 9.5vw;
+    }
+
+    .news .new {
+        padding: 2vw;
+        margin: 2.8vw 2vw;
+    }
+
+    .news .new .newImage img {
+        width: 36vw;
+    }
+
+    .news .new .newImage {
+        height: 20.2vw;
+        overflow-y: hidden;
+    }
+    .news .new .newTitle {
+        width: 36vw;
+        padding-top: 5px;
+    }
+    .news .new .newTitle p {
+        font-size: 2.25vw;
+        line-height: 23px;
+    }
+    .news .new .newText {
+        width: 36vw;
+        height: 8.1vw;
+    }
+    .news .new .newText p {
+        font-size: 1.95vw;
+        line-height: 2.1vw;
+    }
+    .news .new .date p {
+        font-size: 1.6vw;
+        line-height: 12px;
+    }
+    .jobs .grad {
+        width: 65vw;
+        height: 24vw;
+    }
+    .jobs .grad .info {
+        font-size: 2.3vw;
+        line-height: 2.5vw;
+        padding-left: 8vw;
+        width: 36vw;
+        padding-top: 0vw;
+    }
+    .jobs .grad .info p {
+        padding-top: 3vw;
+    }
+    .content .second .owl-stage-outer {
+        width: 64vw;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 750px) {
+    .content .second .owl-nav .owl-next
+    {
+        right: -5vw;
+    }
+}
+
+@media(max-width: 600px)
+{
+    .news .new .newTitle p {
+        font-size: 2.75vw;
+        line-height: 23px;
+    }
+    .news .new .newText {
+        width: 36vw;
+        height: 10.1vw;
+    }
+    .news .new .newText p {
+        font-size: 2.45vw;
+        line-height: 2.6vw;
+    }
+    .news .new .date p {
+        font-size: 2.1vw;
+        line-height: 12px;
+    }
+    .content .second .owl-nav .owl-next
+    {
+        right: -5.5vw;
+    }
+}
+
+@media(max-width:500px)
+{
+    .first .item .image {
+        width: 49.95vw;
+        left: 26vw;
+        top: 5vw;
+    }
+
+    .content .first .owl-nav {
+        top: -67vw;
+    }
+
+    .first .item .text {
+        font-size: 3.15vw;
+        margin-top: 10vw;
+        margin-left: 26vw;
+    }
+
+    .first .item .text .name {
+        font-size: 3.7vw;
+        line-height: 3.8vw;
+        width: 49.95vw;
+    }
+
+    .first .item .text .text_content {
+        width: 49.95vw;
+    }
+
+    .first .item .item_more {
+        font-size: 3.9vw;
+        padding: 1.2vw 3vw;
+        left: 7vw;
+        top: 1.6vw;
+    }
+
+    .content .first .owl-stage-outer {
+        height: 127vw;
+    }
+    .content .second .owl-nav {
+        top: -48vw;
+    }
+    .products .second .item {
+        width: 63vw;
+    }
+    .products .second .item .image {
+        width: 63vw;
+    }
+    .products .info .text {
+        font-size: 4vw;
+        line-height: 4.1vw;
+    }
+    .products .info .price {
+        font-size: 4.1vw;
+        line-height: 4.1vw;
+        padding-bottom: 10px;
+    }
+    .content .second .owl-nav .owl-prev
+    {
+        background-size: 13.4vw;
+        width: 13.4vw;
+        height: 13.4vw;
+        left: -17vw;
+    }
+
+    .content .second .owl-nav .owl-prev:hover
+    {
+        background-size: 13.4vw;
+    }
+
+    .content .second .owl-nav .owl-next
+    {
+        background-size: 13.4vw;
+        width: 13.4vw;
+        height: 13.4vw;
+        right: -8vw;
+    }
+
+    .content .second .owl-nav .owl-next:hover
+    {
+        background-size: 13.4vw;
+    }
+
+    .content .whereDiv {
+        width: 212px;
+        margin-top: 47px;
+    }
+
+    .news .new {
+        padding: 3vw;
+        margin: 3.8vw 2vw;
+        border-radius: 5px;
+    }
+
+    .news .new .newImage img {
+        width: 79vw;
+    }
+
+    .news .new .newImage {
+        height: 44.3vw;
+        overflow-y: hidden;
+    }
+    .news .new .newTitle {
+        width: 79vw;
+        padding-top: 5px;
+    }
+    .news .new .newTitle p {
+        font-size: 4.75vw;
+        line-height: 23px;
+    }
+    .news .new .newText {
+        width: 79vw;
+        height: 18.1vw;
+        padding-top: 2vw;
+    }
+    .news .new .newText p {
+        font-size: 4.45vw;
+        line-height: 4.6vw;
+    }
+    .news .new .date p {
+        font-size: 3.1vw;
+        line-height: 12px;
+    }
+    .jobs .grad {
+        width: 111vw;
+        height: 24vw;
+    }
+    .jobs .grad .info {
+        font-size: 3.3vw;
+        line-height: 3.5vw;
+        padding-left: 8vw;
+        width: 61vw;
+        padding-top: 0vw;
+    }
+    .prodCar {
+        width: 73%;
+    }
+    .content .second .owl-stage-outer {
+        width: 63vw;
+        overflow: hidden;
+    }
+}
+
+@media(max-width:350px)
+{
+    .content .first .owl-dots .owl-dot span {
+        width: 15px;
+        height: 15px;
+        background: #FFFFFF;
+        margin: 5px 15px;
+    }
+}
