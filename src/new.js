@@ -31,7 +31,6 @@ class News extends React.Component {
     }
 }
 
-// Find all DOM containers, and render Like buttons into them.
 document.querySelectorAll('.new')
     .forEach(domContainer => {
         ReactDOM.render(<News />, domContainer);

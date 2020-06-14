@@ -62,9 +62,6 @@ var News = function (_React$Component) {
     return News;
 }(React.Component);
 
-// Find all DOM containers, and render Like buttons into them.
-
-
 document.querySelectorAll('.new').forEach(function (domContainer) {
     ReactDOM.render(React.createElement(News, null), domContainer);
 });
