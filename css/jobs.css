@@ -66,7 +66,7 @@ body
     color: #FFFFFF;
 }
 
-.jobs
+#jobs
 {
     width: 90vw;
     margin-left: auto;
@@ -79,7 +79,7 @@ body
 
 }
 
-.jobs .job
+#jobs .job
 {
     width: 28.02vw;
     background: #E3EFF2;
@@ -124,8 +124,7 @@ body
 .job .jobInfo
 {
     width: 25.5vw;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 20px;
     margin-top: 30px;
 }
 
@@ -142,7 +141,7 @@ body
     white-space: pre-line;
 }
 
-.jobs .more
+#jobs .more
 {
     font-family: 'Roboto';
     font-style: normal;
@@ -154,7 +153,7 @@ body
     text-transform: uppercase;
 }
 
-.jobs .more a
+#jobs .more a
 {
     color: #FFFFFF;
 
@@ -173,14 +172,14 @@ body
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.jobs
+#jobs
 {
     padding-bottom: 8vw;
 }
 
 @media(max-width:1000px)
 {
-    .jobs .job
+    #jobs .job
     {
         width: 43.02vw;
         margin-right: 0.99vw;
@@ -207,7 +206,7 @@ body
 
 @media(max-width:600px)
 {
-    .jobs .job
+    #jobs .job
     {
         width: 90.02vw;
         margin-right: 0.99vw;

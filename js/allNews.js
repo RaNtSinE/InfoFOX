@@ -39,28 +39,28 @@ class News extends React.Component {
     render() {
         return React.createElement(
             'div',
-            {class: "innerNew"},
+            {className: "innerNew"},
             React.createElement(
                 'div',
-                {class: "date"},
+                {className: "date"},
                 React.createElement(
                     'p',
-                    {class: "date"},
+                    {className: "date"},
                     this.props.Date
                 )
             ),
             React.createElement(
                 'div',
-                { class: "newTitle"} ,
+                { className: "newTitle"} ,
                 React.createElement(
                     'p',
-                    {class: "newTitle"},
+                    {className: "newTitle"},
                     this.props.Title
                 )
             ),
             React.createElement(
                 'div',
-                { class: "newImage"} ,
+                { className: "newImage"} ,
                 React.createElement(
                     'img',
                     {src: this.props.Img}
@@ -68,7 +68,7 @@ class News extends React.Component {
             ),
             React.createElement(
                 'div',
-                {class: "newText"},
+                {className: "newText"},
                 React.createElement(
                     'p',
                     {},
@@ -80,7 +80,6 @@ class News extends React.Component {
 }
 document.querySelectorAll('.new')
     .forEach(domContainer => {
-        // Read the comment ID from a data-* attribute.
         ReactDOM.render(
             React.createElement(News, { Date: news[count].date, Title: news[count].title, Img: news[count].img,
                 Text: news[count].text}),

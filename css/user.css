@@ -68,7 +68,7 @@ input, textarea
     width: 866px;
 }
 
-.nologgined .block_content
+#nologgined .block_content
 {
     margin-top: 0px;
 }
@@ -375,7 +375,7 @@ input, textarea
     font-weight: normal;
 }
 
-.nologgined
+#nologgined
 {
     margin-top: 70px;
     margin-bottom: 100px;
