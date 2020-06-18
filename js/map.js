@@ -1,12 +1,12 @@
 $(document).ready(function () {
     ymaps.ready(init);
     function init(){
-        var map = new ymaps.Map("map", {
+        let map = new ymaps.Map("map", {
             center: [56.455, 84.974824],
             zoom: 15,
             controls: ['zoomControl']
         });
-        var placemark = new ymaps.Placemark([56.452639, 84.974824], {
+        let placemark = new ymaps.Placemark([56.452639, 84.974824], {
                 balloonContent: "<p class='address'>Ул. Ф. Лыткина, дом 8</p>" +
                     "<p class='hours'>Часы работы:</p>" +
                     "<p>пн-пт - 9:00 - 18:30</p>" +

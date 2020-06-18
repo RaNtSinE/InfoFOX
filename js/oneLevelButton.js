@@ -60,7 +60,7 @@ function level()
 
 level();
 
-var textTitle = document.getElementsByClassName('jobTitle');
+let textTitle = document.getElementsByClassName('jobTitle');
 maxHeight = 18;
 
 function levelTitle()

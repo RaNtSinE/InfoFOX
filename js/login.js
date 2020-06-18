@@ -1,5 +1,5 @@
  setInterval(function () {
-            var dataReCaptcha = $("#g-recaptcha-response").val();
+            let dataReCaptcha = $("#g-recaptcha-response").val();
             capt = document.getElementsByClassName("g-recaptcha");
             ent = document.getElementsByClassName("enter");
             if (dataReCaptcha != "" && dataReCaptcha != undefined) {

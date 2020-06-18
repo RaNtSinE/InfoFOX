@@ -41,7 +41,7 @@ let check = [];
 let inputCheck = [];
 let success = 0;
 
-var listener = function () {
+let listener = function () {
     let msg = document.getElementById("alert");
     function open()
     {
@@ -123,18 +123,16 @@ var listener = function () {
                     {
                         $.ajax({
                             type: "POST",
-                            url: "/user/edit_block",
-                            data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
+                            url: "",
+                            data: {value: 1}
                         }).done(function () {
-                            opensav();
                         }).fail(function () {
-                            msg.innerHTML = "Сервер недоступен, попробуйте позже";
-                            open();
+
                         });
                     }
                     else
                     {
-                        var request = $.ajax({
+                        let request = $.ajax({
                             type: "POST",
                             url: "/user/add_block",
                             dataType: 'json',
@@ -200,7 +198,7 @@ function addDeleteListeners() {
 
     }
     closeBtns = $('.close');
-    for (var i = 0; i < closeBtns.length; i++) {
+    for (let i = 0; i < closeBtns.length; i++) {
             closeBtns[i].addEventListener("click", function() {
             this.parentNode.parentNode.parentNode.classList.remove("open");
         });
@@ -218,7 +216,7 @@ function addDeleteListeners() {
             check[j] = 0;
             inputCheck[j] = 0;
 
-            var request = $.ajax({
+            let request = $.ajax({
                 url: "/user/delete_block",
                 type: "POST",
                 data: {block_id : infoblock[2].value}
