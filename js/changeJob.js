@@ -47,7 +47,6 @@ function changeJob() {
                 delete localStorage.job_id;
                 document.location.href = "jobs.html";
             }).fail(function () {
-
             });
         });
     }

@@ -35,8 +35,20 @@
          localStorage.setItem('token', data.auth_token);
          document.location.href = "main.html";
      }).fail(function () {
-
+         let errors = document.getElementsByClassName("errorlist")[0]
+             .getElementsByTagName("li");
+         errors[0].innerHTML = "Неправильный логин или пароль";
      });
  });
 
+ $('#id_username').on('input',function () {
+     let errors = document.getElementsByClassName("errorlist")[0]
+         .getElementsByTagName("li");
+     errors[0].innerHTML = "";
+ });
 
+ $('#id_password').on('input',function () {
+     let errors = document.getElementsByClassName("errorlist")[0]
+         .getElementsByTagName("li");
+     errors[0].innerHTML = "";
+ });
