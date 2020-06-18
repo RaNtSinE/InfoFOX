@@ -108,7 +108,7 @@ function loadMenu()
                         {className: "logout"},
                         React.createElement(
                             'a',
-                            {href: ""},
+                            {},
                             React.createElement(
                                 'svg',
                                 {width: "25", height: "25", viewBox: "0 0 25 25", fill: "none",
@@ -277,7 +277,9 @@ function loadMenu()
 
     if (isAdmin)
     {
-        idMenu.insertAdjacentHTML('afterbegin', '<li><a href="">Админ панель</a></li>');
+        idMenu.insertAdjacentHTML('afterbegin',
+            '<li><a href="https://coolstorybob.pythonanywhere.com/admin/">Админ панель</a></li>');
     }
+    menuListeners();
 
 }

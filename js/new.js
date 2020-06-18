@@ -2,117 +2,80 @@
 function mainNews(){
     $.ajax({
         type: "GET",
-        url: pathToServer + "/api/news/count/",
-        data: {count: 4, start_news_id: 1},
+        url: pathToServer + "/api/news/last/",
+        data: {count: 4},
     }).done(function (data) {
-        alert(data[0].title);
+        mainNews(data);
     }).fail(function () {
     });
 
-    let img = [];
-    img[0] = 'img/New1.png';
-    img[1] = 'img/New1.png';
-    img[2] = 'img/New2.png';
-    img[3] = 'img/New3.png';
+    function mainNews(data)
+    {
 
-    let title = [];
-    title[0] = '#StayHome';
-    title[1] = '#StayHome';
-    title[2] = 'Новые пункты продаж';
-    title[3] = 'Открыты вакансии';
+        let allNews = document.getElementById('blockWithNews');
 
-    let text = [];
-    text[0] = 'В связи со сложной эпидемиологической ситуацией мы вынуждены приостановить работу\n' +
-    'пунктов продаж В связи со сложной эпидемиологической ситуацией мы вынуждены\n' +
-    'приостановить работу пунктов продаж В связи со сложной эпидемиологической ситуацией\n'+
-    'мы вынуждены приостановить работу пунктов продаж В связи со сложной\n'+
-    'эпидемиологической ситуацией мы вынуждены приостановить работу пунктов продаж В\n' +
-    'связи со сложной эпидемиологической ситуацией мы вынуждены приостановить работу\n' +
-    'пунктов продаж В связи со сложной эпидемиологической ситуацией мы вынуждены\n' +
-    'приостановить работу пунктов продаж\n';
-    text[1] = 'В связи со сложной эпидемиологической ситуацией мы вынуждены приостановить работу\n' +
-        'пунктов продаж В связи со сложной эпидемиологической ситуацией мы вынуждены\n' +
-        'приостановить работу пунктов продаж В связи со сложной эпидемиологической ситуацией\n'+
-        'мы вынуждены приостановить работу пунктов продаж В связи со сложной\n'+
-        'эпидемиологической ситуацией мы вынуждены приостановить работу пунктов продаж В\n' +
-        'связи со сложной эпидемиологической ситуацией мы вынуждены приостановить работу\n' +
-        'пунктов продаж В связи со сложной эпидемиологической ситуацией мы вынуждены\n' +
-        'приостановить работу пунктов продаж\n';
-    text[2] = 'В связи с расширением желающих браслеты, мы открываем новые пункты продаж…В связи\n' +
-    'с расширением желающих браслеты, мы открываем новые пункты продаж…В связи с расширением\n' +
-    'желающих браслеты, мы открываем новые пункты продаж…В связи с расширением желающих браслеты,\n' +
-    'мы открываем новые пункты продаж…В связи с расширением желающих браслеты, мы открываем новые пункты\n' +
-    'продаж…В связи с расширением желающих браслеты, мы открываем новые пункты продаж…В связи с расширением\n' +
-    'желающих браслеты, мы открываем новые пункты продаж…\n';
-    text[3] = 'Мы рады представить вам наш новый раздел вакансий…Мы рады представить вам наш новый раздел\n' +
-    'вакансий…Мы рады представить вам наш новый раздел вакансий…Мы рады представить вам наш новый\n' +
-    'раздел вакансий…Мы рады представить вам наш новый раздел вакансий…Мы рады представить вам\n' +
-    'наш новый раздел вакансий…Мы рады представить вам наш новый раздел вакансий…Мы рады представить\n' +
-    'вам наш новый раздел вакансий…Мы рады представить вам наш новый раздел вакансий…Мы рады\n' +
-    'представить вам наш новый раздел вакансий…Мы рады представить вам наш новый раздел вакансий…\n';
-
-    let date = [];
-    date[0] = '28.03.2020';
-    date[1] = '28.03.2020';
-    date[2] = '23.03.2020';
-    date[3] = '21.03.2020';
-
-    let count = 0;
-
-    class News extends React.Component {
-        constructor(props) {
-            super(props);
+        for (let i = 0; i < data.length; i++) {
+            allNews.insertAdjacentHTML('beforeend', '<div class="new"></div>');
         }
 
-        render() {
-            return React.createElement(
-                'div',
-                {className: "innerNew"},
-                React.createElement(
+        let count = 0;
+
+        class News extends React.Component {
+            constructor(props) {
+                super(props);
+            }
+
+            render() {
+                return React.createElement(
                     'div',
-                    { className: "newImage"} ,
+                    {className: "innerNew"},
                     React.createElement(
-                        'img',
-                        {src: this.props.Img}
+                        'div',
+                        { className: "newImage"} ,
+                        React.createElement(
+                            'img',
+                            {src: pathToServer + this.props.Img}
+                            )
+                    ),
+                    React.createElement(
+                        'div',
+                        { className: "newTitle"} ,
+                        React.createElement(
+                            'p',
+                            {className: "newTitle"},
+                            this.props.Title
                         )
-                ),
-                React.createElement(
-                    'div',
-                    { className: "newTitle"} ,
+                    ),
                     React.createElement(
-                        'p',
-                        {className: "newTitle"},
-                        this.props.Title
-                    )
-                ),
-                React.createElement(
-                    'div',
-                    {className: "newText"},
+                        'div',
+                        {className: "newText"},
+                        React.createElement(
+                            'p',
+                            {},
+                            this.props.Text
+                        )
+                    ),
                     React.createElement(
-                        'p',
-                        {},
-                        this.props.Text
-                    )
-                ),
-                React.createElement(
-                    'div',
-                    {className: "date"},
-                    React.createElement(
-                        'p',
+                        'div',
                         {className: "date"},
-                        this.props.Date
+                        React.createElement(
+                            'p',
+                            {className: "date"},
+                            this.props.Date
+                        )
                     )
-                )
-            );
+                );
+            }
         }
+        document.querySelectorAll('.new')
+            .forEach(domContainer => {
+                ReactDOM.render(
+                    React.createElement(News, { Img: data[count].img, Title: data[count].title, Text: data[count].content, Date: data[count].created_at }),
+                    domContainer
+                );
+                count ++;
+            });
+
     }
-    document.querySelectorAll('.new')
-        .forEach(domContainer => {
-            ReactDOM.render(
-                React.createElement(News, { Img: img[count], Title: title[count], Text: text[count], Date: date[count] }),
-                domContainer
-            );
-            count ++;
-        });
 
 }

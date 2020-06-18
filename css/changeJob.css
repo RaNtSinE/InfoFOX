@@ -138,11 +138,11 @@ input[name]
 {
     float: right;
     margin-right: 60px;
-
+    margin-top: 31px;
 }
 
 .sav .but {
-    padding: 10px 30px;
+    padding: 12px 30px;
 }
 
 @media(max-width:765px)

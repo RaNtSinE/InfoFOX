@@ -23,4 +23,20 @@
             }
         }, 1000);
 
+ $('.enter').on('click',function()
+ {
+     let username = document.getElementById('id_username');
+     let password = document.getElementById('id_password')
+     $.ajax({
+         type: "POST",
+         url: pathToServer + "/auth/token/login",
+         data: {username: username.value, password: password.value}
+     }).done(function (data) {
+         localStorage.setItem('token', data.auth_token);
+         document.location.href = "main.html";
+     }).fail(function () {
+
+     });
+ });
+
 

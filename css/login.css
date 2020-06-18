@@ -185,7 +185,6 @@ label
     left: calc(49.4vw - 57px);
     padding: 12px 35px;
     text-transform: uppercase;
-    display: none;
     position: absolute;
     margin-top: -217px;
     z-index: 0;
