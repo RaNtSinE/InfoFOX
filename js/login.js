@@ -33,7 +33,7 @@
          data: {username: username.value, password: password.value}
      }).done(function (data) {
          localStorage.setItem('token', data.auth_token);
-         document.location.href = "main.html";
+         document.location.href = "index.html";
      }).fail(function () {
          let errors = document.getElementsByClassName("errorlist")[0]
              .getElementsByTagName("li");

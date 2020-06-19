@@ -1,5 +1,5 @@
 $('.sub').on('click',function () {
-    let msg = document.getElementById("messageForggit");
+    let msg = document.getElementById("messageForg");
     $('#messageForg').removeClass('wrong');
     let address = document.getElementById("id_username");
 
@@ -25,8 +25,8 @@ $('.sub').on('click',function () {
     {
         $.ajax({
             type: "POST",
-            url: "/password_recovery",
-            data: {address: address.value }
+            url: pathToServer + "/password_reset/",
+            data: {email: address.value }
         }).done(function(data){
             // alert(JSON.stringify(data));
             if(data.email_sent === true)
