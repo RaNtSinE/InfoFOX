@@ -126,7 +126,7 @@
         {
           $.ajax({
             type: "POST",
-            url: "/send_email",
+            url: pathToServer + "/send_email/",
             data: {purpose: somePurpose, address: address.value, content: content.value }
           }).done(function(data){
             // alert(JSON.stringify(data));
