@@ -3,10 +3,11 @@ function loadMenu()
 {
     let userLink = "";
     let menu = document.getElementsByClassName('menu');
+    let user_id = 1;
     if (isLogin)
     {
         menu[0].classList.add("loggined");
-        userLink = "user.html";
+        userLink = "user_" + user_id;
     }
 
 
@@ -26,7 +27,7 @@ function loadMenu()
                         {} ,
                         React.createElement(
                             'a',
-                            {href: "map.html"},
+                            {href: "map"},
                             "Места продажи"
                         )
                     ),
@@ -35,7 +36,7 @@ function loadMenu()
                         {} ,
                         React.createElement(
                             'a',
-                            {href: "news.html"},
+                            {href: "news"},
                             "Новости"
                         )
                     ),
@@ -44,7 +45,7 @@ function loadMenu()
                         {},
                         React.createElement(
                             'a',
-                            {href: "jobs.html"},
+                            {href: "jobs"},
                             "Вакансии"
                         )
                     ),
@@ -182,7 +183,7 @@ function loadMenu()
                         {} ,
                         React.createElement(
                             'a',
-                            {href: "map.html"},
+                            {href: "map"},
                             "Места продажи"
                         )
                     ),
@@ -191,7 +192,7 @@ function loadMenu()
                         {} ,
                         React.createElement(
                             'a',
-                            {href: "news.html"},
+                            {href: "news"},
                             "Новости"
                         )
                     ),
@@ -200,7 +201,7 @@ function loadMenu()
                         {},
                         React.createElement(
                             'a',
-                            {href: "jobs.html"},
+                            {href: "jobs"},
                             "Вакансии"
                         )
                     ),
@@ -234,7 +235,7 @@ function loadMenu()
                         {className: "login"},
                         React.createElement(
                             'a',
-                            {href: "login.html"},
+                            {href: "login"},
                             React.createElement(
                                 'svg',
                                 {width: "25", height: "24", viewBox: "0 0 25 24", fill: "none",

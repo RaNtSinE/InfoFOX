@@ -29,7 +29,7 @@ function changeJob() {
                 }
             }).done(function () {
                 delete localStorage.job_id;
-                document.location.href = "jobs.html";
+                document.location.href = "jobs";
             }).fail(function () {
 
             });
@@ -45,7 +45,7 @@ function changeJob() {
                 }
             }).done(function () {
                 delete localStorage.job_id;
-                document.location.href = "jobs.html";
+                document.location.href = "jobs";
             }).fail(function () {
             });
         });

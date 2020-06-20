@@ -13,7 +13,7 @@ function addJob()
                 "Authorization":'Token ' + localStorage.getItem("token")
             }
         }).done(function () {
-            document.location.href = "jobs.html";
+            document.location.href = "jobs";
         }).fail(function () {
 
         });

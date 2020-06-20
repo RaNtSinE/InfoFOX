@@ -188,6 +188,7 @@ label
     position: absolute;
     margin-top: -217px;
     z-index: 0;
+    outline: none;
 }
 
 .enter:hover
