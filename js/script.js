@@ -166,21 +166,23 @@
         content.placeholder = "Текст сообщения";
       });
 
-      $('.logout a').on("click", function () {
-        // alert("click");
-        $.ajax({
-          type: "POST",
-          url: pathToServer + "/auth/token/logout/",
-          headers: {
-            "Authorization":'Token ' + localStorage.getItem("token")
-          }
-        }).done(function (data) {
+    $('.logout a').on("click", function () {
+      $.ajax({
+        type: "POST",
+        url: pathToServer + "/auth/token/logout/",
+        headers: {
+          "Authorization":'Token ' + localStorage.getItem("token")
+        }
+      }).done(function (data, textStatus, xhr) {
+        localStorage.token = "";
+        location.reload()
+      }).fail(function (xhr, textStatus) {
+        if (xhr.status === 401)
+        {
           localStorage.token = "";
-          // alert(localStorage.token);
-          userStatus();
-        }).fail(function () {
-
-        });
+          location.reload()
+        }
       });
+    });
 
   }
