@@ -126,15 +126,6 @@ p
     background-size: 100%;
 }
 
-@media(max-width:1440px)
-{
-    .logo .fox
-    {
-        background: url("../img/Fox.svg");
-    }
-}
-
-
 #menu
 {
     -webkit-box-flex: 1;
@@ -799,7 +790,6 @@ footer .downline
         font-size: 13px;
     }
     .logo .fox {
-        background: url(../img/Fox.svg);
         background-repeat: no-repeat;
         background-size: 75%;
         margin-top: 12px;

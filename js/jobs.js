@@ -7,22 +7,26 @@ function jobs()
         let jobBlocks = document.getElementsByClassName('innerJob');
         let jobs = document.getElementById('jobs');
         jobs.classList.remove("admin");
-        for (let i = 0; i < jobBlocks.length; i++)
-        {
-            jobBlocks[i].getElementsByClassName("settings")[0].remove();
+        try {
+            for (let i = 0; i < jobBlocks.length; i++) {
+                jobBlocks[i].getElementsByClassName("settings")[0].remove();
+            }
         }
+        catch (e) {
+        }
+        try {
         document.getElementsByClassName("jobAdd")[0].remove();
+        }
+        catch (e) {
+        }
     }
     $.ajax({
         type: "GET",
         url: pathToServer + "/api/vacancy/",
-        headers: {
-            "Authorization":'Token ' + localStorage.getItem("token")
-        }
     }).done(function (data) {
-        // alert(JSON.stringify(data));
         jobsFromServer(data);
-    }).fail(function () {
+    }).fail(function (xhr, textStatus) {
+        alert(xhr);
     });
 
     function jobsFromServer(data)

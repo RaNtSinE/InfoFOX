@@ -23,7 +23,6 @@ function userStatus()
         {
             isAdmin = false;
         }
-        // alert(localStorage.token);
         if (localStorage.getItem("token") != "" && localStorage.getItem("token") != null)
         {
             isLogin = true;
