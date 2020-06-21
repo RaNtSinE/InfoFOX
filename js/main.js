@@ -33,5 +33,38 @@ $(document).ready(function(){
             }
         }
     })
+    let allDots = document.getElementsByClassName("owl-dots");
+    let dots = allDots[0].getElementsByTagName("button");
+    let ellipses = document.getElementsByClassName("ellipse");
+    setInterval(function() {
+
+        if(dots[0].classList.contains('active'))
+        {
+            for(let i = 0; i < ellipses.length; i++)
+            {
+                ellipses[i].classList.remove("ellipse_" + (i + 1) + "_1");
+                ellipses[i].classList.remove("ellipse_" + (i + 1) + "_2");
+            }
+        }
+        else
+        if(dots[1].classList.contains('active'))
+        {
+            for(let i = 0; i < ellipses.length; i++)
+            {
+                ellipses[i].classList.add("ellipse_" + (i + 1) + "_1");
+                ellipses[i].classList.remove("ellipse_" + (i + 1) + "_2");
+            }
+        }
+        else
+        if(dots[2].classList.contains('active'))
+        {
+            for(let i = 0; i < ellipses.length; i++)
+            {
+                ellipses[i].classList.remove("ellipse_" + (i + 1) + "_1");
+                ellipses[i].classList.add("ellipse_" + (i + 1) + "_2");
+            }
+        }
+    }, 50);
+
 });
 

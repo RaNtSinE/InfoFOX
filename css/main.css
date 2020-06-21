@@ -4,6 +4,187 @@ button:focus {
     outline: none;
 }
 
+.ellipse
+{
+    position: absolute;
+    z-index: -50;
+    border: 3px solid rgba(219, 199, 246, 0.4);
+    box-sizing: border-box;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+.ellipse_1
+{
+    width: 8.5vw;
+    height: 8.5vw;
+    margin-top: 31vw;
+    left: 17vw;
+}
+.ellipse_2
+{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin-top: 5vw;
+    left: 9vw;
+}
+.ellipse_3
+{
+    width: 16vw;
+    height: 16vw;
+    margin-top: 7vw;
+    left: 28vw;
+}
+.ellipse_4
+{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin-top: 6vw;
+    left: 40.5vw;
+}
+.ellipse_5
+{
+    width: 11vw;
+    height: 11vw;
+    margin-top: 21vw;
+    left: 46.5vw;
+}
+.ellipse_6
+{
+    width: 16vw;
+    height: 16vw;
+    margin-top: 22vw;
+    left: 61vw;
+}
+.ellipse_7
+{
+    width: 11vw;
+    height: 11vw;
+    margin-top: 2vw;
+    left: 85.5vw;
+}
+.ellipse_8
+{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin-top: 38vw;
+    left: 85.5vw;
+}
+.ellipse_1_1
+{
+    left: 10vw;
+}
+.ellipse_2_1
+{
+    left: 4vw;
+}
+.ellipse_3_1
+{
+    left: 12vw;
+}
+.ellipse_4_1
+{
+    left: 34.5vw;
+}
+.ellipse_5_1
+{
+    left: 38.5vw;
+}
+.ellipse_6_1
+{
+    left: 47vw;
+}
+.ellipse_7_1
+{
+    left: 76.5vw;
+}
+.ellipse_8_1
+{
+    left: 82.5vw;
+}
+.ellipse_1_2
+{
+    left: 5vw;
+}
+.ellipse_2_2
+{
+    left: 1vw;
+}
+.ellipse_3_2
+{
+    left: 2vw;
+}
+.ellipse_4_2
+{
+    left: 28.5vw;
+}
+.ellipse_5_2
+{
+    left: 32.5vw;
+}
+.ellipse_6_2
+{
+    left: 34vw;
+}
+.ellipse_7_2
+{
+    left: 61.5vw;
+}
+.ellipse_8_2
+{
+    left: 75.5vw;
+}
+@media(max-width: 1000px)
+{
+    .ellipse_1
+    {
+        width: 18.5vw;
+        height: 18.5vw;
+        margin-top: 81vw;
+    }
+    .ellipse_2
+    {
+        width: 10.5vw;
+        height: 10.5vw;
+        margin-top: 11vw;
+    }
+    .ellipse_3
+    {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 34vw;
+    }
+    .ellipse_4
+    {
+        width: 10.5vw;
+        height: 10.5vw;
+        margin-top: 10vw;
+    }
+    .ellipse_5
+    {
+        width: 20vw;
+        height: 20vw;
+        margin-top: 28vw;
+    }
+    .ellipse_6
+    {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 63vw;
+    }
+    .ellipse_7
+    {
+        width: 20vw;
+        height: 20vw;
+        margin-top: 20vw;
+    }
+    .ellipse_8
+    {
+        width: 10.5vw;
+        height: 10.5vw;
+        margin-top: 88vw;
+    }
+}
+
 .content .first .owl-dots .owl-dot.active span,.content .first .owl-dots .owl-dot:hover span
 {
     background: #3AB9DA;
@@ -36,33 +217,34 @@ button:focus {
 
 .content .first .owl-nav .owl-prev
 {
-    background: url("../img/left.svg");
+    background: url("../img/left.png");
     background-repeat: no-repeat;
-    width: 53px;
-    height: 53px;
+    width: 30px;
+    height: 61px;
     float: left;
     margin-left: 3vw;
 }
 
 .content .first .owl-nav .owl-prev:hover
 {
-    background: url("../img/leftHover.svg");
+    background: url("../img/leftHover.png");
     background-repeat: no-repeat;
 }
 
 .content .first .owl-nav .owl-next
 {
-    background: url("../img/right.svg");
+    background: url("../img/right.png");
     background-repeat: no-repeat;
-    width: 53px;
-    height: 53px;
+    background-position-x: 5px;
+    width: 30px;
+    height: 61px;
     float: right;
     margin-right: 3vw;
 }
 
 .content .first .owl-nav .owl-next:hover
 {
-    background: url("../img/rightHover.svg");
+    background: url("../img/rightHover.png");
     background-repeat: no-repeat;
 }
 
@@ -234,9 +416,9 @@ button:focus {
 
 .content .second .owl-nav .owl-prev
 {
-    background: url("../img/left2.svg");
+    background: url("../img/left2.png");
     background-repeat: no-repeat;
-    background-size: 4.4vw;
+    background-size: 2vw;
     width: 4.4vw;
     height: 4.4vw;
     float: left;
@@ -252,16 +434,16 @@ button:focus {
 
 .content .second .owl-nav .owl-prev:hover
 {
-    background: url("../img/left2Hover.svg");
+    background: url("../img/left2.png");
     background-repeat: no-repeat;
-    background-size: 4.4vw;
+    background-size: 2vw;
 }
 
 .content .second .owl-nav .owl-next
 {
-    background: url("../img/right2.svg");
+    background: url("../img/right2.png");
     background-repeat: no-repeat;
-    background-size: 4.4vw;
+    background-size: 2vw;
     width: 4.4vw;
     height: 4.4vw;
     float: right;
@@ -272,9 +454,9 @@ button:focus {
 
 .content .second .owl-nav .owl-next:hover
 {
-    background: url("../img/right2Hover.svg");
+    background: url("../img/right2.png");
     background-repeat: no-repeat;
-    background-size: 4.4vw;
+    background-size: 2vw;
 }
 
 .content .where
@@ -649,7 +831,7 @@ button:focus {
 
     .content .second .owl-nav .owl-prev
     {
-        background-size: 8.4vw;
+        background-size: 4vw;
         width: 8.4vw;
         height: 8.4vw;
         left: -11vw;
@@ -662,7 +844,7 @@ button:focus {
 
     .content .second .owl-nav .owl-next
     {
-        background-size: 8.4vw;
+        background-size: 4vw;
         width: 8.4vw;
         height: 8.4vw;
         right: -4vw;
@@ -819,7 +1001,7 @@ button:focus {
     }
     .content .second .owl-nav .owl-prev
     {
-        background-size: 13.4vw;
+        background-size: 6.4vw;
         width: 13.4vw;
         height: 13.4vw;
         left: -17vw;
@@ -832,7 +1014,7 @@ button:focus {
 
     .content .second .owl-nav .owl-next
     {
-        background-size: 13.4vw;
+        background-size: 6.4vw;
         width: 13.4vw;
         height: 13.4vw;
         right: -8vw;
