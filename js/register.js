@@ -23,7 +23,7 @@ setInterval(function () {
     }
 }, 1000);
 
-$('.enter').on('click',function()
+$('.create').on('click',function()
 {
     let username = document.getElementById('id_username');
     let email = document.getElementById('id_mail');
