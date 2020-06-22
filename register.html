@@ -10,7 +10,7 @@
     <link rel ="stylesheet" type="text/css" href ="css/login.css">
 
     <script src="js/jquery.min.js"></script>
-    <title>Логин</title>
+    <title>Регистрация</title>
 </head>
 <body>
 <header id="head">
@@ -33,8 +33,6 @@
             </svg>
         </div>
         <div class="menu">
-            <ul id="menu">
-            </ul>
         </div>
     </nav>
     <div id="letterGhost">
@@ -60,6 +58,7 @@
             <div id="letterInputZone">
                 <input type="email" name="name" maxlength="200" id="letterAddress"
                        placeholder="Ваш почтовый адрес">
+
                 <textarea name="content" rows="9" id="letterContent"
                           placeholder="Текст сообщения" ></textarea>
             </div>
@@ -74,45 +73,46 @@
         </div>
     </div>
 </header>
+
 <div class="content">
 
     <form action="login" method="post" id="login" name="login">
         <input type="hidden" name="csrfmiddlewaretoken" value="Oc8l7WMPlACEWNYjqpVKa3JGxsRlcKq86JtHrUvUraU9OuImeDS0tBrIpcmXyln2">
-        <p class="authorization">Вход</p>
+        <p class="authorization">Регистрация</p>
+
+        <p class="label label-1"></p>
+        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="Имя пользователя"></p>
+        <p class="label label-2"></p>
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_mail" placeholder="E-mail адрес"></p>
+        <p class="label label-2"></p>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password_1" placeholder="Пароль"></p>
+        <p class="label label-2"></p>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password_2" placeholder="Повторите пароль"></p>
+        <!--        <script src="https://www.google.com/recaptcha/api.js"></script>-->
+        <!--        <div class="form-group g-recaptcha" data-sitekey="6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL&amp;co=aHR0cDovL3ZlZ2FzYXVyLnB5dGhvbmFueXdoZXJlLmNvbTo4MA..&amp;hl=ru&amp;v=-wV2EAWEOTlEtZh4vNQtn3H1&amp;size=normal&amp;cb=aywm0divnkxf" width="304" height="78" role="presentation" name="a-itd15vngdqdh" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>-->
+
+        <input type="hidden" name="next" value="/login">
         <ul class="errorlist">
             <li></li>
             <li class="import-field"></li>
         </ul>
-        <p class="label label-1">адрес электронной почты</p>
-        <p><label for="id_username">Имя пользователя:</label>
-            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"></p>
-        <p class="label label-2">пароль</p>
-        <p><label for="id_password">Пароль:</label>
-            <input type="password" name="password" autocomplete="current-password" required="" id="id_password"></p>
-        <div class="forgotten">
-            <a href="forgot">Забыли пароль?</a>
-            </br>
-            <a href="register">Создать аккаунт</a>
-        </div>
-
-<!--        <script src="https://www.google.com/recaptcha/api.js"></script>-->
-<!--        <div class="form-group g-recaptcha" data-sitekey="6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL&amp;co=aHR0cDovL3ZlZ2FzYXVyLnB5dGhvbmFueXdoZXJlLmNvbTo4MA..&amp;hl=ru&amp;v=-wV2EAWEOTlEtZh4vNQtn3H1&amp;size=normal&amp;cb=aywm0divnkxf" width="304" height="78" role="presentation" name="a-itd15vngdqdh" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>-->
-
-        <input type="hidden" name="next" value="/login">
     </form>
-<!--    <input type="submit" value="Войти" id="submit" class="enter" onclick="document.forms['login'].submit();">-->
-    <input type="submit" value="Войти" id="submit" class="enter" >
+    <!--    <input type="submit" value="Войти" id="submit" class="enter" onclick="document.forms['login'].submit();">-->
+
+    <input type="submit" value="СОЗДАТЬ" id="submit" class="enter" >
+
 
 </div>
+
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="js/new.js"></script>
 <script src="js/loadMenu.js"></script>
-<!--<script src="js/loginUser.js"></script>-->
 <script src="js/userStatus.js"></script>
-</body>
 <script src="js/script.js"></script>
-
+<script src="js/register.js"></script>
 <script src="js/select.js"></script>
+</body>
 
-<script src="js/login.js"></script>
+
 </html>

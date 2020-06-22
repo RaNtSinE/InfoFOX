@@ -32,6 +32,8 @@ http.createServer(function (request, response) {
         filePath ='./postNewPassword.html';
     if(filePath == './preLogin')
         filePath ='./preLogin.html';
+    if(filePath == './register')
+        filePath ='./register.html';
     if(filePath.search(pattern) === 0)
     {
         filePath ='./user.html';

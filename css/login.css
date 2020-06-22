@@ -1,6 +1,6 @@
 body
 {
-    background: #F3F3F3;
+    background: #fff4f0;
     font-family: Roboto;
 }
 
@@ -12,10 +12,10 @@ label
 #login {
     width: 500px;
     margin-left: calc(49.95vw - 257px);
-    background: #C4EAF5;
-    border: 2px solid #3AB9DA;
-    box-sizing: border-box;
-    border-radius: 5px;
+    /*background: #C4EAF5;*/
+    /*border: 2px solid #3AB9DA;*/
+    /*box-sizing: border-box;*/
+    /*border-radius: 5px;*/
     margin-top: 100px;
     margin-bottom: 100px;
     height: 469px;
@@ -75,12 +75,15 @@ label
 {
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 23px;
     text-align: center;
 
     color: #313131;
     margin-top: 35px;
+
+    padding-bottom: 50px;
+    border-bottom: 1px solid #093d64;
 }
 
 .label
@@ -95,12 +98,12 @@ label
     margin-bottom: 5px;
 }
 
-#id_username, #id_password,.forgotten
+#id_username, #id_mail, #id_password, #id_password_1, #id_password_2,.forgotten
 {
     margin-left: 30px;
 }
 
-#id_username, #id_password
+#id_username, #id_mail, #id_password, #id_password_1, #id_password_2
 {
     border: none;
     -webkit-box-sizing: border-box;
@@ -172,7 +175,7 @@ label
 }
 
 .enter {
-    background: #3AB9DA;
+    background: #093d64;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     border: none;
@@ -186,9 +189,10 @@ label
     padding: 12px 35px;
     text-transform: uppercase;
     position: absolute;
-    margin-top: -217px;
+    margin-top: -200px;
     z-index: 0;
     outline: none;
+
 }
 
 .enter:hover
@@ -371,7 +375,7 @@ label
         margin-left: calc(10vw - -5px);
     }
 
-    #id_username, #id_password {
+    #id_username, #id_mail, #id_password, #id_password_1, #id_password_2{
         width: calc(77vw - 64px);
     }
     .sub
