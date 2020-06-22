@@ -1,8 +1,11 @@
+let captcha;
+
 setInterval(function () {
     let dataReCaptcha = $("#g-recaptcha-response").val();
     capt = document.getElementsByClassName("g-recaptcha");
     ent = document.getElementsByClassName("create");
     if (dataReCaptcha != "" && dataReCaptcha != undefined) {
+        captcha = document.getElementById('g-recaptcha-response').value
         setTimeout(function () {
             capt[0].classList.add("almostHide");
             ent[0].classList.add("create-visible");
@@ -32,7 +35,7 @@ $('.create').on('click',function()
     $.ajax({
         type: "POST",
         url: pathToServer + "/auth/users/",
-        data: {username: username.value, email:email.value, password: password.value, re_password: repeatPassword.value}
+        data: {username: username.value, email:email.value, password: password.value, re_password: repeatPassword.value, recaptcha: captcha}
     }).done(function (data) {
         document.location.href = "/";
     }).fail(function () {
