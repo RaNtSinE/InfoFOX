@@ -174,7 +174,7 @@ label
     opacity: 0;
 }
 
-.enter {
+.enter, .create{
     background: #093d64;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -195,9 +195,14 @@ label
 
 }
 
-.enter:hover
+.create
 {
-    background: #4AC9EA;
+    display: none;
+}
+
+.enter:hover, .create:hover
+{
+    background: #177ac5;
 }
 
 .almost-enter
@@ -224,7 +229,7 @@ label
     background: #4AC9EA;
 }
 
-.enter-visible
+.enter-visible, .create-visible
 {
     display: initial;
 }
