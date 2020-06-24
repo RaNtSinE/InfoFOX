@@ -13,7 +13,7 @@
     <link rel ="stylesheet" type="text/css" href ="css/login.css">
 
     <script src="js/jquery.min.js"></script>
-    <title>Document</title>
+    <title>Логин</title>
 </head>
 <body>
 <header class="header" id="head">
@@ -38,6 +38,7 @@
         </div>
         <div class="menu"></div>
     </nav>
+<<<<<<< HEAD
     <div class="feedback" id="letterGhost">
         <div class="feedback__inner" id="letterWindow">
             <div class="feedback__select-outer">
@@ -58,6 +59,33 @@
                         </svg>
                     </a>
                 </div>
+=======
+    <div id="letterGhost">
+        <div id="letterWindow">
+            <div class="custom-select">
+                <select name="select">
+                    <option value="0" hidden disabled selected>Тема сообщения</option>
+                    <option value="1">Вопрос по продукту</option>
+                    <option value="2">Предложение</option>
+                    <option value="3">Отзыв</option>
+                    <option value="4">Отклик на вакансию</option>
+                    <option value="5">Жалоба</option>
+                </select>
+            </div>
+            <div id="letterClose">
+                <a>
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.46585 7.99996L15.6959 1.76969C16.1014 1.36443 16.1014 0.709193 15.6959 0.30394C15.2907 -0.101313 14.6354 -0.101313 14.2302 0.30394L7.99992 6.53421L1.76983 0.30394C1.36439 -0.101313 0.709336 -0.101313 0.304083 0.30394C-0.101361 0.709193 -0.101361 1.36443 0.304083 1.76969L6.53417 7.99996L0.304083 14.2302C-0.101361 14.6355 -0.101361 15.2907 0.304083 15.696C0.506045 15.8981 0.771595 15.9997 1.03696 15.9997C1.30232 15.9997 1.56768 15.8981 1.76983 15.696L7.99992 9.4657L14.2302 15.696C14.4323 15.8981 14.6977 15.9997 14.9631 15.9997C15.2284 15.9997 15.4938 15.8981 15.6959 15.696C16.1014 15.2907 16.1014 14.6355 15.6959 14.2302L9.46585 7.99996Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <p id="message">Некорректный email</p>
+            <div id="letterInputZone">
+                <input type="email" name="name" maxlength="200" id="letterAddress"
+                       placeholder="Ваш почтовый адрес">
+                <textarea name="content" rows="9" id="letterContent"
+                          placeholder="Текст сообщения" ></textarea>
+>>>>>>> d53b2e320d7ac64e0c4b5a18121a1229f8241848
             </div>
             <p class="feedback__error-message" id="message">Некорректный email</p>
             <div class="feedback__form" id="letterInputZone">

@@ -164,6 +164,7 @@ function loadMenu()
                         "Обратная связь"
                     ),
                     React.createElement(
+<<<<<<< HEAD
                         'p',
                         {className: "menu__item menu__item--line"},
                         ""
@@ -177,6 +178,24 @@ function loadMenu()
                         'a',
                         {className: "menu__item", href: "register"},
                         "Регистрация"
+=======
+                        'li',
+                        {},
+                        React.createElement(
+                            'a',
+                            {href: "login"},
+                            "Вход"
+                        )
+                    ),
+                    React.createElement(
+                        'li',
+                        {},
+                        React.createElement(
+                            'a',
+                            {href: "register"},
+                            "Регистрация"
+                        )
+>>>>>>> d53b2e320d7ac64e0c4b5a18121a1229f8241848
                     )
                 );
             }
