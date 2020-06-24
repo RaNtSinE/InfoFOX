@@ -378,3 +378,9 @@ footer .downline
     }
 }
 
+
+.content
+{
+    min-height: calc(100vh - 435px);
+    overflow-x: hidden;
+}

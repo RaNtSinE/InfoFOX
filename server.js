@@ -44,15 +44,10 @@ http.createServer(function (request, response) {
     else
     if(filePath == './preLogin')
         filePath ='./preLogin.html';
-<<<<<<< HEAD
     else
     if(filePath == './register')
         filePath = './register.html';
     else
-=======
-    if(filePath == './register')
-        filePath ='./register.html';
->>>>>>> d53b2e320d7ac64e0c4b5a18121a1229f8241848
     if(filePath.search(pattern) === 0)
     {
         filePath ='./user.html';
