@@ -1,0 +1,186 @@
+body
+{
+    background: #FFF4F0;
+    font-family: Roboto;
+    font-style: normal;
+}
+
+.form-control {
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: calc(470px - 64px);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    color: #313131;
+    resize: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.activationHeader {
+    width: 300px;
+    border-bottom: 1px solid #093D64;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    color: #313131;
+    margin-top: 160px;
+    padding-bottom: 45px;
+}
+
+.activationInfo {
+    width: 330px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+.blockWithBraclet_code {
+    width: 406px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+.changeProfileText {
+    text-align: center;
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+.activationButton {
+    width: 189.42px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 0px;
+    margin-top: 45px;
+    margin-bottom: 160px;
+}
+
+.activationButton a {
+    background: #093D64;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #F3F3F3;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 12px 40px;
+    cursor: pointer;
+}
+
+.activationButton a:hover {
+    background: #295D94;
+}
+
+
+.profiles {
+    margin-top: 16px;
+}
+
+.profileBlock {
+    display: flex;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #093D64;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-top: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.profileBlock:hover
+{
+    background: #295D94;
+}
+
+.profileContent {
+    padding-top: 12px;
+    padding-left: 12px;
+    color: #f3f3f3;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-bottom: 40px;
+}
+
+.circle
+{
+    position: absolute;
+    right: 0;
+    margin-top: -20px;
+    margin-right: 10px;
+}
+
+.check
+{
+    position: absolute;
+    right: 0;
+    margin-top: -7px;
+    margin-right: 19px;
+    display: none;
+}
+
+.activated .check
+{
+    display: block;
+}
+
+.errorMessage {
+    position: absolute;
+    text-align: center;
+    width: 99vw;
+    margin-top: -145px;
+    color: #FF0000;
+    font-size: 16px;
+    display: none;
+}
+
+.activeErrorMessage
+{
+    display: block;
+}
+
+@media(max-width: 650px)
+{
+    .profileBlock {
+        width: 89.3vw;
+    }
+}
+
+@media(max-width: 455px)
+{
+    .blockWithBraclet_code
+    {
+        width: 89.3vw;
+    }
+    .braclet_code
+    {
+        width: 89.3vw;
+    }
+}
+
+@media(max-width: 350px)
+{
+    .activationHeader {
+        font-size: 8.8vw;
+        width: 85vw;
+    }
+    .activationInfo, .changeProfileText {
+        font-size: 4.7vw;
+        width: 85vw;
+    }
+}

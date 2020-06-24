@@ -1,0 +1,485 @@
+body
+{
+    background: #FFF4F0;
+    font-family: Roboto;
+    font-style: normal;
+}
+
+.profileHead {
+    width: 100%;
+    height: 78px;
+    background: #093D64;
+    margin-bottom: 50px;
+}
+
+.profileHead p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 29px;
+    padding-left: 6vw;
+    color: #F3F3F3;
+}
+
+#profileFrame {
+    margin-left: auto;
+    margin-right: auto;
+    width: 680px;
+    border: 3px solid #093D64;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.profileFrame__title{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.dataField
+{
+    border-bottom: 1px solid #093D64;
+    margin-left: auto;
+    margin-right: auto;
+    width: 590px;
+    margin-top: 70px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #3E3E3E;
+}
+
+.lableLogin {
+    position: absolute;
+    font-weight: bold;
+}
+
+.userLogin {
+    text-align: right;
+}
+
+.lableEmail {
+    position: absolute;
+    font-weight: bold;
+}
+
+.userEmail {
+    text-align: right;
+}
+
+
+.changeLink{
+    text-align: right;
+    font-size: 15px;
+    color: #929292;
+    margin-top: 5px;
+}
+
+
+.changeLink a {
+    margin-right: 42px;
+    cursor: pointer;
+}
+
+.changeLink a:hover {
+    margin-right: 42px;
+    cursor: pointer;
+    color: #C2C2C2;
+}
+
+.lablePassword {
+    position: absolute;
+    font-weight: bold;
+}
+
+.userPassword {
+    text-align: right;
+}
+
+.profileFrame__profiles {
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+
+.profileFrame__profileBlock {
+    position: relative;
+}
+
+.profileFrame__block {
+    display: flex;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #093D64;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.profileFrame__profileTitle {
+    padding-top: 12px;
+    padding-left: 12px;
+    color: #f3f3f3;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-bottom: 40px;
+}
+
+.profileFrame__deleteBlock {
+    width: 25px;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+.profileFrame__addBlock {
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #093D64;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    height: 70px;
+    display: flex;
+    cursor: pointer;
+}
+
+.profileFrame__addBlock div {
+    width: 30px;
+    margin: auto;
+    display: flex;
+}
+
+.profileFrame__deleteBlock:hover svg path
+{
+    fill: #497DA4;
+}
+.profileFrame__block:hover
+{
+    background: #295D94;
+}
+
+.profileFrame__addBlock:hover
+{
+    background: #295D94;
+}
+.profileFrame__addBlock:hover .plus
+{
+    fill: #295D94;
+}
+
+
+.shading
+{
+    background: rgba(102, 102, 102, 0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+
+.wind {
+    width: 500px;
+    position: fixed;
+    top: 37vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding-bottom: 55px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #f3f3f3;
+    background: #093D64;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.ChangeInfo {
+    color: #f3f3f3;
+    font-weight: 300;
+    border-bottom: 1px solid #f3f3f3;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.form-control {
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: calc(470px - 64px);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    color: #313131;
+    resize: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+
+.open .shading {display: block;}
+.open .close {display: block;}
+.open .emailSave {display: block;}
+.open .passwordSave {display: block;}
+.open .delete {display: block;}
+
+.close {
+     display: none;
+    width: 68px;
+    float: left;
+    font-weight: bold;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 130px!important;
+    margin-top: 70px;
+    text-align: center;
+    z-index: 3;
+    text-transform: uppercase;
+    border: 1px solid #F3F3F3;
+    background: #F3F3F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #093D64;
+    margin-right: 0px!important;
+}
+
+.emailSave, .passwordSave {
+     display: none;
+     width: 112px;
+     float: right;
+     font-weight: bold;
+     padding: 7px 14px;
+     text-decoration: none;
+     font-family: "Roboto";
+     font-size: 14px;
+     cursor: pointer;
+     margin-right: 128px!important;
+     margin-top: 70px;
+     text-align: center;
+     z-index: 3;
+     text-transform: uppercase;
+     background: transparent;
+     color: #F3F3F3;
+     border: 1px solid #F3F3F3;
+     box-sizing: border-box;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 5px;
+ }
+
+.delete {
+    display: none;
+    width: 112px;
+    float: right;
+    font-weight: bold;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 128px!important;
+    margin-top: 70px;
+    text-align: center;
+    z-index: 3;
+    text-transform: uppercase;
+    border: 1px solid #F3F3F3;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #F3F3F3;
+    color: #093D64;
+}
+
+.close:hover, .delete:hover
+{
+    color: #093D64!important;
+    border: 1px solid #C3C3C3;
+    background: #C3C3C3;
+}
+
+.emailSave:hover, .passwordSave:hover
+{
+    color: #C3C3C3!important;
+    border: 1px solid #C3C3C3;
+}
+
+.NewPassword
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.profileFrame__changePassword .wind
+{
+    top: 27vh!important;
+}
+
+.deleteWind
+{
+    width: 435px;
+    padding-bottom: 45px;
+}
+
+.deleteWind a
+{
+    font-weight: normal;
+    text-transform: none;
+}
+
+.deleteWind .close
+{
+    padding: 10px 0px;
+    margin-left: 90px!important;
+    width: 113px;
+}
+
+.deleteWind .delete
+{
+    padding: 10px 15px;
+    margin-right: 90px!important;
+    width: 115px;
+}
+
+.DeleteInfo
+{
+    font-size: 30px;
+    color: #f3f3f3;
+    font-weight: 300;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media(max-width: 770px)
+{
+    #profileFrame {
+        width: 88.5vw;
+    }
+    .dataField {
+        width: 76.7vw;
+    }
+    .profileFrame__block, .profileFrame__addBlock {
+        width: 75.4vw;
+    }
+    .profileFrame__deleteBlock {
+        right: calc(3vw - 13px);
+    }
+
+    .userLogin, .userPassword, .userEmail {
+        width: 59vw;
+        margin-left: calc(17.7vw - 0px);
+    }
+    .changeLink a {
+        margin-right: 5.5vw;
+    }
+}
+
+@media(max-width: 630px)
+{
+    .wind
+    {
+        width: 79vw;
+    }
+    .deleteWind {
+        width: 435px;
+    }
+    .form-control
+    {
+        width: 64.4vw;
+    }
+
+    .passwordSave, .emailSave
+    {
+        margin-right: calc(45vw - 145px)!important;
+    }
+
+    .close
+    {
+        margin-left: calc(45vw - 145px)!important;
+    }
+}
+
+@media(max-width: 550px)
+{
+    .deleteWind {
+        width: 79vw;
+    }
+
+    .deleteWind .close
+    {
+        margin-top: 30px;
+        margin-left: calc(39.4vw - 57px)!important;
+    }
+
+    .deleteWind .delete
+    {
+        margin-top: 30px;
+        margin-right: calc(39.4vw - 57px)!important;
+    }
+    .DeleteInfo {
+        font-size: 5.7vw;
+    }
+}
+
+@media(max-width: 390px)
+{
+    .ChangeInfo {
+        width: 64.4vw;
+    }
+    .passwordSave, .emailSave
+    {
+        margin-right: calc(45.5vw - 77px)!important;
+        margin-top: 30px;
+    }
+
+    .close
+    {
+        margin-top: 30px;
+        margin-left: calc(33vw - 26px)!important;
+    }
+}
+
+@media(max-width: 450px)
+{
+    .profileFrame__block, .profileFrame__addBlock {
+        width: 67.4vw;
+    }
+    .profileFrame__deleteBlock {
+        right: calc(5vw - 13px);
+    }
+}

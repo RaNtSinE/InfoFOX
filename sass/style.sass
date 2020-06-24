@@ -1,0 +1,53 @@
+@import "library"
+
+
+body
+  font-family: "Roboto", serif
+  font-weight: normal
+  font-style: normal
+  font-size: 14px
+
+  overflow-x: hidden
+
+
+*,
+*:after,
+*:before
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  color: $text-color
+
+
+small
+  font-size: 0.9em
+
+
+ul
+  list-style: none
+
+
+a
+  text-decoration: none
+  white-space: nowrap
+
+  &:hover
+    cursor: pointer
+    color: $text-color--hover
+    path
+      fill: $text-color--hover
+
+
+button
+  border: none
+  outline: none
+  background: transparent
+
+
+h1
+  line-height: 1.1em
+
+
+textarea
+  font: normal 1em "Roboto"
+  overflow: visible

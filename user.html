@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel ="stylesheet" type="text/css" href ="css/navbar.css">
+    <link rel ="stylesheet" type="text/css" href ="css/style.css">
+    <link rel ="stylesheet" type="text/css" href ="css/footer.css">
+    <link rel ="stylesheet" type="text/css" href ="css/components/header.css">
+    <link rel ="stylesheet" type="text/css" href ="css/components/feedback.css">
     <link rel ="stylesheet" type="text/css" href ="css/user.css">
 
     <script src="js/jquery-1.3.2.min.js"></script>
@@ -18,65 +21,62 @@
     <title>Document</title>
 </head>
 <body>
-<header id="head">
+<header class="header" id="head">
     <nav class="nav">
-        <a class="logo" href="./">
-            <p class="text">InfoFOX</p>
-            <div class="fox"></div>
+        <a class="nav__logo" href="./">
+            <p class="nav__logo-text">InfoFOX</p>
+            <img src="img/Fox.png" class="nav__logo-picture" alt="">
         </a>
-        <div class="nav-toggle">
-            <svg id="ham" class="hamRotate ham1" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('activee')">
+        <div class="nav__toggle">
+            <svg id="ham" class="nav__burger nav__burger--rotate" viewBox="0 0 100 100"
+                 width="60" onclick="this.classList.toggle('nav__burger--active')">
                 <path
-                        class="line top"
+                        class="nav__burger-line nav__burger--top"
                         d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
                 <path
-                        class="line middle"
+                        class="nav__burger-line nav__burger--middle"
                         d="m 30,50 h 40" />
                 <path
-                        class="line bottom"
+                        class="nav__burger-line nav__burger--bottom"
                         d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
             </svg>
         </div>
-        <div class="menu">
-            <ul id="menu">
-            </ul>
-        </div>
+        <div class="menu"></div>
     </nav>
-    <div id="letterGhost">
-        <div id="letterWindow">
-            <div class="custom-select">
-                <select name="select">
-                    <option value="0" hidden disabled selected>Тема сообщения</option>
-                    <option value="1">Вопрос по продукту</option>
-                    <option value="2">Предложение</option>
-                    <option value="3">Отзыв</option>
-                    <option value="4">Отклик на вакансию</option>
-                    <option value="5">Жалоба</option>
-                </select>
+    <div class="feedback" id="letterGhost">
+        <div class="feedback__inner" id="letterWindow">
+            <div class="feedback__select-outer">
+                <div class="feedback__select">
+                    <select name="select">
+                        <option class="feedback__select-item" value="0" hidden disabled selected>Тема сообщения</option>
+                        <option class="feedback__select-item" value="1">Вопрос по продукту</option>
+                        <option class="feedback__select-item" value="2">Предложение</option>
+                        <option class="feedback__select-item" value="3">Отзыв</option>
+                        <option class="feedback__select-item" value="4">Отклик на вакансию</option>
+                        <option class="feedback__select-item" value="5">Жалоба</option>
+                    </select>
+                </div>
+                <div id="letterClose">
+                    <a class="feedback__letter-close-btn">
+                        <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.46585 7.99996L15.6959 1.76969C16.1014 1.36443 16.1014 0.709193 15.6959 0.30394C15.2907 -0.101313 14.6354 -0.101313 14.2302 0.30394L7.99992 6.53421L1.76983 0.30394C1.36439 -0.101313 0.709336 -0.101313 0.304083 0.30394C-0.101361 0.709193 -0.101361 1.36443 0.304083 1.76969L6.53417 7.99996L0.304083 14.2302C-0.101361 14.6355 -0.101361 15.2907 0.304083 15.696C0.506045 15.8981 0.771595 15.9997 1.03696 15.9997C1.30232 15.9997 1.56768 15.8981 1.76983 15.696L7.99992 9.4657L14.2302 15.696C14.4323 15.8981 14.6977 15.9997 14.9631 15.9997C15.2284 15.9997 15.4938 15.8981 15.6959 15.696C16.1014 15.2907 16.1014 14.6355 15.6959 14.2302L9.46585 7.99996Z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div id="letterClose">
-                <a>
-                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.46585 7.99996L15.6959 1.76969C16.1014 1.36443 16.1014 0.709193 15.6959 0.30394C15.2907 -0.101313 14.6354 -0.101313 14.2302 0.30394L7.99992 6.53421L1.76983 0.30394C1.36439 -0.101313 0.709336 -0.101313 0.304083 0.30394C-0.101361 0.709193 -0.101361 1.36443 0.304083 1.76969L6.53417 7.99996L0.304083 14.2302C-0.101361 14.6355 -0.101361 15.2907 0.304083 15.696C0.506045 15.8981 0.771595 15.9997 1.03696 15.9997C1.30232 15.9997 1.56768 15.8981 1.76983 15.696L7.99992 9.4657L14.2302 15.696C14.4323 15.8981 14.6977 15.9997 14.9631 15.9997C15.2284 15.9997 15.4938 15.8981 15.6959 15.696C16.1014 15.2907 16.1014 14.6355 15.6959 14.2302L9.46585 7.99996Z" fill="white"/>
-                    </svg>
-                </a>
-            </div>
-            <p id="message">Некорректный email</p>
-            <div id="letterInputZone">
-                <input type="email" name="name" maxlength="200" id="letterAddress"
-                       placeholder="Ваш почтовый адрес">
+            <p class="feedback__error-message" id="message">Некорректный email</p>
+            <div class="feedback__form" id="letterInputZone">
+                <input type="email" name="name" maxlength="200"
+                       class="feedback__form-address" id="letterAddress" placeholder="Ваш почтовый адрес">
 
-                <textarea name="content" rows="9" id="letterContent"
-                          placeholder="Текст сообщения" ></textarea>
+                <textarea name="content" rows="9"
+                          class="feedback__form-content" id="letterContent" placeholder="Текст сообщения" ></textarea>
             </div>
-            <div id="letterSubmit">
-                <a>
-                    <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.75 0H2.25002C1.00928 0 0 1.00928 0 2.25002V15.75C0 16.9907 1.00928 18 2.25002 18H21.75C22.9907 18 24 16.9907 24 15.75V2.25002C24 1.00928 22.9907 0 21.75 0ZM21.75 1.49999C21.8519 1.49999 21.9488 1.52114 22.0374 1.55806L12 10.2576L1.9625 1.55806C2.05113 1.52119 2.14807 1.49999 2.24997 1.49999H21.75ZM21.75 16.5H2.25002C1.8362 16.5 1.49999 16.1638 1.49999 15.75V3.14282L11.5085 11.8169C11.6499 11.9392 11.825 12 12 12C12.175 12 12.3501 11.9392 12.4915 11.8169L22.5 3.14282V15.75C22.5 16.1638 22.1638 16.5 21.75 16.5Z" fill="white"/>
-                    </svg>
-
-                </a>
-            </div>
+            <a class="feedback__letter-submit" id="letterSubmit">
+                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.75 0H2.25002C1.00928 0 0 1.00928 0 2.25002V15.75C0 16.9907 1.00928 18 2.25002 18H21.75C22.9907 18 24 16.9907 24 15.75V2.25002C24 1.00928 22.9907 0 21.75 0ZM21.75 1.49999C21.8519 1.49999 21.9488 1.52114 22.0374 1.55806L12 10.2576L1.9625 1.55806C2.05113 1.52119 2.14807 1.49999 2.24997 1.49999H21.75ZM21.75 16.5H2.25002C1.8362 16.5 1.49999 16.1638 1.49999 15.75V3.14282L11.5085 11.8169C11.6499 11.9392 11.825 12 12 12C12.175 12 12.3501 11.9392 12.4915 11.8169L22.5 3.14282V15.75C22.5 16.1638 22.1638 16.5 21.75 16.5Z" fill="#093D64"/>
+                </svg>
+            </a>
         </div>
     </div>
 </header>
@@ -114,7 +114,7 @@
 </footer>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script src="js/script.js"></script>
+<script src="js/feedback.js"></script>
 <script src="js/user.js"></script>
 <script src="js/select.js"></script>
 <script src="js/loadMenu.js"></script>

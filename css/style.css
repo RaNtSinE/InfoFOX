@@ -1,0 +1,73 @@
+html
+{
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #093D64 0%, #DF8053 100%);
+  background-size:101%;
+  background-attachment: fixed;
+}
+
+/*body*/
+/*{*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background: linear-gradient(90deg, #093D64 0%, #DF8053 100%);*/
+/*  background-size:101%;*/
+/*  background-attachment: fixed;*/
+/*  font-style: normal;*/
+/*  font-weight: normal;*/
+/*}*/
+
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #313131;
+}
+
+small {
+  font-size: 0.9em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #818181;
+}
+
+a:hover path {
+  fill: #818181;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+h1 {
+  line-height: 1.1em;
+}
+
+textarea {
+  font: normal 1em "Roboto";
+  overflow: visible;
+}

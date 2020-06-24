@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel ="stylesheet" type="text/css" href ="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel ="stylesheet" type="text/css" href ="css/footer.css">
+    <link rel ="stylesheet" type="text/css" href ="css/style.css">
+    <link rel ="stylesheet" type="text/css" href ="css/login.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/header.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/feedback.css">
-    <link rel ="stylesheet" type="text/css" href ="css/news.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="js/jquery.min.js"></script>
-    <title>Document</title>
+    <title>Регистрация</title>
 </head>
 <body>
 <header class="header" id="head">
@@ -74,47 +75,44 @@
         </div>
     </div>
 </header>
+
 <div class="content">
-    <div class="news">
-        <p>Новости</p>
-    </div>
-    <div id="allNews">
-    </div>
+
+    <form action="login" method="post" id="login" name="login">
+        <input type="hidden" name="csrfmiddlewaretoken" value="Oc8l7WMPlACEWNYjqpVKa3JGxsRlcKq86JtHrUvUraU9OuImeDS0tBrIpcmXyln2">
+        <p class="authorization">Регистрация</p>
+
+        <p class="label label-1"></p>
+        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="Имя пользователя"></p>
+        <p class="label label-2"></p>
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_mail" placeholder="E-mail адрес"></p>
+        <p class="label label-2"></p>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password_1" placeholder="Пароль"></p>
+        <p class="label label-2"></p>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password_2" placeholder="Повторите пароль"></p>
+        <!--        <script src="https://www.google.com/recaptcha/api.js"></script>-->
+        <!--        <div class="form-group g-recaptcha" data-sitekey="6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL&amp;co=aHR0cDovL3ZlZ2FzYXVyLnB5dGhvbmFueXdoZXJlLmNvbTo4MA..&amp;hl=ru&amp;v=-wV2EAWEOTlEtZh4vNQtn3H1&amp;size=normal&amp;cb=aywm0divnkxf" width="304" height="78" role="presentation" name="a-itd15vngdqdh" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>-->
+
+        <input type="hidden" name="next" value="/login">
+        <ul class="errorlist">
+            <li></li>
+            <li class="import-field"></li>
+        </ul>
+        <div class="g-recaptcha" data-sitekey="6Lf8nN0UAAAAAKZvwaOktduMzSFcBQORzsz9wBFL"></div>
+    </form>
+    <!--    <input type="submit" value="Войти" id="submit" class="enter" onclick="document.forms['login'].submit();">-->
+    <input type="submit" value="СОЗДАТЬ" id="submit" class="create">
 </div>
-<footer>
-    <div class="upline"></div>
-    <div class="footerContent">
-        <p class="logoFoot">InfoFOX</p>
-        <div class="aboutUs">
-            <p>Наш главный офис:</p>
-            <p>Главный офис - Ул. Федора Лыткина д.8 кв.331</p>
-        </div>
-        <div class="social">
-            <ul>
-                <li class="soc"><p>Мы в социальных сетях</p></li>
-                <li class="firstSoc"><a href="">ВКонтакте</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Telegram</a></li>
-            </ul>
-        </div>
-        <div class="vac">
-            <ul>
-                <li class="sot"><p>Навигация</p></li>
-                <li class="vacan"><a href="news">Новости</a> </li>
-                <li class=""><a href="map">Информация</a> </li>
-                <li class=""><a href="jobs">Вакансии</a> </li>
-            </ul>
-        </div>
-    </div>
-    <div class="downline"></div>
-</footer>
+
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script src="js/allNews.js"></script>
+<script src="js/new.js"></script>
 <script src="js/loadMenu.js"></script>
 <script src="js/userStatus.js"></script>
-</body>
-<script src="js/feedback.js"></script>
-
+<script src="js/script.js"></script>
+<script src="js/register.js"></script>
 <script src="js/select.js"></script>
+</body>
+
+
 </html>

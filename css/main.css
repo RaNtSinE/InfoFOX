@@ -4,6 +4,11 @@ button:focus {
     outline: none;
 }
 
+
+.circles {
+    position: relative;
+}
+
 .ellipse
 {
     position: absolute;
@@ -676,8 +681,7 @@ button:focus {
     width: 40vw;
     height: 24vw;
 }
-.jobs .grad .info
-{
+.jobs .grad .info {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -686,12 +690,13 @@ button:focus {
     padding-left: 8vw;
     width: 17vw;
     padding-top: 3vw;
-
-    color: #FFFFFF;
+    box-sizing: content-box;
 }
+
 .jobs .grad .info p
 {
     padding-top: 3vw;
+    color: #FFFFFF;
 }
 
 .content .moree

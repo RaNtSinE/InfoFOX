@@ -204,6 +204,8 @@ function jobs()
         }
 
         jobsWindow();
+        level();
+        levelTitle();
         $(".settings a").on("click", function () {
             localStorage.setItem('job_id', this.parentNode.parentNode.getElementsByClassName('job_id')[0].value);
         })

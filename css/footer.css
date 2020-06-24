@@ -1,0 +1,386 @@
+html
+{
+    overflow-x: hidden;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #093D64 0%, #DF8053 100%);
+    background-size:101%;
+    background-attachment: fixed;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/**, *:after,*:before*/
+/*{*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*h3*/
+/*{*/
+/*    margin-bottom:1em;*/
+/*}*/
+
+/*ul*/
+/*{*/
+/*    list-style: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*a*/
+/*{*/
+/*    text-decoration: none;*/
+/*    outline: none;*/
+/*}*/
+/*p*/
+/*{*/
+/*    text-decoration: none;*/
+/*    outline: none;*/
+/*}*/
+
+footer .upline
+{
+    width: 100%;
+    height: 1px;
+    background: #3AB9DA;
+}
+footer .footerContent
+{
+    width: 100%;
+    height: 300px;
+    background: #F3F3F3;
+}
+
+footer .logoFoot
+{
+    float: left;
+    padding-top: 0px;
+
+    width: 150px;
+    height: 30px;
+    font-family: 'Stalinist One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 8vw;
+    margin-top: 50px;
+    color: #313131;
+
+}
+
+footer .aboutUs
+{
+    position: relative;
+    padding-top: 80px;
+    margin-left: 8vw;
+    top: 175px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+footer .aboutUs p
+{
+    color: #929292;
+    /*margin-top: 0.5em;*/
+}
+
+footer .logo:hover
+{
+    cursor: default;
+}
+
+footer .vac
+{
+    float:right;
+    position: relative;
+    margin-right: 10vw;
+    top: -73px;
+    text-align: center;
+}
+
+footer .vac ul li
+{
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 14px;
+
+    color: #313131;
+}
+
+footer .vac ul li p
+{
+    font-size: 20px;
+    color: #313131;
+    margin-top: 0.5em;
+}
+
+footer .vac ul li a
+{
+    color: #313131;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    color: #313131;
+}
+
+footer .vacan
+{
+    margin-top: 40px!important;
+}
+
+footer .social
+{
+    float:right;
+    position: relative;
+    margin-right: 12vw;
+    top: -69px;
+    text-align: center;
+}
+
+footer .social ul li
+{
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 14px;
+
+    color: #313131;
+}
+
+footer .social ul li p
+{
+    font-size: 20px;
+    color: #313131;
+    margin-top: 0.5em;
+}
+
+footer .social ul li a
+{
+    color: #313131;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    color: #313131;
+}
+
+footer .soc
+{
+    margin-top: 0px!important;
+
+}
+
+footer .firstSoc
+{
+    margin-top: 40px!important;
+}
+
+footer .downline
+{
+    width: 100%;
+    height: 50px;
+    background: #E3EFF2;
+}
+
+@media(max-width:1400px)
+{
+    footer .logoFoot
+    {
+        font-size: 18px;
+    }
+    footer .aboutUs
+    {
+        font-size: 13px;
+    }
+    footer .vac
+    {
+        margin-right: 10vw;
+        top: -75px;
+    }
+    footer .vac ul li
+    {
+        font-size: 13px;
+    }
+
+    footer .vac ul li p
+    {
+        font-size: 18px;
+    }
+    footer .social
+    {
+        margin-right: 12vw;
+        top: -70px;
+    }
+    footer .social ul li
+    {
+        font-size: 13px;
+    }
+
+    footer .social ul li p
+    {
+        font-size: 18px;
+    }
+}
+@media(max-width:1000px)
+{
+    footer .logoFoot
+    {
+        font-size: 16px;
+    }
+    footer .aboutUs
+    {
+        font-size: 11px;
+    }
+    footer .vac
+    {
+        margin-right: 8vw;
+        top: -75px;
+    }
+    footer .vac ul li
+    {
+        font-size: 11px;
+    }
+
+    footer .vac ul li p
+    {
+        font-size: 16px;
+    }
+    footer .social
+    {
+        margin-right: 10vw;
+        top: -69px;
+    }
+    footer .social ul li
+    {
+        font-size: 11px;
+    }
+
+    footer .social ul li p
+    {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:600px)
+{
+    footer .footerContent
+    {
+        height: 540px;
+    }
+    footer .logoFoot
+    {
+        float: none;
+        margin-top: 0px;
+        position: relative;
+        top:50px;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 127px;
+    }
+    footer .aboutUs
+    {
+        top: 380px;
+        font-size: 11px;
+    }
+    footer .vac
+    {
+        margin-left: auto;
+        margin-right: auto;
+        top: -185px;
+        float: none;
+    }
+    footer .vac ul li
+    {
+        font-size: 13px;
+    }
+
+    footer .vac ul li p
+    {
+        font-size: 18px;
+    }
+    footer .social
+    {
+        margin-left: auto;
+        top:140px;
+        margin-right: auto;
+        float: none;
+    }
+    footer .social ul li
+    {
+        font-size: 13px;
+    }
+
+    footer .social ul li p
+    {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:400px)
+{
+    footer .aboutUs
+    {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 300px)
+{
+    .logo {
+        width: 150px;
+    }
+    .logo .text {
+        height: 45px;
+        font-size: 13px;
+    }
+    .logo .fox {
+        background-repeat: no-repeat;
+        background-size: 75%;
+        margin-top: 12px;
+        margin-left: 0px;
+    }
+}
+
+
+.content
+{
+    min-height: calc(100vh - 435px);
+    overflow-x: hidden;
+}

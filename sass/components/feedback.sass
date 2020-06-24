@@ -1,0 +1,199 @@
+@import "../library"
+
+
+.feedback
+  position: absolute
+  top: calc(100vh - 363px)
+  right: 0
+
+  display: block
+
+  width: 393px
+  height: 363px
+
+  border-radius: 5px
+  +transition(400ms)
+
+  background-color: $feedback-color
+
+
+.feedback__inner
+  +display-flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  align-items: center
+
+  margin: 10px
+
+  width: 373px
+  height: 343px
+
+  .wrong
+    color: $error-color
+    opacity: 1
+
+  .done
+    color: $feedback-color
+    opacity: 1
+
+
+.feedback__select-outer
+  display: inherit
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: flex-start
+
+  width: 373px
+
+
+
+.feedback__select
+  position: relative
+
+  width: 200px
+
+  select
+    display: none
+
+
+%feedback__select--style
+  padding: 8px
+  color: $feedback-color
+  cursor: pointer
+  border: 1px solid transparent
+  border-color: $feedback-color transparent transparent transparent
+
+
+.feedback__select--selected
+  @extend %feedback__select--style
+  border-top: none
+  background-color: $white-color
+
+  &:after
+    content: ""
+
+    position: absolute
+    top: 14px
+    right: 10px
+
+    width: 0
+    height: 0
+
+    border: 10px solid transparent
+    border-right: 16px solid
+    border-left: 16px solid
+    border-color: $feedback-color transparent transparent transparent
+
+
+.feedback__select--hide
+  display: none
+
+
+.feedback__select-menu
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  z-index: 1
+  background-color: $white-color
+
+  div
+    @extend %feedback__select--style
+    padding: 3px 8px
+
+    &:hover
+      background-color: $white-color--hover
+
+
+.feedback__select-item
+  border-top: $feedback-color
+
+
+.feedback__select-item--same-as-selected
+  background-color: $white-color--hover
+
+
+.feedback__letter-close-btn
+  +display-flex
+
+  cursor: pointer
+
+  padding: 4px
+  border-radius: 5px
+  background-color: $white-color
+
+  path
+    fill: $feedback-color
+
+  &:hover
+    background-color: $white-color--hover
+    path
+      fill: $feedback-color
+
+
+.feedback__form
+  +display-flex
+  flex-direction: column
+  justify-content: space-between
+
+  width: 373px
+  height: 237px
+
+  margin-bottom: 10px
+
+  .wrong
+    border: 1px solid $error-color
+    &::placeholder
+      color: $error-color
+
+
+.feedback__error-message
+  position: relative
+  align-self: flex-start
+
+  color: $error-color
+  opacity: 0
+
+
+%feedback__form-item-style
+  padding: 8px 0 7px 10px
+
+  resize: none
+
+  border: none
+  border-radius: 5px
+
+  outline: none
+
+
+.feedback__form-address
+  @extend %feedback__form-item-style
+
+
+.feedback__form-content
+  @extend %feedback__form-item-style
+  height: 200px
+
+
+.feedback__letter-submit
+  +display-flex
+  align-items: center
+  align-self: flex-end
+  padding: 11px 8px
+
+  border-radius: 100%
+  background-color: $white-color
+
+  &:hover
+    background-color: $white-color--hover
+    path
+      fill: $feedback-color
+
+
+@media screen and (max-width: 393px)
+  .feedback
+    width: 320px
+
+
+  .feedback__inner, .feedback__select-outer, .feedback__form
+    width: 300px

@@ -1,0 +1,186 @@
+// TODO
+// Wrong using .active nesting, add independent active element
+// for each when it's used
+
+
+@import "../library"
+
+
+header
+  position: -ms-device-fixed
+  position: fixed
+  top: 0
+  z-index: 2
+
+  width: 100vw
+  height: 90px
+
+  background: #FAFAFA
+
+
+.nav
+  +display-flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+  align-self: center
+
+  height: 90px
+
+
+.nav__logo
+  +display-flex
+  align-items: center
+  margin-left: 100px
+
+  width: 190px
+  height: 50px
+
+  &:hover
+    cursor: pointer
+    .nav__logo-text
+      color: $text-color--hover
+
+
+.nav__logo-text
+  font-family: 'Stalinist One', cursive
+  font-size: 1.43em
+  margin-right: 5px
+
+
+.nav__logo-picture
+  object-fit: cover
+
+
+.nav__toggle
+  display: none
+  margin-right: 24px
+
+
+.nav__burger
+  +transition(transform 400ms)
+  +user-select(none)
+
+  path
+    stroke: $text-color
+    +transition(200ms)
+
+
+.nav__burger-line
+  fill: none
+
+  stroke-width: 5.5
+  stroke-linecap: round
+
+
+.nav__burger--active
+  +transform(rotate(45deg))
+
+  .nav__burger--top
+    stroke-dashoffset: -98px
+
+  .nav__burger--bottom
+    stroke-dashoffset: -138px
+
+
+.nav__burger--top
+  stroke-dasharray: 40, 139
+
+
+.nav__burger--bottom
+  stroke-dasharray: 40, 180
+
+
+.menu__inner
+  +display-flex
+  align-items: center
+
+
+.menu__item
+  text-align: center
+  margin-right: 40px
+
+  max-height: 25px
+
+  +transition(250ms)
+
+
+.menu__item--letter
+  margin-right: 0
+
+
+.menu__item--line
+  margin: 0 30px
+
+  max-width: 1px
+  height: 25px !important
+
+  overflow: hidden
+
+  &:after
+    content: ""
+
+    position: relative
+    top: 5px
+
+    border: 5px solid $text-color
+    +transform(rotate(90deg))
+
+
+.menu__item--profile
+  margin-right: 30px
+
+
+.menu__item--logout
+  margin-right: 130.25px
+
+
+@media screen and (max-width: 1024px)
+  .nav__logo
+    margin-left: 50px
+
+
+  .nav__toggle
+    +display-flex
+
+
+  .menu
+    position: absolute
+    top: 90px
+    right: 0
+
+    display: none
+
+    background-color: #FAFAFA
+
+    +transform(scaleY(0))
+    +transition(200ms ease-in-out)
+
+
+  .menu--active
+    +display-flex
+    +transform(scaleY(1))
+
+
+  .menu__inner
+    flex-direction: column
+    align-items: flex-start
+    padding-bottom: 10px
+
+
+  .menu__item
+    padding: 20px
+    margin-right: 0
+
+
+  .menu__item--line
+    display: none
+
+
+@media screen and (max-width: 393px)
+  .nav__logo
+    margin-left: 25px
+
+
+  .nav__toggle
+    margin-right: 10px

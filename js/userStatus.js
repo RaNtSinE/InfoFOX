@@ -61,6 +61,16 @@ function userStatus()
         }
         catch (e) {
         }
+        try {
+            loadProfile();
+        }
+        catch (e) {
+        }
+        try {
+            loadActivation();
+        }
+        catch (e) {
+        }
 
     }).fail(function () {
         isAdmin = false;
@@ -99,6 +109,16 @@ function userStatus()
         }
         try {
             changeJob();
+        }
+        catch (e) {
+        }
+        try {
+            loadProfile();
+        }
+        catch (e) {
+        }
+        try {
+            loadActivation();
         }
         catch (e) {
         }

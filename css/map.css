@@ -59,6 +59,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     height: 500px;
+    box-sizing: content-box;
 }
 
 @media(max-width:1400px)
