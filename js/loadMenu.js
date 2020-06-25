@@ -171,7 +171,7 @@ function loadMenu()
                     React.createElement(
                         'a',
                         {className: "menu__item menu__item--login", href: "login"},
-                        "Авторизация"
+                        "Вход"
                     ),
                     React.createElement(
                         'a',

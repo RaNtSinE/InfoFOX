@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c226cea2-be73-4bad-a3b3-4c50d2dd51bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/loadMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,31 +23,54 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b2871e21-8b2e-46c9-a400-bbfdb48af291" name="Default Changelist" comment="" />
+      <changelist id="c226cea2-be73-4bad-a3b3-4c50d2dd51bc" name="Default Changelist" comment="" />
       <created>1592932231446</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592932231446</updated>
       <workItem from="1592932232604" duration="2882000" />
+      <workItem from="1593084249742" duration="7559000" />
     </task>
+    <task id="LOCAL-00001" summary="Артём, ты доволен?">
+      <created>1593014564650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593014564650</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Артём, ты доволен?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Артём, ты доволен?" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="616" y="240" key="run.anything.popup" timestamp="1592932539629">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593014563357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592932539629" />
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593014563357" />
+    <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593084302203">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593084302203" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1593086341341">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593086341341" />
   </component>
 </project>
