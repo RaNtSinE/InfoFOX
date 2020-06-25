@@ -80,22 +80,22 @@
     <form action="login" method="post" id="login" name="login">
         <input type="hidden" name="csrfmiddlewaretoken" value="Oc8l7WMPlACEWNYjqpVKa3JGxsRlcKq86JtHrUvUraU9OuImeDS0tBrIpcmXyln2">
         <p class="authorization">Вход</p>
-        <ul class="errorlist">
-            <li></li>
-            <li class="import-field"></li>
-        </ul>
-        <p class="label label-1">адрес электронной почты</p>
+        <p class="label label-1"></p>
         <p><label for="id_username">Имя пользователя:</label>
-            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"></p>
-        <p class="label label-2">пароль</p>
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="Имя пользователя"></p>
+        <p class="label label-2"></p>
         <p><label for="id_password">Пароль:</label>
-            <input type="password" name="password" autocomplete="current-password" required="" id="id_password"></p>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль"></p>
         <div class="forgotten">
             <a href="forgot">Забыли пароль?</a>
             </br>
             <a href="register">Создать аккаунт</a>
         </div>
         <input type="hidden" name="next" value="/login">
+        <ul class="errorlist">
+            <li></li>
+            <li class="import-field"></li>
+        </ul>
     </form>
     <input type="submit" value="Войти" id="submit" class="enter" >
     <div class="VKlogin">

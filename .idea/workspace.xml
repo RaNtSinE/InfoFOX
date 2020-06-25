@@ -4,7 +4,8 @@
     <list default="true" id="c226cea2-be73-4bad-a3b3-4c50d2dd51bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
       <workItem from="1592932232604" duration="2882000" />
       <workItem from="1593084249742" duration="8734000" />
       <workItem from="1593118481455" duration="2946000" />
-      <workItem from="1593123118192" duration="721000" />
+      <workItem from="1593123118192" duration="1496000" />
     </task>
     <task id="LOCAL-00001" summary="Артём, ты доволен?">
       <created>1593014564650</created>
@@ -57,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593093019548</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Register update (recovery)">
+      <created>1593123905630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593123905630</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,13 +74,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Артём, ты доволен?" />
     <MESSAGE value="Register update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register update" />
+    <MESSAGE value="Register update (recovery)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register update (recovery)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593093017220">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593123903371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593093017220" />
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593123903371" />
     <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593123156062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
