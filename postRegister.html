@@ -10,8 +10,14 @@
     <link rel ="stylesheet" type="text/css" href ="css/footer.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/header.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/feedback.css">
-    <link rel ="stylesheet" type="text/css" href ="css/changeJob.css">
+    <link rel ="stylesheet" type="text/css" href ="css/login.css">
+
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+        var jQuery_1_3_2 = $.noConflict(true);
+    </script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.textarea-expander.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -75,72 +81,26 @@
     </div>
 </header>
 <div class="content">
-    <div class="changeJobTitle">
-        <p>Создание вакансии</p>
-    </div>
-    <div class="changeJob addJob">
-        <form action method="post">
-            <p>
-                <label for="id_name"></label>
-                <input type="text" name="name" maxlength="100" class="form-control" required id="id_name"
-                       placeholder="Название вакансии">
-            </p>
-            <p>
-                <label for="id_description"></label>
-                <textarea name="description" cols="40" rows="10" maxlength="150" class="form-control" required id="id_description"
-                          placeholder="Описание вакансии"></textarea>
-            </p>
-            <p>
-                <label for="id_content"></label>
-                <textarea name="content" cols="40" rows="10" class="form-control" required id="id_content"
-                          placeholder="Требования"></textarea>
-            </p>
-            <input type="hidden" name="text" value="/user1/add">
-            <div class="sav">
-                <a class="but">Сохранить</a>
-            </div>
-            <div class="can">
-                <a href="jobs" class="but">Отмена</a>
-            </div>
-        </form>
+    <div class="postRegister">
+        <div class="postRegisterHeader">
+            <p>Регистрация</p>
+        </div>
+        <div class="registerInfo">
+            <p>На введенный e-mail отправлено письмо,
+            содержащее ссылку для завершения
+            регистрации.</p>
+        </div>
+        <div class="backToMain">
+            <a href="./">Вернуться на главную</a>
+        </div>
     </div>
 </div>
-<footer>
-    <div class="upline"></div>
-    <div class="footerContent">
-        <p class="logoFoot">InfoFOX</p>
-        <div class="aboutUs">
-            <p>Наш главный офис:</p>
-            <p>Главный офис - Ул. Федора Лыткина д.8 кв.331</p>
-        </div>
-        <div class="social">
-            <ul>
-                <li class="soc"><p>Мы в социальных сетях</p></li>
-                <li class="firstSoc"><a href="">ВКонтакте</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Telegram</a></li>
-            </ul>
-        </div>
-        <div class="vac">
-            <ul>
-                <li class="sot"><p>Навигация</p></li>
-                <li class="vacan"><a href="news">Новости</a> </li>
-                <li class=""><a href="map">Информация</a> </li>
-                <li class=""><a href="jobs">Вакансии</a> </li>
-            </ul>
-        </div>
-    </div>
-    <div class="downline"></div>
-</footer>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script src="js/loadMenu.js"></script>
-<script src="js/addJob.js"></script>
-<script src="js/userStatus.js"></script>
-</body>
 <script src="js/feedback.js"></script>
-
-<script src="js/jobsWindow.js"></script>
-
 <script src="js/select.js"></script>
+<script src="js/loadMenu.js"></script>
+<script src="js/userStatus.js"></script>
+
+</body>
 </html>

@@ -35,7 +35,15 @@ function changeJob() {
             });
         });
 
-        $('.del a').on('click',function()
+            $('.close').on('click', function () {
+                this.parentNode.parentNode.parentNode.classList.remove("open");
+            });
+
+            $('.del a').on('click',function () {
+                this.parentNode.parentNode.classList.add("open");
+            });
+
+        $('.delete').on('click',function()
         {
             $.ajax({
                 type: "DELETE",

@@ -43,24 +43,20 @@ body
 /*    outline: none;*/
 /*}*/
 
-footer .upline
-{
+footer .upline {
     width: 100%;
     height: 1px;
-    background: #3AB9DA;
+    background: #3E3E3E;
 }
-footer .footerContent
-{
+footer .footerContent {
     width: 100%;
     height: 300px;
-    background: #F3F3F3;
+    background: #FFF4F0;
 }
 
-footer .logoFoot
-{
+footer .logoFoot {
     float: left;
     padding-top: 0px;
-
     width: 150px;
     height: 30px;
     font-family: 'Stalinist One', cursive;
@@ -77,8 +73,7 @@ footer .logoFoot
     text-align: center;
     margin-left: 8vw;
     margin-top: 50px;
-    color: #313131;
-
+    color: #3E3E3E;
 }
 
 footer .aboutUs
@@ -94,10 +89,8 @@ footer .aboutUs
     line-height: 18px;
 }
 
-footer .aboutUs p
-{
-    color: #929292;
-    /*margin-top: 0.5em;*/
+footer .aboutUs p {
+    color: #3e3e3e;
 }
 
 footer .logo:hover
@@ -134,10 +127,9 @@ footer .vac ul li
     color: #313131;
 }
 
-footer .vac ul li p
-{
+footer .vac ul li p {
     font-size: 20px;
-    color: #313131;
+    color: #3e3e3e;
     margin-top: 0.5em;
 }
 
@@ -184,10 +176,9 @@ footer .social ul li
     color: #313131;
 }
 
-footer .social ul li p
-{
+footer .social ul li p {
     font-size: 20px;
-    color: #313131;
+    color: #3e3e3e;
     margin-top: 0.5em;
 }
 
@@ -211,11 +202,10 @@ footer .firstSoc
     margin-top: 40px!important;
 }
 
-footer .downline
-{
+footer .downline {
     width: 100%;
     height: 50px;
-    background: #E3EFF2;
+    background: #093D64;
 }
 
 @media(max-width:1400px)
@@ -379,8 +369,3 @@ footer .downline
 }
 
 
-.content
-{
-    min-height: calc(100vh - 435px);
-    overflow-x: hidden;
-}

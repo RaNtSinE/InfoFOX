@@ -1,13 +1,13 @@
 body
 {
-    background: #FFFFFF;
+    background: #FFF4F0;
 }
 
 .news
 {
     width: 100%;
     height: 70px;
-    background: #3AB9DA;
+    background: #093D64;
     margin-bottom: 50px;
 }
 
@@ -22,13 +22,13 @@ body
 
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 20px;
     line-height: 18px;
     padding-top: 25px;
     padding-left: 6vw;
 
-    color: #FFFFFF;
+    color: #F3F3F3;
 }
 
 .new
@@ -36,15 +36,16 @@ body
     width: 43vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background: #C5EAF3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #093D64;
     border-radius: 5px;
     padding-bottom: 55px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .new .date
@@ -52,8 +53,7 @@ body
     width: 33.85vw;
     margin-left: auto;
     margin-right: auto;
-    color: #929292;
-
+    color: #FFFCF7;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
@@ -75,7 +75,7 @@ body
     line-height: 18px;
     padding-top:8px;
 
-    color: #313131;
+    color: #FFFCF7;
 }
 
 .new .newImage
@@ -104,6 +104,11 @@ body
     font-size: 15px;
     line-height: 18px;
     padding-top: 25px;
+}
+
+.new .newText p
+{
+    color: #F3F3F3;
 }
 
 @media(max-width:1400px)
@@ -212,4 +217,53 @@ body
 .exp
 {
     height: calc(100vh - 92px - 351px);
+}
+
+.addNew
+{
+    display: flex;
+}
+
+.addNew a
+{
+    height: 300px;
+    padding-bottom: 0;
+    display: flex;
+}
+.addNew svg{
+    margin: auto;
+    margin-top: auto;
+}
+
+.addNew a:hover
+{
+    background: #177AC5;
+}
+
+.addNew a:hover .circle
+{
+    fill: #F3F3F3;
+}
+
+.addNew a:hover .plusInCircle
+{
+    fill: #177AC5;
+}
+
+.settings
+{
+    position: absolute;
+    display: flex;
+    right: 0;
+    margin-right: -45px;
+}
+
+.settings:hover rect
+{
+    fill: #177AC5;
+}
+
+.settings:hover path
+{
+    fill: #F3F3F3;
 }

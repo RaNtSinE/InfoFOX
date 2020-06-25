@@ -1,3 +1,266 @@
+.circles {
+    position: relative;
+}
+
+.ellipse
+{
+    position: absolute;
+    z-index: -50;
+    border: 3px solid #DCB0A7;
+    box-sizing: border-box;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+.ellipse_1
+{
+    width: 8.5vw;
+    height: 8.5vw;
+    margin-top: 31vw;
+    left: 17vw;
+}
+.ellipse_2
+{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin-top: 5vw;
+    left: 9vw;
+}
+.ellipse_3
+{
+    width: 16vw;
+    height: 16vw;
+    margin-top: 7vw;
+    left: 28vw;
+}
+.ellipse_4
+{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin-top: 6vw;
+    left: 40.5vw;
+}
+.ellipse_5
+{
+    width: 11vw;
+    height: 11vw;
+    margin-top: 21vw;
+    left: 46.5vw;
+}
+.ellipse_6
+{
+    width: 16vw;
+    height: 16vw;
+    margin-top: 22vw;
+    left: 61vw;
+}
+.ellipse_7
+{
+    width: 11vw;
+    height: 11vw;
+    margin-top: 2vw;
+    left: 85.5vw;
+}
+.ellipse_8
+{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin-top: 38vw;
+    left: 85.5vw;
+}
+
+@media(max-width: 1050px)
+{
+    .ellipse_1
+    {
+        width: 18.5vw;
+        height: 18.5vw;
+        margin-top: 81vw;
+    }
+    .ellipse_2
+    {
+        width: 10.5vw;
+        height: 10.5vw;
+        margin-top: 11vw;
+    }
+    .ellipse_3
+    {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 34vw;
+    }
+    .ellipse_4
+    {
+        width: 10.5vw;
+        height: 10.5vw;
+        margin-top: 10vw;
+    }
+    .ellipse_5
+    {
+        width: 20vw;
+        height: 20vw;
+        margin-top: 28vw;
+    }
+    .ellipse_6
+    {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 63vw;
+    }
+    .ellipse_7
+    {
+        width: 20vw;
+        height: 20vw;
+        margin-top: 20vw;
+    }
+    .ellipse_8
+    {
+        width: 10.5vw;
+        height: 10.5vw;
+        margin-top: 88vw;
+    }
+}
+@media(max-width: 800px)
+{
+    .ellipse_1
+    {
+        margin-top: 100vw;
+    }
+    .ellipse_2
+    {
+        margin-top: 14vw;
+    }
+    .ellipse_3
+    {
+        margin-top: 48vw;
+    }
+    .ellipse_4
+    {
+        margin-top: 14vw;
+    }
+    .ellipse_5
+    {
+        margin-top: 33vw;
+    }
+    .ellipse_6
+    {
+        margin-top: 72vw;
+    }
+    .ellipse_7
+    {
+        margin-top: 22vw;
+    }
+    .ellipse_8
+    {
+        margin-top: 94vw;
+    }
+}
+@media(max-width: 600px)
+{
+    .ellipse_1
+    {
+        margin-top: 132vw;
+    }
+    .ellipse_2
+    {
+        margin-top: 20vw;
+    }
+    .ellipse_3
+    {
+        margin-top: 54vw;
+    }
+    .ellipse_4
+    {
+        margin-top: 23vw;
+    }
+    .ellipse_5
+    {
+        margin-top: 41vw;
+    }
+    .ellipse_6
+    {
+        margin-top: 114vw;
+    }
+    .ellipse_7
+    {
+        margin-top: 32vw;
+    }
+    .ellipse_8
+    {
+        margin-top: 139vw;
+    }
+}
+@media(max-width: 425px)
+{
+    .ellipse_1
+    {
+        margin-top: 183vw;
+    }
+    .ellipse_2
+    {
+        margin-top: 24vw;
+    }
+    .ellipse_3
+    {
+        margin-top: 93vw;
+    }
+    .ellipse_4
+    {
+        margin-top: 33vw;
+    }
+    .ellipse_5
+    {
+        margin-top: 49vw;
+    }
+    .ellipse_6
+    {
+        margin-top: 162vw;
+    }
+    .ellipse_7
+    {
+        margin-top: 49vw;
+    }
+    .ellipse_8
+    {
+        margin-top: 186vw;
+    }
+}
+
+@media(max-width: 320px)
+{
+    .ellipse_1
+    {
+        margin-top: 233vw;
+    }
+    .ellipse_2
+    {
+        margin-top: 37vw;
+    }
+    .ellipse_3
+    {
+        margin-top: 135vw;
+    }
+    .ellipse_4
+    {
+        margin-top: 47vw;
+    }
+    .ellipse_5
+    {
+        margin-top: 86vw;
+    }
+    .ellipse_6
+    {
+        margin-top: 217vw;
+    }
+    .ellipse_7
+    {
+        margin-top: 49vw;
+    }
+    .ellipse_8
+    {
+        margin-top: 240vw;
+    }
+}
+
 #map
 {
     height: 500px;
@@ -14,26 +277,29 @@
     font-size: 30px;
     line-height: 35px;
     white-space: pre-line;
-    margin-top: -540px;
-    margin-right: calc(46vw - 500px);
+    margin-top: -450px;
+    margin-right: calc(47vw - 500px);
     color: #3E3E3E;
     float: right;
 }
 
-.content .text
-{
+.content .info .name, .content .info .text{
+    color: #F3F3F3;
+}
+
+.content .text {
     font-size: 20px;
     line-height: 23px;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .content .image {
-    margin-left: calc(44vw - 480px);
+    margin-left: calc(43vw - 480px);
     margin-top: 100px;
 }
 
 .content .mabBlock {
-    background: #F3F3F3;
+    background: #FFF4F0;
     width: 100%;
     margin-top: 140px;
     padding-bottom: 200px;
@@ -53,13 +319,12 @@
     padding-bottom: 30px;
 }
 
-.mabBlock .color
-{
-    background: #C5EAF3;
+.mabBlock .color {
     padding-top: 50px;
     padding-bottom: 50px;
     height: 500px;
     box-sizing: content-box;
+    background: #093D64;
 }
 
 @media(max-width:1400px)
@@ -67,13 +332,13 @@
     .content .info {
         font-size: 25px;
         line-height: 30px;
-        top: 125px;
+        top: 49px;
         margin-right: calc(56vw - 474px);
     }
     .content .text {
         font-size: 15px;
-        line-height: 23px;
-        margin-top: 15px;
+        line-height: 20px;
+        margin-top: 10px;
     }
     .content .image {
         width: 424px;
@@ -106,7 +371,7 @@
         float: none;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -100px;
+        margin-top: -35px;
         padding-bottom: 70px;
     }
     .content .text {
@@ -168,7 +433,7 @@
 }
 
 .ymaps-2-1-76-zoom__scale {
-    background: rgba(58, 185, 218, 0.52)!important;
+    background: #093D64!important;
     border: none!important;
     box-shadow: none!important;
     width: 4px!important;
@@ -177,7 +442,7 @@
 
 .ymaps-2-1-76-float-button
 {
-    background: #3AB9DA!important;
+    background: #093D64!important;
     border-radius: 100%!important;
 }
 
@@ -215,13 +480,12 @@
   display: none!important;
 }
 
-.ymaps-2-1-76-balloon{
+.ymaps-2-1-76-balloon {
     top: -155px!important;
     left: 9px!important;
-    background: #FFFFFF!important;
-    border: 3px solid #00B1DF!important;
+    background: #093D64!important;
+    border: 3px solid #093D64!important;
     box-sizing: border-box!important;
-    border-radius: 5px!important;
 }
 
 #map p
@@ -233,7 +497,7 @@
     line-height: 14px;
     padding-top: 2px;
 
-    color: #3E3E3E;
+    color: #F3F3F3;
 }
 
 #map .address
@@ -250,4 +514,5 @@
 
 .ymaps-2-1-76-balloon__content {
     padding-right: 70px!important;
+    background: #093D64!important;
 }

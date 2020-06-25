@@ -79,10 +79,11 @@
     <form action="" method="post" id="forgotWindow">
         <p id="messageForg">Ошибка</p>
         <p class="back-password">Восстановление пароля</p>
-        <p class="label label-forgot">адрес электронной почты</p>
-        <input type="email" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
-        <p class="label label-info">На введённый адрес эллектронной почты будет отправлено письмо с новым паролем</p>
-        <div style="margin-top: 25px; margin-bottom: 25px"><a class="almost-enter sub">Отправить</a></div>
+        <div class="line"></div>
+        <input type="email" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" class="forgEm" id="id_username" placeholder="E-mail адрес">
+        <p class="label label-info">На введённый адрес эллектронной почты будет отправлено письмо со ссылкой на изменение пароля</p>
+        <div class="almost-enter"><a class="sub">Отправить</a></div>
+        <div class="almost-cancel"><a class="sub" href="./login">Отмена</a></div>
     </form>
 </div>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>

@@ -59,7 +59,7 @@
 			}
 
 			return true;
-		};
+		}
 
 		// initialize
 		this.each(function() {

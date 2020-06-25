@@ -14,7 +14,6 @@ function userStatus()
             "Authorization":'Token ' + localStorage.getItem("token")
         }
     }).done(function (data) {
-
         if(data.User_is_admin)
         {
             isAdmin = true;
@@ -72,8 +71,12 @@ function userStatus()
         catch (e) {
         }
 
-    }).fail(function () {
+    }).fail(function (xhr, textStatus) {
         isAdmin = false;
+        if(xhr.status === 401)
+        {
+            localStorage.setItem("token","");
+        }
         if (localStorage.getItem("token") != "" && localStorage.getItem("token") != null)
         {
             isLogin = true;

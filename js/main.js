@@ -32,7 +32,7 @@ $(document).ready(function(){
                 items:3
             }
         }
-    })
+    });
     let allDots = document.getElementsByClassName("owl-dots");
     let dots = allDots[0].getElementsByTagName("button");
     let ellipses = document.getElementsByClassName("ellipse");

@@ -26,20 +26,41 @@ function loadUser()
                 '        <p id="suc">Блоки сохранены!</p>\n' +
                 '        <p id="alert">Заполните или удалите пустые блоки</p>');
             user[0].insertAdjacentHTML('beforeend',
-                '        <a class="userInfo add">\n' +
-                '            <div class="inputZone plus">\n' +
-                '                <div>\n' +
-                '                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                '                        <path class="circle" d="M25 0C11.2144 0 0 11.2144 0 25C0 38.7856 11.2144 50 25 50C38.7856 50 50 38.7856 50 25C50 11.2144 38.7856 0 25 0Z" fill="#3AB9DA"/>\n' +
-                '                        <path d="M35.9367 27.083H27.0824V35.9373C27.0824 37.0875 26.1494 38.0205 24.9992 38.0205C23.8491 38.0205 22.916 37.0875 22.916 35.9373V27.083H14.0617C12.9116 27.083 11.9785 26.15 11.9785 24.9998C11.9785 23.8497 12.9116 22.9166 14.0617 22.9166H22.916V14.0623C22.916 12.9122 23.8491 11.9791 24.9992 11.9791C26.1494 11.9791 27.0824 12.9122 27.0824 14.0623V22.9166H35.9367C37.0869 22.9166 38.0199 23.8497 38.0199 24.9998C38.0199 26.15 37.0869 27.083 35.9367 27.083Z" fill="#FAFAFA"/>\n' +
-                '                    </svg>\n' +
-                '                </div>\n' +
-                '            </div>\n' +
-                '        </a>')
+                        '   <a class="userInfo add">\n' +
+                        '       <div class="inputZone plus">\n' +
+                        '           <div>\n' +
+                        '                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                        '                        <path class="circle" d="M25 0C11.2144 0 0 11.2144 0 25C0 38.7856 11.2144 50 25 50C38.7856 50 50 38.7856 50 25C50 11.2144 38.7856 0 25 0Z" fill="#F3F3F3"/>\n' +
+                        '                        <path class="plusInCircle" d="M35.9367 27.083H27.0824V35.9373C27.0824 37.0875 26.1494 38.0205 24.9992 38.0205C23.8491 38.0205 22.916 37.0875 22.916 35.9373V27.083H14.0617C12.9116 27.083 11.9785 26.15 11.9785 24.9998C11.9785 23.8497 12.9116 22.9166 14.0617 22.9166H22.916V14.0623C22.916 12.9122 23.8491 11.9791 24.9992 11.9791C26.1494 11.9791 27.0824 12.9122 27.0824 14.0623V22.9166H35.9367C37.0869 22.9166 38.0199 23.8497 38.0199 24.9998C38.0199 26.15 37.0869 27.083 35.9367 27.083Z" fill="#093D64"/>\n' +
+                        '                    </svg>\n' +
+                        '           </div>\n' +
+                        '       </div>\n' +
+                        '   </a>\n' +
+                '<div>' +
+                        '   <div class="shading">\n' +
+                        '       <div class="wind deleteWind backWind">\n' +
+                        '           <div class="ChangeInfo backInfo">\n' +
+                        '                   <p>Вернуться на личную страницу?</p>\n' +
+                        '           </div>\n' +
+                        '           <div class="backWarn">\n' +
+                        '                   <p>Несохраненные результаты исчезнут</p>\n' +
+                        '           </div>\n' +
+                        '           <a class="close closeBack">Отмена</a>\n' +
+                        '           <a class="backToProfile">Вернуться</a>\n' +
+                        '       </div>\n' +
+                        '   </div>\n' +
+                        '   <div class="back"><a>Назад</a></div>\n' +
+                '</div>');
             for (let i = 0; i < infoBlocks.length; i++) {
                 add[0].insertAdjacentHTML('beforebegin', '<div class="userInfo"></div>');
             }
+            $('.back a').on('click',function () {
+                this.parentNode.parentNode.classList.add("open");
+            });
 
+            $('.backToProfile').on('click', function () {
+                document.location.href = "./profile";
+            });
         }
         else
         {
@@ -67,34 +88,25 @@ function loadUser()
                             {className: "shading"},
                             React.createElement(
                                 'div',
-                                {className: "wind"},
+                                {className: "wind deleteWind"},
                                 React.createElement(
                                     'div',
-                                    {className: "right"},
+                                    {className: "ChangeInfo DeleteInfo"},
                                     React.createElement(
                                         'p',
                                         {},
-                                        'Вы уверены, что хотите удалить данный блок?'
+                                        'Удалить блок?'
                                     )
-                                ),
-                                React.createElement(
-                                    'div',
-                                    {className: "warn"},
-                                    React.createElement(
-                                        'p',
-                                        {},
-                                        'Удаленные данные будет невозможно восстановить'
-                                    )
-                                ),
-                                React.createElement(
-                                    'a',
-                                    {className: "delete"},
-                                    'Удалить'
                                 ),
                                 React.createElement(
                                     'a',
                                     {className: "close"},
                                     'Отмена'
+                                ),
+                                React.createElement(
+                                    'a',
+                                    {className: "delete"},
+                                    'Удалить'
                                 )
                             ),
                         ),
@@ -116,7 +128,7 @@ function loadUser()
                                             d: "M15.9478 9.05756C15.6244 9.05756 15.3623 9.31965 15.3623 " +
                                                 "9.64304V20.7086C15.3623 21.0318 15.6244 21.2941 15.9478 21.2941C16.2712 " +
                                                 "21.2941 16.5333 21.0318 16.5333 20.7086V9.64304C16.5333 9.31965 16.2712 " +
-                                                "9.05756 15.9478 9.05756Z", fill: "#00B1DF"
+                                                "9.05756 15.9478 9.05756Z", fill: "#093D64"
                                         },
                                     ),
                                     React.createElement(
@@ -125,7 +137,7 @@ function loadUser()
                                             d: "M9.03958 9.05756C8.7162 9.05756 8.4541 9.31965 8.4541 " +
                                                 "9.64304V20.7086C8.4541 21.0318 8.7162 21.2941 9.03958 21.2941C9.36297" +
                                                 " 21.2941 9.62506 21.0318 9.62506 20.7086V9.64304C9.62506 9.31965 9.36297" +
-                                                " 9.05756 9.03958 9.05756Z", fill: "#00B1DF"
+                                                " 9.05756 9.03958 9.05756Z", fill: "#093D64"
                                         },
                                     ),
                                     React.createElement(
@@ -150,7 +162,7 @@ function loadUser()
                                                 " 16.2411 2.31262V3.04447H8.74702V2.31262ZM4.57846 4.21543H20.4097C20.9918" +
                                                 " 4.21543 21.4636 4.68724 21.4636 5.26929C21.4636 5.85134 20.9918 6.32315" +
                                                 " 20.4097 6.32315H4.57846C3.99642 6.32315 3.5246 5.85134 3.5246 " +
-                                                "5.26929C3.5246 4.68724 3.99642 4.21543 4.57846 4.21543Z", fill: "#00B1DF"
+                                                "5.26929C3.5246 4.68724 3.99642 4.21543 4.57846 4.21543Z", fill: "#093D64"
                                         },
                                     ),
                                     React.createElement(
@@ -159,7 +171,7 @@ function loadUser()
                                             d: "M12.4947 9.05756C12.1713 9.05756 11.9092 9.31965 11.9092 " +
                                                 "9.64304V20.7086C11.9092 21.0318 12.1713 21.2941 12.4947 21.2941C12.818 " +
                                                 "21.2941 13.0801 21.0318 13.0801 20.7086V9.64304C13.0801 9.31965 12.818 " +
-                                                "9.05756 12.4947 9.05756Z", fill: "#00B1DF"
+                                                "9.05756 12.4947 9.05756Z", fill: "#093D64"
                                         },
                                     )
                                 ),

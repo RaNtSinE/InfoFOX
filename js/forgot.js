@@ -1,4 +1,4 @@
-$('.sub').on('click',function () {
+$('.almost-enter a').on('click',function () {
     let msg = document.getElementById("messageForg");
     $('#messageForg').removeClass('wrong');
     let address = document.getElementById("id_username");
@@ -28,27 +28,10 @@ $('.sub').on('click',function () {
             url: pathToServer + "/password_reset/",
             data: {email: address.value }
         }).done(function(data){
-            // alert(JSON.stringify(data));
-            if(data.email_sent === true)
-            {
-                forg = document.getElementById("forgotWindow");
-                forgPost = document.getElementById("forgotPostWindow");
-                forgPost.classList.add("forgOpen");
-                setTimeout(function () {
-                    forg.classList.add("almostHide");
-                    setTimeout(function () {
-                        forg.classList.add("hide");
-                    }, 500)
-                }, 100);
-            }
-            else
-            {
-                $('#messageForg').addClass('wrong');
-                msg.innerHTML = "Ошибка отправки, " + data.error_msg;
-            }
+            document.location.href = "./post_forgot";
         }).fail(function () {
             $('#messageForg').addClass('wrong');
-            msg.innerHTML = "Сервер недоступен";
+            msg.innerHTML = "Возможно, на эту почту не зарегестрирован аккаунт";
         });
     }
 });

@@ -10,7 +10,7 @@
     <link rel ="stylesheet" type="text/css" href ="css/footer.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/header.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/feedback.css">
-    <link rel ="stylesheet" type="text/css" href ="css/changeJob.css">
+    <link rel ="stylesheet" type="text/css" href ="css/changeNews.css">
     <script src="js/jquery.min.js"></script>
     <title>Document</title>
 </head>
@@ -75,35 +75,56 @@
     </div>
 </header>
 <div class="content">
-    <div class="changeJob">
-        <form action method="post">
-            <p>
-                <label for="id_name"></label>
-                <input type="text" name="name" maxlength="100" class="form-control" required id="id_name"
-                       placeholder="Название вакансии">
-            </p>
-            <p>
-                <label for="id_description"></label>
-                <textarea name="description" cols="40" rows="10" maxlength="150" class="form-control" required id="id_description"
-                          placeholder="Описание вакансии"></textarea>
-            </p>
-            <p>
-                <label for="id_content"></label>
-                <textarea name="content" cols="40" rows="10" class="form-control" required id="id_content"
-                          placeholder="Требования"></textarea>
-            </p>
-            <input type="hidden" name="text" value="/user1/add">
-            <div class="del">
-                <a class="but"> Удалить </a>
+    <div class="redactNewsTitle">
+        <p>Редактирование новости</p>
+    </div>
+    <div class="redactNews">
+        <div class="blockWithName">
+            <textarea name="name" rows="3" class="form-control block_name" maxlength="250"
+                      placeholder="Заголовок" autocomplete="off"></textarea>
+        </div>
+        <div class="blockWithFile">
+            <input type="file" name="file" id="file" class="input-file">
+            <label for="file" class="btn btn-tertiary js-labelFile">
+                <i class="icon fa fa-check">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path d="M29.9954 7.41424C29.979 7.24854 29.9145 7.08226 29.8011 6.94392C29.7574 6.89042 30.205 7.34153 23.1212 0.257702C22.9523 0.0888367 22.7231 0.000185577 22.4994 0.00024417C21.9664 0.00024417 3.16765 0.00024417 2.63668 0.00024417C1.18282 0.00024417 0 1.18306 0 2.63693V27.3632C0 28.817 1.18282 29.9998 2.63668 29.9998H27.3629C28.8168 29.9998 29.9996 28.817 29.9996 27.3632C29.9996 6.02442 30.002 7.48163 29.9954 7.41424ZM20.2146 1.75803V7.50014C20.2146 7.98476 19.8204 8.37904 19.3357 8.37904H18.2225V1.75803H20.2146ZM16.4647 1.75803V8.37904H8.32026C7.83564 8.37904 7.44136 7.98476 7.44136 7.50014V1.75803H16.4647ZM20.2146 18.8086H7.44136V17.6953C7.44136 17.2107 7.83564 16.8164 8.32026 16.8164H19.3357C19.8204 16.8164 20.2146 17.2107 20.2146 17.6953V18.8086ZM7.44136 28.242V20.5664H20.2146V28.242H7.44136ZM28.2419 27.3632C28.2419 27.8478 27.8476 28.242 27.363 28.242H21.9724C21.9724 27.0963 21.9724 19.0015 21.9724 17.6953C21.9724 16.2414 20.7896 15.0586 19.3357 15.0586H8.32026C6.86639 15.0586 5.68357 16.2414 5.68357 17.6953V28.242H2.63674C2.15212 28.242 1.75785 27.8478 1.75785 27.3632V2.63693C1.75785 2.1523 2.15212 1.75803 2.63674 1.75803H5.68357V7.50014C5.68357 8.95401 6.86639 10.1368 8.32026 10.1368H19.3357C20.7896 10.1368 21.9724 8.95401 21.9724 7.50014V1.75803H22.1357L28.2419 7.86424V27.3632Z" fill="#F3F3F3"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="30" height="30" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </i>
+                <div class="fileText">
+                    <span class="js-fileName">Загрузить изображение</span>
+                </div>
+            </label>
+        </div>
+        <div class="blockWithContent">
+            <textarea name="content" rows="8" class="form-control block_content" maxlength="650"
+                      placeholder="Текст новости" autocomplete="off"></textarea>
+        </div>
+        <div class="shading">
+        <div class="wind deleteWind">
+            <div class="ChangeInfo DeleteInfo">
+                <p>Удалить новость?</p>
+                </div>
+            <a class="close">Отмена</a>
+            <a class="delete">Удалить</a>
             </div>
-            <div class="sav">
-                <a class="but">Сохранить</a>
-            </div>
-            <div class="can">
-                <a class="but" href="jobs">Отмена</a>
-            </div>
-
-        </form>
+        </div>
+        <div class="btnNews deleteNews">
+            <a>Удалить</a>
+        </div>
+        <div class="btnNews cancel">
+            <a href="./news">Отмена</a>
+        </div>
+        <div class="btnNews save">
+            <a>Сохранить</a>
+        </div>
     </div>
 </div>
 <footer>
@@ -135,8 +156,8 @@
 </footer>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script src="js/changeJob.js"></script>
 <script src="js/loadMenu.js"></script>
+<script src="js/redactNews.js"></script>
 <script src="js/userStatus.js"></script>
 </body>
 <script src="js/feedback.js"></script>

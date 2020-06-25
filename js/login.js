@@ -1,7 +1,7 @@
 $('.enter').on('click',function()
 {
     let username = document.getElementById('id_username');
-    let password = document.getElementById('id_password')
+    let password = document.getElementById('id_password');
     $.ajax({
         type: "POST",
         url: pathToServer + "/auth/token/login",
@@ -27,3 +27,12 @@ $('#id_password').on('input',function () {
         .getElementsByTagName("li");
     errors[0].innerHTML = "";
 });
+
+var path = location.pathname.split('/');
+var path = path[path.length-1];
+var path = location.pathname.split('_');
+var path = path[path.length-1];
+if (path === "success")
+{
+    alert("success");
+}

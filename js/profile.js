@@ -30,11 +30,29 @@ function profile()
                 }
             }
 
-
     }
     addListeners();
 
     $('.profileFrame__addBlock').on('click', function () {
+
+        // $.ajax({
+        //     type: "POST",
+        //     url: pathToServer + "/auth/token/login",
+        //     data: {name: "Новый профиль"}
+        //     headers: {
+        //         "Authorization":'Token ' + localStorage.getItem("token")
+        //     }
+        // }).done(function (data) {
+        //     createNewProfile();
+        // }).fail(function () {
+        //     let errors = document.getElementsByClassName("errorlist")[0]
+        //         .getElementsByTagName("li");
+        //     errors[0].innerHTML = "Неправильный логин или пароль";
+        // });
+
+        createNewProfile();
+
+        function createNewProfile() {
         this.insertAdjacentHTML('beforebegin', '        <div class="profileFrame__profileBlock">\n' +
             '            <div class="shading">\n' +
             '                <div class="wind deleteWind">\n' +
@@ -62,10 +80,12 @@ function profile()
             '            </a>\n' +
             '            <a class="profileFrame__block">\n' +
             '                <div class="profileFrame__profileTitle">\n' +
-            '                    <p>Название профиля</p>\n' +
+            '                    <p>Новый профиль</p>\n' +
             '                </div>\n' +
             '            </a>\n' +
             '        </div>');
+
+        }
         addListeners();
     });
 }

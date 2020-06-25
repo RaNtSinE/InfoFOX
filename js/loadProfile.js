@@ -220,7 +220,7 @@ function loadProfile()
             '                    </defs>\n' +
             '                </svg>\n' +
             '            </a>\n' +
-            '            <a class="profileFrame__block">\n' +
+            '            <a class="profileFrame__block" href="./user">\n' +
             '            </a>\n' +
             '        </div>');
     }

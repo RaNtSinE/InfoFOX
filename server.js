@@ -3,10 +3,13 @@ var fs = require('fs');
 var path = require('path');
 
 http.createServer(function (request, response) {
-    console.log('request starting...');
+    // console.log('request starting...');
 
     let pattern = /^\.\/user_[a-z0-9_-]+$/i;
     let nohtml = /^\.\/[a-z0-9_-]+\.html$/i;
+    let activate =  /^\.\/activate\/[a-z0-9_-]+\/[a-z0-9_-]+\-[a-z0-9_-]+$/i;
+    let login = /^\.\/login\_success$/i;
+    let reset = /^\.\/password_reset\?token=[a-z0-9_-]+$/i;
 
     var filePath = '.' + request.url;
     if (filePath == './')
@@ -24,11 +27,17 @@ http.createServer(function (request, response) {
     if(filePath == './forgot')
         filePath ='./forgot.html';
     else
+    if(filePath == './post_forgot')
+        filePath ='./postForgot.html';
+    else
     if(filePath == './jobs')
         filePath ='./jobs.html';
     else
     if(filePath == './login')
         filePath ='./login.html';
+    else
+    if(filePath == './user')
+        filePath ='./user.html';
     else
     if(filePath == './map')
         filePath ='./map.html';
@@ -39,6 +48,12 @@ http.createServer(function (request, response) {
     if(filePath == './postForgot')
         filePath ='./postForgot.html';
     else
+    if(filePath == './addNews')
+        filePath ='./addNews.html';
+    else
+    if(filePath == './redactNews')
+        filePath ='./redactNews.html';
+    else
     if(filePath == './postNewPassword')
         filePath ='./postNewPassword.html';
     else
@@ -48,14 +63,37 @@ http.createServer(function (request, response) {
     if(filePath == './register')
         filePath = './register.html';
     else
+    if(filePath == './postRegister')
+        filePath = './postRegister.html';
+    else
     if(filePath.search(pattern) === 0)
     {
         filePath ='./user.html';
     }
     else
+    if(filePath.search(login) === 0)
+    {
+        filePath ='./login.html';
+    }
+    else
+    if(filePath.search(reset) === 0)
+    {
+        filePath ='./newPassword.html';
+    }
+    else
+    if(filePath == './profile')
+    {
+        filePath ='./profile.html';
+    }
+    else
     if(filePath.search(nohtml) === 0)
     {
         filePath ="./404.html"
+    }
+    else
+    if(filePath.search(activate) === 0)
+    {
+        filePath = './activate.html';
     }
     var extname = path.extname(filePath);
     var contentType = 'text/html';

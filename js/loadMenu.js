@@ -7,7 +7,7 @@ function loadMenu()
     if (isLogin)
     {
         menu.classList.add("loggined");
-        userLink = "user_" + user_id;
+        userLink = "profile";
     }
 
 

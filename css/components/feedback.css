@@ -29,6 +29,7 @@
   border-radius: 5px;
   transition: 400ms;
   margin-top: 363px;
+  box-sizing: border-box;
 }
 
 #letterGhost.almostOpen
@@ -187,6 +188,7 @@
 
 .feedback__form-content {
   height: 200px;
+  margin-top: 7px;
 }
 
 .feedback__letter-submit {

@@ -1,6 +1,6 @@
 body
 {
-    background: #F3F3F3;
+    background: #FFF4F0;
 }
 
 label
@@ -8,27 +8,37 @@ label
     display: none;
 }
 
-.changeJob
-{
-    border: 2px solid #3AB9DA;
+
+.changeJobTitle {
+    border-bottom: 1px solid #093D64;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 680px;
+    width: 70vw;
+    margin-top: 90px;
+    padding-bottom: 10px;
+}
+
+
+.changeJobTitle p{
+    color: #000000;
+    font-size: 30px;
+}
+
+.changeJob {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
-
     max-width: 800px;
     width: 80vw;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 60px;
     padding-bottom: 83px;
-
-    background: #E3EFF2;
+    background: #093D64;
 }
 
-.addJob
-{
-    background: #E3EFF2;
-}
 
 .form-control
 {
@@ -50,8 +60,12 @@ label
     outline: none;
 }
 
+.form-control::placeholder {
+    color: #313131;
+}
+
 .form-control::-webkit-input-placeholder {
-    color: #c2c2c2;
+    color: #313131;
 }
 
 input[name]
@@ -74,8 +88,7 @@ input[name]
     height: 165px;
 }
 
-.but
-{
+.but {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -85,32 +98,23 @@ input[name]
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-
     margin-top: 21px;
-    background: #3AB9DA;
-    color: #FFFFFF;
+    background: #F3F3F3;
+    color: #093D64;
     border: none;
     cursor: pointer;
-
     padding: 10px 42px;
     border-radius: 5px;
     margin-bottom: 40px;
-
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     outline: none;
 }
 
-/*.addJob .but*/
-/*{*/
-/*    background: #3AB9DA;*/
-/*    color: #FFFFFF;*/
-/*}*/
-
 .but:hover
 {
-    background: #4AC9EA;
+    background: #D3D3D3;
+    color: #093D64;
 }
 
 .del
@@ -120,10 +124,10 @@ input[name]
     margin-top: 31px;
 }
 
-.del .but
-{
-    padding: 12px 42px;
+.del .but {
+    padding: 11px 28px;
 }
+
 
 .can
 {
@@ -133,7 +137,7 @@ input[name]
 }
 
 .can .but {
-    padding: 12px 42px;
+    padding: 11px 31px;
 }
 
 .sav
@@ -144,7 +148,139 @@ input[name]
 }
 
 .sav .but {
-    padding: 12px 30px;
+    padding: 11px 20px;
+}
+
+.shading
+{
+    background: rgba(102, 102, 102, 0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+
+.wind {
+    width: 500px;
+    position: fixed;
+    top: 37vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding-bottom: 55px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #f3f3f3;
+    background: #093D64;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.DeleteInfo
+{
+    font-size: 30px;
+    font-weight: 300;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.DeleteInfo p
+{
+    color: #f3f3f3;
+}
+
+.open .shading {display: block;}
+.open .close {display: block;}
+.open .emailSave {display: block;}
+.open .passwordSave {display: block;}
+.open .delete {display: block;}
+
+.close {
+    display: none;
+    width: 68px;
+    float: left;
+    font-weight: bold;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 130px!important;
+    margin-top: 70px;
+    text-align: center;
+    z-index: 3;
+    text-transform: uppercase;
+    border: 1px solid #F3F3F3;
+    background: #F3F3F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #093D64;
+    margin-right: 0px!important;
+}
+
+.delete {
+    display: none;
+    width: 112px;
+    float: right;
+    font-weight: bold;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 128px!important;
+    margin-top: 70px;
+    text-align: center;
+    z-index: 3;
+    text-transform: uppercase;
+    border: 1px solid #F3F3F3;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #F3F3F3;
+    color: #093D64;
+}
+
+.deleteWind .close
+{
+    padding: 10px 0px;
+    margin-left: 90px!important;
+    width: 113px;
+}
+
+.deleteWind .delete
+{
+    padding: 10px 15px;
+    margin-right: 90px!important;
+    width: 115px;
+}
+
+.close:hover, .delete:hover
+{
+    color: #093D64!important;
+    border: 1px solid #C3C3C3;
+    background: #C3C3C3;
+}
+
+.emailSave:hover, .passwordSave:hover
+{
+    color: #C3C3C3!important;
+    border: 1px solid #C3C3C3;
 }
 
 @media(max-width:765px)
@@ -160,8 +296,8 @@ input[name]
         -ms-flex-align: center;
         text-align: center;
         margin-top: 5px;
-        background: #3AB9DA;
-        color: #FFFFFF;
+        background: #F3F3F3;
+        color: #093D64;
         border: none;
         cursor: pointer;
         padding: 12px 204px;
@@ -171,12 +307,11 @@ input[name]
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    .del
-    {
+    .del {
         float: none;
         margin-top: 29px;
+        margin-bottom: 29px;
     }
-
     .del .but
     {
         float:none;
@@ -190,32 +325,95 @@ input[name]
         margin-left: 60px;
     }
 
-    .sav .but
-    {
-        padding: 10px calc(39.9vw - 98px);
+    .sav .but {
+        padding: 11px calc(39.9vw - 99px);
     }
 
-    .can
-    {
+    .can {
         float: none;
-        margin-top: 15px;
+        margin-top: 28px;
         margin-bottom: 30px;
         margin-left: 60px;
     }
 
-    .can .but
-    {
-        padding: 12px calc(39.9vw - 87.5px);
+    .can .but {
+        padding: 11px calc(40vw - 89px);
+
     }
 
-    .addJob .sav
-    {
+    .addJob .sav {
         margin-top: 15px;
     }
 
 
-    .changeJob
+    .changeJob {
+        padding-bottom: 1px;
+    }
+}
+
+@media(max-width: 625px) {
+    .changeJobTitle p {
+        font-size: 4.9vw;
+    }
+}
+@media(max-width: 500px)
+{
+    .form-control {
+        width: calc(-73px + 81vw);
+        margin-left: 25px;
+    }
+    .sav {
+        margin-left: 25px;
+    }
+    .sav .but {
+        padding: 11px calc(40.8vw - 65px);
+    }
+    .can {
+        margin-left: 25px;
+    }
+    .can .but {
+        padding: 11px calc(40.8vw - 54px);
+    }
+    .del
     {
-        padding-bottom: 0px;
+        margin-left: 25px;
+    }
+    .del .but
+    {
+        padding: 11px calc(40.8vw - 57px);
+    }
+}
+
+@media(max-width: 630px) {
+    .deleteWind {
+        width: 435px;
+    }
+
+    .close
+    {
+        margin-left: calc(45vw - 145px)!important;
+    }
+}
+
+@media(max-width: 550px)
+{
+    .deleteWind {
+        width: 79vw;
+    }
+
+    .deleteWind .close
+    {
+        margin-top: 30px;
+        margin-left: calc(39.4vw - 57px)!important;
+    }
+
+    .deleteWind .delete
+    {
+        margin-top: 30px;
+        margin-right: calc(39.4vw - 57px)!important;
+    }
+    .DeleteInfo {
+        font-size: 5.7vw;
+        width: 56vw;
     }
 }

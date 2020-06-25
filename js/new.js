@@ -76,6 +76,23 @@ function mainNews(){
                 count ++;
             });
 
+        let news = document.getElementsByClassName("new");
+        for (let i = 0; i < news.length; i++)
+        {
+            let image = news[i].getElementsByClassName("newImage");
+            let img = image[0].getElementsByTagName("img");
+            if(image[0].offsetHeight > img[0].offsetHeight)
+            {
+                img[0].style.width = "auto";
+                img[0].style.height = "13vw";
+            }
+            else
+            {
+                img[0].style.width = "15vw";
+                img[0].style.height = "auto";
+            }
+        }
+
     }
 
 }

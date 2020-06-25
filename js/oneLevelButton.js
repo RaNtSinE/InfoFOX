@@ -49,7 +49,7 @@ function level()
             }
             if(i === textInput.length - 1 && (i % 2) !== 1)
             {
-                for(let j = (i / 2) * 2 - 1; j < textInput.length; j ++)
+                for(let j = (i / 2) * 2; j < textInput.length; j ++)
                 {
                     textInput[j].style.height = maxHeight + 'px';
                 }
@@ -102,7 +102,6 @@ function levelTitle()
             }
             if((i % 2) === 1)
             {
-
                 for(let j = i - 1; j < i + 1; j++)
                 {
                     textTitle[j].style.height = 'calc(' + maxHeight + 'px - 20px)';
@@ -111,7 +110,7 @@ function levelTitle()
             }
             if(i === textTitle.length - 1 && (i % 2) !== 1)
             {
-                for(let j = (i / 2) * 2 - 1; j < textTitle.length; j ++)
+                for(let j = (i / 2) * 2; j < textTitle.length; j ++)
                 {
                     textTitle[j].style.height = 'calc(' + maxHeight + 'px - 20px)';
                 }

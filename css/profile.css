@@ -129,12 +129,16 @@ body
 .profileFrame__profileTitle {
     padding-top: 12px;
     padding-left: 12px;
-    color: #f3f3f3;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 0.5px;
     padding-bottom: 40px;
+}
+
+.profileFrame__profileTitle p
+{
+    color: #f3f3f3;
 }
 
 .profileFrame__deleteBlock {

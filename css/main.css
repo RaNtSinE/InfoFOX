@@ -13,7 +13,7 @@ button:focus {
 {
     position: absolute;
     z-index: -50;
-    border: 3px solid rgba(219, 199, 246, 0.4);
+    border: 3px solid #DCB0A7;
     box-sizing: border-box;
     border-radius: 100%;
     transition: 0.2s;
@@ -192,7 +192,7 @@ button:focus {
 
 .content .first .owl-dots .owl-dot.active span,.content .first .owl-dots .owl-dot:hover span
 {
-    background: #3AB9DA;
+    background: #093D64;
 }
 
 .content .first .owl-dots .owl-dot span
@@ -232,8 +232,9 @@ button:focus {
 
 .content .first .owl-nav .owl-prev:hover
 {
-    background: url("../img/leftHover.png");
+    background: url("../img/left.png");
     background-repeat: no-repeat;
+    background-position-x: -5px;
 }
 
 .content .first .owl-nav .owl-next
@@ -249,8 +250,9 @@ button:focus {
 
 .content .first .owl-nav .owl-next:hover
 {
-    background: url("../img/rightHover.png");
+    background: url("../img/right.png");
     background-repeat: no-repeat;
+    background-position-x: 10px;
 }
 
 .first .item .image
@@ -268,8 +270,6 @@ button:focus {
     left: 200px;
     top: 5vw;
 }
-
-
 
 .first .item .text
 {
@@ -292,10 +292,18 @@ button:focus {
     width: 28vw;
 }
 
+.first .item .text .name p {
+    color: #F3F3F3;
+}
 .first .item .text .text_content
 {
     white-space: pre-line;
     width: 30vw;
+}
+
+.first .item .text .text_content p
+{
+    color: #F3F3F3;
 }
 
 .first .item .item_more
@@ -311,7 +319,7 @@ button:focus {
 
     position: relative;
     padding: 1.2vw 4vw;
-    background: #3AB9DA;
+    background: #093D64;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -322,7 +330,7 @@ button:focus {
 
 .first .item .item_more:hover
 {
-    background: #4AC9EA;
+    background: #177AC5;
 }
 
 .content .first .owl-nav
@@ -334,7 +342,7 @@ button:focus {
 
 .products
 {
-    background: #F3F3F3;
+    background: #FFF4F0;
     padding-bottom: 40px;
 }
 
@@ -345,10 +353,15 @@ button:focus {
     font-weight: normal;
     font-size: 20px;
     line-height: 23px;
-
-    padding-top: 65px;
-    padding-left: 8vw;
+    padding-top: 120px;
     color: #313131;
+    border-bottom: 1px solid #3E3E3E;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 10px;
+
 }
 
 .products .second .item .image
@@ -357,6 +370,11 @@ button:focus {
 }
 
 
+.products .owl-carousel .owl-stage
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .prodCar
 {
@@ -364,7 +382,7 @@ button:focus {
     margin-left: auto;
     margin-right: 12.5vw;
     margin-top: 25px;
-    padding-top: 35px;
+    padding-top: 10px;
     padding-bottom: 30px;
 }
 
@@ -374,7 +392,7 @@ button:focus {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 1vw;
+    font-size: 0.8vw;
     line-height: 1.1vw;
 
     color: #3E3E3E;
@@ -386,7 +404,7 @@ button:focus {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.1vw;
+    font-size: 0.8vw;
     line-height: 1.1vw;
 
     color: #3E3E3E;
@@ -395,14 +413,15 @@ button:focus {
 
 .products .second .item
 {
-    background: #FFFFFF;
+    background: #F3F3F3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     width: 19vw;
 }
 
 .products .color
 {
     width: 100%;
-    background: #00B1DF;
+    background: #FFF4F0;
     margin-top: 25px;
 }
 
@@ -433,7 +452,7 @@ button:focus {
 
 .content .second .owl-stage-outer
 {
-    width: 69vw;
+    width: 70vw;
     overflow: hidden;
 }
 
@@ -442,6 +461,7 @@ button:focus {
     background: url("../img/left2.png");
     background-repeat: no-repeat;
     background-size: 2vw;
+    background-position-x: -5px;
 }
 
 .content .second .owl-nav .owl-next
@@ -462,6 +482,7 @@ button:focus {
     background: url("../img/right2.png");
     background-repeat: no-repeat;
     background-size: 2vw;
+    background-position-x: 5px;
 }
 
 .content .where
@@ -475,7 +496,7 @@ button:focus {
     color: #FFFFFF;
 
     padding: 18px 57px;
-    background: #3AB9DA;
+    background: #093D64;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -485,7 +506,7 @@ button:focus {
 
 .content .where:hover
 {
-    background: #4AC9EA;
+    background: #177AC5;
 }
 
 .content .whereDiv
@@ -498,29 +519,31 @@ button:focus {
 
 .news
 {
-    background: #F3F3F3;
+    background: #FFF4F0;
     padding-bottom: 40px;
 }
 
 
-.news .ourNews
-{
+.news .ourNews {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 23px;
-
-    padding-top: 65px;
-    padding-left: 8vw;
-    padding-bottom: 20px;
+    padding-top: 100px;
+    padding-bottom: 10px;
     color: #313131;
+    border-bottom: 1px solid #3E3E3E;
+    text-align: center;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .news .color
 {
     width: 100%;
-    background: #C5EAF3;
+    background: #FFF4F0;
 }
 
 #blockWithNews
@@ -541,17 +564,25 @@ button:focus {
     padding: 1.5vw;
     margin: 1.8vw 2vw;
     border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .news .new .newImage img
 {
     width: 15vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
-.news .new .newImage
-{
-    height: 8.4vw;
+.news .new .newImage {
+    height: 13vw;
     overflow-y: hidden;
+    overflow-x: hidden;
+    width: 15vw;
+    position: relative;
 }
 
 .news .new .newTitle
@@ -584,7 +615,7 @@ button:focus {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     padding-top: 0.3vw;
-
+    word-break: break-word;
 }
 .news .new .newText p
 {
@@ -625,7 +656,7 @@ button:focus {
     color: #FFFFFF;
 
     padding: 18px 33px;
-    background: #3AB9DA;
+    background: #093D64;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -635,7 +666,7 @@ button:focus {
 
 .content .moreNews:hover
 {
-    background: #4AC9EA;
+    background: #177AC5;
 }
 
 .content .moreNewsDiv
@@ -648,22 +679,25 @@ button:focus {
 
 .jobs
 {
-    background: #F3F3F3;
+    background: #FFF4F0;
     padding-bottom: 170px;
 }
 
-.jobs .work
-{
+.jobs .work {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 23px;
-
     padding-top: 90px;
-    padding-left: 8vw;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     color: #313131;
+    border-bottom: 1px solid #3E3E3E;
+    width: 90vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
 }
 
 .jobs .jobsBG
@@ -676,8 +710,7 @@ button:focus {
 
 .jobs .grad
 {
-    background: -o-linear-gradient(358.59deg, #3AB9DA 59.86%, rgba(196, 196, 196, 0) 94.72%);
-    background: linear-gradient(91.41deg, #3AB9DA 59.86%, rgba(196, 196, 196, 0) 94.72%);
+    background: linear-gradient(91.42deg, rgba(9, 61, 100, 0.76) 59.86%, rgba(196, 196, 196, 0) 94.72%);
     width: 40vw;
     height: 24vw;
 }
@@ -711,7 +744,7 @@ button:focus {
     color: #FFFFFF;
 
     padding: 18px 44px;
-    background: #3AB9DA;
+    background: #093D64;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -721,7 +754,7 @@ button:focus {
 
 .content .moree:hover
 {
-    background: #4AC9EA;
+    background: #177AC5;
 }
 
 .content .moreeDiv
@@ -749,6 +782,15 @@ button:focus {
     }
 }
 
+@media(max-width: 1400px)
+{
+    .products .info .price, .products .info .text
+    {
+        font-size: 1vw;
+    }
+
+}
+
 @media(max-width: 1300px)
 {
     .first .item .text {
@@ -766,15 +808,15 @@ button:focus {
     }
 
     .first .item .image {
-        width: 40.95vw;
-        left: 31vw;
+        width: 50.95vw;
+        left: 24vw;
         top: 5vw;
     }
 
     .first .item .text {
         font-size: 2.15vw;
         margin-top: 10vw;
-        margin-left: 31vw;
+        margin-left: 24vw;
         position: inherit;
         top: 0;
         right: 0;
@@ -784,17 +826,17 @@ button:focus {
     .first .item .text .name {
         font-size: 2.7vw;
         line-height: 2.8vw;
-        width: 40.95vw;
+        width: 50.95vw;
     }
 
     .first .item .text .text_content {
-        width: 40.95vw;
+        width: 50.95vw;
     }
 
     .first .item .item_more {
         font-size: 2.9vw;
         padding: 1.2vw 3vw;
-        left: 3.5vw;
+        left: 11.5vw;
         top: 1.6vw;
     }
 
@@ -820,12 +862,12 @@ button:focus {
         padding-left: 15px;
     }
     .products .info .text {
-        font-size: 2vw;
+        font-size: 1.5vw;
         line-height: 2.1vw;
     }
 
     .products .info .price {
-        font-size: 2.1vw;
+        font-size: 1.5vw;
         line-height: 2.1vw;
         padding-bottom: 10px;
     }
@@ -874,7 +916,7 @@ button:focus {
     }
 
     .news .new .newImage {
-        height: 20.2vw;
+        height: 31.2vw;
         overflow-y: hidden;
     }
     .news .new .newTitle {
@@ -921,6 +963,14 @@ button:focus {
     .content .second .owl-nav .owl-next
     {
         right: -5vw;
+    }
+}
+
+@media(max-width: 700px)
+{
+    .products .info .price, .products .info .text
+    {
+        font-size: 2vw;
     }
 }
 
@@ -1046,7 +1096,7 @@ button:focus {
     }
 
     .news .new .newImage {
-        height: 44.3vw;
+        height: 68.3vw;
         overflow-y: hidden;
     }
     .news .new .newTitle {
