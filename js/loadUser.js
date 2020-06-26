@@ -2,20 +2,71 @@
 
 function loadUser()
 {
-    let infoBlocks = [
-        { id: 1, name: '28.03.2020', text: 'Много текста Много текста Много текста Много текстаМного текста Много ' +
-                'текста Много текста Много текста Много текста Много текста Много текста Много текста Много текста' +
-                ' Много текста Много текста Много текста Много текста Много текста Много текста Много текста Много' +
-                ' текста Много текста Много текста Много текста Много текста Много текста Много текста Много текста' +
-                ' Много текста Много текста Много текста Много текста Много текста Много текста Много текста Много' +
-                ' текста Много текста Много текста Много текста Много текстаМного текста Много текста Много текста' +
-                ' Много текста Много текста Много текста Много текста Много текста Много текста Много текста Мk'},
-        { id: 2, name: '22.03.2020', text: 'Hello'},
-        { id: 3, name: '21.03.2020', text: '#Wow'}];
+    // let infoBlocks = [
+    //     { id: 1, name: '28.03.2020', text: 'Много текста Много текста Много текста Много текстаМного текста Много ' +
+    //             'текста Много текста Много текста Много текста Много текста Много текста Много текста Много текста' +
+    //             ' Много текста Много текста Много текста Много текста Много текста Много текста Много текста Много' +
+    //             ' текста Много текста Много текста Много текста Много текста Много текста Много текста Много текста' +
+    //             ' Много текста Много текста Много текста Много текста Много текста Много текста Много текста Много' +
+    //             ' текста Много текста Много текста Много текста Много текстаМного текста Много текста Много текста' +
+    //             ' Много текста Много текста Много текста Много текста Много текста Много текста Много текста Мk'},
+    //     { id: 2, name: '22.03.2020', text: 'Hello'},
+    //     { id: 3, name: '21.03.2020', text: '#Wow'}];
 
-    loadUser();
+    function getAllUrlParams(url) {
 
-    function loadUser()
+        var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+        var obj = {};
+
+        if (queryString) {
+
+            queryString = queryString.split('#')[0];
+
+            var arr = queryString.split('&');
+
+            for (var i=0; i<arr.length; i++) {
+                var a = arr[i].split('=');
+                var paramNum = undefined;
+                var paramName = a[0].replace(/\[\d*\]/, function(v) {
+                    paramNum = v.slice(1,-1);
+                    return '';
+                });
+                var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+                paramName = paramName.toLowerCase();
+                paramValue = paramValue.toLowerCase();
+                if (obj[paramName]) {
+                    if (typeof obj[paramName] === 'string') {
+                        obj[paramName] = [obj[paramName]];
+                    }
+                    if (typeof paramNum === 'undefined') {
+                        obj[paramName].push(paramValue);
+                    }
+                    else {
+                        obj[paramName][paramNum] = paramValue;
+                    }
+                }
+                else {
+                    obj[paramName] = paramValue;
+                }
+            }
+        }
+
+        return obj;
+    }
+
+    let prof_id = getAllUrlParams().id;
+
+    $.ajax({
+        type: "GET",
+        url: pathToServer + "/api/userpage/profile/" + prof_id,
+    }).done(function (data) {
+        loadUser(data.blocks);
+    }).fail(function (xhr, textStatus) {
+        document.location.href = "./userpage";
+    });
+
+    function loadUser(data)
     {
         let add = document.getElementsByClassName('add');
         let user = document.getElementsByClassName('User');
@@ -51,7 +102,7 @@ function loadUser()
                         '   </div>\n' +
                         '   <div class="back"><a>Назад</a></div>\n' +
                 '</div>');
-            for (let i = 0; i < infoBlocks.length; i++) {
+            for (let i = 0; i < data.length; i++) {
                 add[0].insertAdjacentHTML('beforebegin', '<div class="userInfo"></div>');
             }
             $('.back a').on('click',function () {
@@ -59,7 +110,7 @@ function loadUser()
             });
 
             $('.backToProfile').on('click', function () {
-                document.location.href = "./profile";
+                document.location.href = "./userpage";
             });
         }
         else
@@ -249,11 +300,11 @@ function loadUser()
 
         document.querySelectorAll('.userInfo')
             .forEach(domContainer => {
-                if (count < infoBlocks.length)
+                if (count < data.length)
                 {
                     ReactDOM.render(
-                        React.createElement(Block, { Name: infoBlocks[count].name, Text: infoBlocks[count].text,
-                            Id: infoBlocks[count].id,  IsLogin: isLogin}),
+                        React.createElement(Block, { Name: data[count].title, Text: data[count].content,
+                            Id: data[count].id,  IsLogin: isLogin}),
                         domContainer
                     );
                 }
@@ -262,7 +313,7 @@ function loadUser()
 
         if (isLogin)
         {
-            userScript();
+            userScript(prof_id);
             jQuery_1_3_2("textarea[class*=expand]").TextAreaExpander();
             jQuery_1_3_2("input[class*=expand]").TextAreaExpander();
         }

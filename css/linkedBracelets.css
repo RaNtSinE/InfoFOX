@@ -1,0 +1,132 @@
+.content__bracelets-frame {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 680px;
+  width: 90vw;
+  border: 3px solid #093D64;
+  box-sizing: border-box;
+}
+
+.content__bracelets-frame-text {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin: 40px auto;
+  color: #000000;
+}
+
+.content__bracelets {
+  margin-bottom: -24px;
+}
+
+.content__bracelet-block {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto 24px;
+  max-width: 580px;
+  width: 80vw;
+  height: 70px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: #093D64;
+}
+
+.content__bracelet-block:hover {
+  background-color: #295D94;
+}
+
+.profileContent--flexbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 580px;
+  width: 80vw;
+  height: 70px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.profileContent__description {
+  margin-left: 40px;
+  margin-top: 25px;
+}
+
+.profileContent__description p {
+  color: #F3F3F3;
+}
+
+.profileContent__checkbox {
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.content__btns {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 40px auto;
+  width: 312px;
+}
+
+.content__btns-back {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  color: #093D64;
+  border: 1px solid #093D64;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-height: 40px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.content__btns-back:hover {
+  color: #177AC5;
+  border: 1px solid #177AC5;
+}
+
+.content__btns-cutoff {
+  background: #093D64;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #F3F3F3;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 12px 40px;
+  cursor: pointer;
+}
+
+.content__btns-cutoff:hover {
+  background-color: #295D94;
+}
+
+@media screen and (max-width: 393px) {
+  .content__btns {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .content__btns-cutoff {
+    margin-bottom: 10px;
+  }
+}

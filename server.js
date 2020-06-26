@@ -8,10 +8,15 @@ http.createServer(function (request, response) {
     let pattern = /^\.\/user_[a-z0-9_-]+$/i;
     let nohtml = /^\.\/[a-z0-9_-]+\.html$/i;
     let activate =  /^\.\/activate\/[a-z0-9_-]+\/[a-z0-9_-]+\-[a-z0-9_-]+$/i;
+    let activation = /^\.\/activation\?id=[a-z0-9_-]+$/i;
     let login = /^\.\/login\_success$/i;
     let reset = /^\.\/password_reset\?token=[a-z0-9_-]+$/i;
+    let profile = /^\.\/profile\?id=[a-z0-9_-]+$/i;
+    let bracelet = /^\.\/bracelet\?id=[a-z0-9_-]+$/i;
+    let disconnect = /^\.\/disconnect\?brac_id=[a-z0-9_-]+$/i;
 
     var filePath = '.' + request.url;
+    console.log(filePath);
     if (filePath == './')
         filePath = './index.html';
     else
@@ -71,6 +76,16 @@ http.createServer(function (request, response) {
         filePath ='./user.html';
     }
     else
+    if(filePath.search(bracelet) === 0)
+    {
+        filePath ='./redirection.html';
+    }
+    else
+    if(filePath.search(activation) === 0)
+    {
+        filePath ='./activation.html';
+    }
+    else
     if(filePath.search(login) === 0)
     {
         filePath ='./login.html';
@@ -81,7 +96,17 @@ http.createServer(function (request, response) {
         filePath ='./newPassword.html';
     }
     else
-    if(filePath == './profile')
+    if(filePath.search(disconnect) === 0)
+    {
+        filePath ='./linkedBracelets.html';
+    }
+    else
+    if(filePath.search(profile) === 0)
+    {
+        filePath ='./user.html';
+    }
+    else
+    if(filePath == './userpage')
     {
         filePath ='./profile.html';
     }

@@ -109,7 +109,6 @@ body
 .profileContent {
     padding-top: 12px;
     padding-left: 12px;
-    color: #f3f3f3;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -117,26 +116,33 @@ body
     padding-bottom: 40px;
 }
 
+.profileContent p
+{
+    color: #f3f3f3;
+}
+
 .circle
 {
-    position: absolute;
-    right: 0;
-    margin-top: -20px;
-    margin-right: 10px;
+    position: absolute!important;
+    right: 0!important;
+    margin-top: -20px!important;
+    margin-right: 10px!important;
+    top: auto!important;
 }
 
 .check
 {
-    position: absolute;
-    right: 0;
-    margin-top: -7px;
-    margin-right: 19px;
-    display: none;
+    position: absolute!important;
+    right: 0!important;
+    margin-top: -7px!important;
+    margin-right: 19px!important;
+    display: none!important;
+    top: auto!important;
 }
 
 .activated .check
 {
-    display: block;
+    display: block!important;
 }
 
 .errorMessage {

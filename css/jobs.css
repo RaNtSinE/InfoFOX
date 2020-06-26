@@ -306,19 +306,21 @@ body
     right: 0;
     left: 0;
     margin: auto;
-    background: #E3EFF2;
     padding-bottom: 20px;
-    border: 1px solid #3AB9DA;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-
     color: #3E3E3E;
+    background: #093D64;
+    border-radius: 5px;
+}
+
+.wind p {
+    color: #F3F3F3;
 }
 
 .open .shading {display: block;}
@@ -327,14 +329,14 @@ body
 .close {
     display: none;
     width: 70px;
-    color: #FFFFFF;
+    color: #093D64;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    background: #3AB9DA;
+    background: #F3F3F3;
     font-family: "Roboto";
     font-size: 15px;
-    cursor:pointer;
+    cursor: pointer;
     margin-right: auto;
     margin-left: auto;
     margin-top: 10vh;
@@ -351,9 +353,12 @@ body
 
 .vacName
 {
-    margin-left: 25px;
     margin-top: 5px;
-    width: 400px;
+    border-bottom: 1px solid #F3F3F3;
+    padding-bottom: 7px;
+    width: 410px;
+    padding-left: 5px;
+    margin-left: 20px;
 }
 
 .vacName p
@@ -499,7 +504,8 @@ body
 
 .close:hover
 {
-    background: #4AC9EA;
+    background: #C3C3C3;
+    color: #093D64;
 }
 
 .jobAdd:hover .plus div svg .circle

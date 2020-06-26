@@ -122,13 +122,13 @@ body
     background: #093D64;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    margin-bottom: 30px;
-    cursor: pointer;
+    margin-bottom: 24px;
+    cursor: default!important;
 }
 
 .profileFrame__profileTitle {
     padding-top: 12px;
-    padding-left: 12px;
+    padding-left: 6px;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -147,7 +147,7 @@ body
     right: 15px;
     cursor: pointer;
 }
-.profileFrame__addBlock {
+.profileFrame__addBlock, .profileFrame__braceletBlock {
     width: 580px;
     margin-left: auto;
     margin-right: auto;
@@ -157,6 +157,10 @@ body
     margin-bottom: 40px;
     height: 70px;
     display: flex;
+}
+
+.profileFrame__addBlock
+{
     cursor: pointer;
 }
 
@@ -170,18 +174,26 @@ body
 {
     fill: #497DA4;
 }
-.profileFrame__block:hover
-{
-    background: #295D94;
-}
 
 .profileFrame__addBlock:hover
 {
     background: #295D94;
 }
+
+.profileFrame__addBlock:hover path
+{
+    fill: #F3F3F3;
+}
+
+
 .profileFrame__addBlock:hover .plus
 {
     fill: #295D94;
+}
+
+.profileFrame__profileBlock a:hover
+{
+    color: #C3C3C3;
 }
 
 
@@ -220,7 +232,6 @@ body
 
 
 .ChangeInfo {
-    color: #f3f3f3;
     font-weight: 300;
     border-bottom: 1px solid #f3f3f3;
     width: 250px;
@@ -229,6 +240,11 @@ body
     margin-top: 55px;
     padding-bottom: 40px;
     margin-bottom: 40px;
+}
+
+.ChangeInfo p
+{
+    color: #f3f3f3;
 }
 
 .form-control {
@@ -254,7 +270,7 @@ body
 .open .close {display: block;}
 .open .emailSave {display: block;}
 .open .passwordSave {display: block;}
-.open .delete {display: block;}
+.open .delete, .open .Ok {display: block;}
 
 .close {
      display: none;
@@ -302,7 +318,7 @@ body
      border-radius: 5px;
  }
 
-.delete {
+.delete, .Ok {
     display: none;
     width: 112px;
     float: right;
@@ -325,7 +341,7 @@ body
     color: #093D64;
 }
 
-.close:hover, .delete:hover
+.close:hover, .delete:hover, .Ok:hover
 {
     color: #093D64!important;
     border: 1px solid #C3C3C3;
@@ -378,7 +394,6 @@ body
 .DeleteInfo
 {
     font-size: 30px;
-    color: #f3f3f3;
     font-weight: 300;
     width: 270px;
     margin-left: auto;
@@ -389,6 +404,271 @@ body
     padding-bottom: 0;
 }
 
+.DeleteInfo p
+{
+    color: #f3f3f3;
+}
+
+.profileFrame__bracletes{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.profileFrame__bracletes p {
+    color: #000000;
+}
+
+.profileFrame__braceletBlock {
+    position: relative;
+    height: 92px;
+    margin-bottom: 25px;
+    /*overflow-x: auto;*/
+}
+
+.settings {
+    position: absolute;
+    right: 0;
+    margin-right: -30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 25px;
+}
+
+.braceletDescription {
+    margin-top: 4px;
+    margin-left: 40px;
+    width: 535px;
+    overflow: auto;
+}
+.braceletDescription p {
+    line-height: 18px;
+    margin-top: 6px;
+}
+
+.braceletDescription span{
+    color: #F3F3F3;
+    font-size: 15px;
+}
+
+.boldDesc
+{
+    font-weight: bold;
+}
+
+.desc1
+{
+    margin-left: 42px;
+}
+
+.desc2 {
+    margin-left: 55px;
+}
+
+.desc3 {
+    margin-left: 5px;
+}
+
+.profileFrame__profileTitle input {
+    font-size: 15px;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    line-height: 18px;
+    font-weight: bold;
+    padding: 3px 10px;
+    padding-left: 4px;
+    padding-right: 25px;
+    width: 300px;
+    background: transparent;
+    color: #F3F3F3;
+    background: url("../img/pen.png");
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    background-position-x: 280px;
+}
+
+.profileFrame__profileTitle input:focus
+{
+    border: 1px solid #F3F3F3;
+    padding: 2px 9px;
+    padding-left: 3px;
+    width: 298px;
+    background: transparent;
+}
+
+.profileFrame__linkBrac {
+    position: absolute;
+    margin-top: -56px;
+    margin-left: 57px;
+}
+
+.profileFrame__linkBrac a {
+    border-bottom: 1px solid #F3F3F3;
+    color: #F3F3F3;
+    font-size: 15px;
+}
+
+.profileFrame__linkProf{
+    position: absolute;
+    right: 0;
+    margin-top: -56px;
+    margin-right: 58px;
+    font-size: 15px;
+}
+
+.profileFrame__linkProf a {
+    border-bottom: 1px solid #F3F3F3;
+    color: #F3F3F3;
+}
+
+.settings:hover svg rect
+{
+    background: #295D94;
+}
+
+.settings:hover path
+{
+    fill: #F3F3F3;
+}
+
+.error
+{
+    position: absolute;
+    left: 50%;
+    margin-right: -50px;
+    transform: translate(-50%);
+    margin-top: 71px;
+    color: red;
+    display: none;
+}
+
+.wind .wrong
+{
+    display: block;
+}
+
+.wind .done
+{
+    display: block;
+    color: #FFFFFF;
+}
+
+.profileInfo
+{
+    width: 300px;
+    border: none;
+    margin-bottom: 0;
+}
+
+.line {
+    height: 1px;
+    background: #F3F3F3;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profileWind {
+    top: 20vh;
+}
+
+.blockWithProfilesInBraclet {
+    /*height: 110px;*/
+    /*overflow: auto;*/
+    margin-top: 20px;
+}
+
+.blockWithProf::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+.blockWithProf
+{
+    overflow: auto;
+    height: 160px;
+}
+
+.prof {
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.prof p {
+    background: #F3F3F3;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #093D64;
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 80px;
+}
+
+.circle {
+    position: absolute;
+    right: 0;
+    margin-right: -35px;
+    top: 2px;
+}
+
+.profileWind .close
+{
+    color: #F3F3F3;
+    background: none;
+    font-weight: normal;
+    padding: 8px 22px;
+}
+
+
+.profileWind .close:hover
+{
+    color: #C3C3C3!important;
+}
+
+.profileWind .Ok
+{
+    font-weight: normal;
+    padding: 8px 14px;
+    width: 115px;
+}
+
+.check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -30px;
+    margin-top: 7px;
+    display: none;
+}
+
+.activated .check
+{
+    display: block;
+}
+
+.prof
+{
+    cursor: pointer;
+}
+
+.prof:hover p
+{
+    background: #C3C3C3;
+}
+
+.prof:hover circle
+{
+    fill: #C3C3C3;
+}
+
 @media(max-width: 770px)
 {
     #profileFrame {
@@ -397,7 +677,7 @@ body
     .dataField {
         width: 76.7vw;
     }
-    .profileFrame__block, .profileFrame__addBlock {
+    .profileFrame__block, .profileFrame__addBlock, .profileFrame__braceletBlock {
         width: 75.4vw;
     }
     .profileFrame__deleteBlock {
@@ -410,6 +690,20 @@ body
     }
     .changeLink a {
         margin-right: 5.5vw;
+    }
+
+    .profileFrame__linkBrac {
+        margin-left: 7.4vw;
+    }
+    .profileFrame__linkProf {
+        margin-right: 8.4vw;
+    }
+    .settings {
+        margin-right: calc(-2.8vw - 13px);
+    }
+    .braceletDescription
+    {
+        width: 67vw;
     }
 }
 
@@ -435,6 +729,20 @@ body
     .close
     {
         margin-left: calc(45vw - 145px)!important;
+    }
+
+    .profileWind .close
+    {
+        margin-left: calc(40vw - 61px)!important;
+    }
+
+    .profileWind .Ok {
+        margin-top: 20px;
+        margin-right: calc(39.4vw - 55px)!important;
+    }
+
+    .prof {
+        width: 54vw;
     }
 }
 
@@ -476,14 +784,45 @@ body
         margin-top: 30px;
         margin-left: calc(33vw - 26px)!important;
     }
+    .profileWind .close
+    {
+        margin-left: calc(40vw - 61px)!important;
+    }
 }
 
 @media(max-width: 450px)
 {
-    .profileFrame__block, .profileFrame__addBlock {
+    .profileFrame__block, .profileFrame__addBlock, .profileFrame__braceletBlock {
         width: 67.4vw;
     }
     .profileFrame__deleteBlock {
         right: calc(5vw - 13px);
+    }
+    .settings {
+        margin-right: calc(-4.8vw - 13px);
+
+    }
+    .braceletDescription
+    {
+        width: 53vw;
+    }
+    .profileFrame__block {
+        height: 120px;
+    }
+    .profileFrame__linkBrac {
+        margin-top: -95px;
+        margin-left: calc(11.2vw - -4px);
+    }
+    .profileFrame__linkProf {
+        left: 0;
+        margin-left: calc(11.2vw - -4px);
+    }
+    .profileFrame__profileTitle input {
+        width: 66vw;
+        background-position-x: calc(64vw - 12px);
+    }
+    .profileFrame__profileTitle input:focus
+    {
+        width: 64vw;
     }
 }

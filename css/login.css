@@ -133,12 +133,13 @@ label
 
 .label-1
 {
-    margin-top: 70px;
+    margin-top: 45px;
+
 }
 
 .label-2
 {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .forgotten
@@ -496,12 +497,13 @@ label
     width: 500px;
 }
 
-#id_username.wrong
+#id_username.wrong, #id_mail.wrong, #id_password.wrong, #id_password_1.wrong, #id_password_2.wrong
 {
+    border: 1px solid red;
     border: 1px solid red;
 }
 
-#id_username.wrong::placeholder
+#id_username.wrong::placeholder, #id_mail.wrong::placeholder, #id_password.wrong::placeholder, #id_password_1.wrong::placeholder, #id_password_2.wrong::placeholder
 {
     color: red;
 }
@@ -514,7 +516,7 @@ label
 .errorlist li {
     cursor: default;
     font-family: Roboto;
-    font-size: 13px;
+    font-size: 16px;
     position: absolute;
     color: #EF1010;
     width: calc(500px - 64px);

@@ -9,12 +9,12 @@ function userStatus()
 {
     $.ajax({
         type: "GET",
-        url: pathToServer + "/auth/is_admin",
+        url: pathToServer + "/auth/is_admin/",
         headers: {
             "Authorization":'Token ' + localStorage.getItem("token")
         }
     }).done(function (data) {
-        if(data.User_is_admin)
+        if(data.is_admin)
         {
             isAdmin = true;
         }

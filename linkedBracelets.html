@@ -10,9 +10,17 @@
     <link rel ="stylesheet" type="text/css" href ="css/footer.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/header.css">
     <link rel ="stylesheet" type="text/css" href ="css/components/feedback.css">
-    <link rel ="stylesheet" type="text/css" href ="css/login.css">
+    <link rel ="stylesheet" type="text/css" href ="css/activation.css">
+    <link rel ="stylesheet" type="text/css" href ="css/profile.css">
+    <link rel ="stylesheet" type="text/css" href ="css/newPassword.css">
+    <link rel ="stylesheet" type="text/css" href ="css/linkedBracelets.css">
 
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+        var jQuery_1_3_2 = $.noConflict(true);
+    </script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.textarea-expander.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -76,46 +84,56 @@
     </div>
 </header>
 <div class="content">
-
-    <form action="login" method="post" id="login" name="login">
-        <input type="hidden" name="csrfmiddlewaretoken" value="Oc8l7WMPlACEWNYjqpVKa3JGxsRlcKq86JtHrUvUraU9OuImeDS0tBrIpcmXyln2">
-        <p class="authorization">Вход</p>
-        <p class="label label-1"></p>
-        <p><label for="id_username">Имя пользователя:</label>
-            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="Имя пользователя"></p>
-        <p class="label label-2"></p>
-        <p><label for="id_password">Пароль:</label>
-            <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль"></p>
-        <div class="forgotten">
-            <a href="forgot">Забыли пароль?</a>
-            </br>
-            <a href="register">Создать аккаунт</a>
+   <div class="content__header profileHead">
+        <p class="content__header-text">Личная страница</p>
+   </div>
+    <div class="content__bracelets-frame">
+        <p class="content__bracelets-frame-text">Привязанные браслеты</p>
+        <div class="content__bracelets"></div>
+        <div class="content__btns">
+            <a class="content__btns-back" href="./userpage">Отмена</a>
+            <a class="content__btns-cutoff">Отвязать</a>
+            <div class="errorMessage">
+                <p>Необходимо выбрать хотя бы один браслет</p>
+            </div>
         </div>
-        <input type="hidden" name="next" value="/login">
-        <ul class="errorlist">
-            <li></li>
-            <li class="import-field"></li>
-        </ul>
-    </form>
-    <input type="submit" value="Войти" id="submit" class="enter" >
-    <div class="VKlogin">
-        <a>
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M28.4043 0H1.59574C0.714255 0 0 0.714574 0 1.59574V28.4043C0 29.2854 0.714255 30 1.59574 30H28.4043C29.2857 30 30 29.2854 30 28.4043V1.59574C30 0.714574 29.2857 0 28.4043 0ZM23.8944 16.8967C24.712 17.6946 25.5766 18.4459 26.311 19.3277C26.6359 19.717 26.9422 20.1191 27.1755 20.572C27.5078 21.218 27.2078 21.9274 26.6288 21.9654L23.0365 21.9645C22.109 22.0407 21.3705 21.6673 20.7476 21.0332C20.2513 20.5273 19.7898 19.9873 19.3114 19.4649C19.1164 19.2501 18.9096 19.0481 18.6651 18.8885C18.1755 18.5706 17.7501 18.6677 17.4689 19.1786C17.183 19.6988 17.1169 20.2759 17.0907 20.8557C17.0508 21.7031 16.7955 21.9243 15.9456 21.9635C14.1297 22.049 12.406 21.7733 10.8048 20.8583C9.39128 20.0509 8.29819 18.9102 7.34585 17.6202C5.48968 15.1044 4.06819 12.3428 2.7916 9.50202C2.50404 8.86213 2.71436 8.51968 3.41936 8.5066C4.59255 8.4833 5.76543 8.48649 6.93702 8.50532C7.41447 8.51266 7.73011 8.78585 7.91298 9.23585C8.54649 10.7949 9.32394 12.2783 10.2973 13.6538C10.5568 14.0199 10.8217 14.3853 11.1983 14.6441C11.6145 14.9301 11.9317 14.836 12.128 14.3716C12.2534 14.0754 12.3077 13.7607 12.3345 13.4441C12.4277 12.3603 12.4388 11.2765 12.278 10.1968C12.1774 9.52149 11.797 9.08521 11.1236 8.95755C10.7809 8.89245 10.831 8.76542 10.9976 8.56979C11.2867 8.23085 11.5593 8.02149 12.1005 8.02149L16.1604 8.02085C16.8006 8.14596 16.943 8.43319 17.0301 9.07755L17.0339 13.5881C17.0272 13.8377 17.1587 14.5768 17.6068 14.7402C17.9652 14.8586 18.203 14.5711 18.4174 14.3432C19.3902 13.3107 20.0834 12.0913 20.7048 10.8297C20.9783 10.2734 21.2154 9.69702 21.4452 9.12032C21.6153 8.69362 21.8815 8.48362 22.3628 8.49128L26.2711 8.49543C26.386 8.49543 26.5037 8.4967 26.6177 8.51553C27.2757 8.62883 27.4561 8.91223 27.2528 9.555C26.9323 10.5645 26.3084 11.4057 25.6982 12.2489C25.0462 13.1505 24.3501 14.0224 23.7029 14.9285C23.1099 15.7596 23.1578 16.177 23.8944 16.8967Z" fill="#093D64"/>
-            </svg>
-            <p>вход через вконтакте</p>
-        </a>
     </div>
-
 </div>
+<footer>
+    <div class="upline"></div>
+    <div class="footerContent">
+        <p class="logoFoot">InfoFOX</p>
+        <div class="aboutUs">
+            <p>Наш главный офис:</p>
+            <p>Главный офис - Ул. Федора Лыткина д.8 кв.331</p>
+        </div>
+        <div class="social">
+            <ul>
+                <li class="soc"><p>Мы в социальных сетях</p></li>
+                <li class="firstSoc"><a href="">ВКонтакте</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Telegram</a></li>
+            </ul>
+        </div>
+        <div class="vac">
+            <ul>
+                <li class="sot"><p>Навигация</p></li>
+                <li class="vacan"><a href="news">Новости</a> </li>
+                <li class=""><a href="map">Информация</a> </li>
+                <li class=""><a href="jobs">Вакансии</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="downline"></div>
+</footer>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script src="js/loadMenu.js"></script>
-<script src="js/userStatus.js"></script>
-</body>
 <script src="js/feedback.js"></script>
-
 <script src="js/select.js"></script>
+<script src="js/loadMenu.js"></script>
+<script src="js/linkedBracelets/bracelets.js"></script>
+<script src="js/linkedBracelets/loadBracelets.js"></script>
+<script src="js/userStatus.js"></script>
 
-<script src="js/login.js"></script>
+</body>
 </html>
