@@ -45,6 +45,11 @@ $('#id_password').on('input',function () {
     errors[0].innerHTML = "";
 });
 
+//Вход через вк
+$('.VKlogin').on('click', function () {
+
+});
+
 var path = location.pathname.split('/');
 var path = path[path.length-1];
 var path = location.pathname.split('_');
