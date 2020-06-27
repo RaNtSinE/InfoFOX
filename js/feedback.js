@@ -92,7 +92,7 @@
         else
         {
           success = 0;
-          $('#select-selected').addClass('wrong');
+          $('#feedback__select--selected').addClass('wrong');
         }
         if(address.value === "")
         {
@@ -166,16 +166,16 @@
         type: "POST",
         url: pathToServer + "/auth/token/logout/",
         headers: {
-          "Authorization":'Token ' + localStorage.getItem("token")
+          "Authorization":localStorage.getItem("token")
         }
       }).done(function (data, textStatus, xhr) {
         localStorage.token = "";
-        location.reload()
+        document.location.href = "./";
       }).fail(function (xhr, textStatus) {
         if (xhr.status === 401)
         {
           localStorage.token = "";
-          location.reload()
+          document.location.href = "./";
         }
       });
     });

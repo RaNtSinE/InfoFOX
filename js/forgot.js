@@ -12,7 +12,7 @@ $('.almost-enter a').on('click',function () {
 
         address.placeholder = "Это поле должно быть заполнено";
     }
-    let pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+    let pattern = /^[a-z0-9_.-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
     if(address.value !== ""){
         if(address.value.search(pattern) != 0){
             $('#id_username').addClass('wrong');

@@ -886,7 +886,12 @@ button:focus {
 
     .content .second .owl-nav .owl-prev:hover
     {
-        background-size: 8.4vw;
+        background-size: 4vw;
+    }
+
+    .content .first .owl-nav .owl-prev:hover
+    {
+        background-position-x: 0px;
     }
 
     .content .second .owl-nav .owl-next
@@ -899,7 +904,14 @@ button:focus {
 
     .content .second .owl-nav .owl-next:hover
     {
-        background-size: 8.4vw;
+        /*background-size: 8.4vw;*/
+        background-size: 4vw;
+        background-position-x: 0px;
+    }
+
+    .content .first .owl-nav .owl-next:hover
+    {
+        background-position-x: 5px;
     }
 
     .prodCar {
@@ -918,6 +930,7 @@ button:focus {
     .news .new .newImage {
         height: 31.2vw;
         overflow-y: hidden;
+        width: 36vw;
     }
     .news .new .newTitle {
         width: 36vw;
@@ -1060,11 +1073,13 @@ button:focus {
         width: 13.4vw;
         height: 13.4vw;
         left: -17vw;
+        background-position-x: 30px;
     }
 
     .content .second .owl-nav .owl-prev:hover
     {
-        background-size: 13.4vw;
+        background-size: 6.4vw;
+        background-position-x: 30px;
     }
 
     .content .second .owl-nav .owl-next
@@ -1077,7 +1092,7 @@ button:focus {
 
     .content .second .owl-nav .owl-next:hover
     {
-        background-size: 13.4vw;
+        background-size: 6.4vw;
     }
 
     .content .whereDiv {
@@ -1098,6 +1113,7 @@ button:focus {
     .news .new .newImage {
         height: 68.3vw;
         overflow-y: hidden;
+        width: 79.1vw;
     }
     .news .new .newTitle {
         width: 79vw;
@@ -1137,6 +1153,22 @@ button:focus {
     .content .second .owl-stage-outer {
         width: 63vw;
         overflow: hidden;
+    }
+}
+
+@media (max-width: 425px) {
+    .content .second .owl-nav .owl-prev {
+        background-position-x: 25px;
+    }
+}
+@media (max-width: 375px) {
+    .content .second .owl-nav .owl-prev {
+        background-position-x: 22px;
+    }
+}
+@media (max-width: 320px) {
+    .content .second .owl-nav .owl-prev {
+        background-position-x: 21px;
     }
 }
 

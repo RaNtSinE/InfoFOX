@@ -76,23 +76,101 @@ function mainNews(){
                 count ++;
             });
 
-        let news = document.getElementsByClassName("new");
-        for (let i = 0; i < news.length; i++)
-        {
-            let image = news[i].getElementsByClassName("newImage");
-            let img = image[0].getElementsByTagName("img");
-            if(image[0].offsetHeight > img[0].offsetHeight)
-            {
-                img[0].style.width = "auto";
-                img[0].style.height = "13vw";
-            }
-            else
-            {
-                img[0].style.width = "15vw";
-                img[0].style.height = "auto";
+        $(document).ready(function () {
+
+            $(".newImage img").load(function () {
+                let width = $('body').innerWidth();
+                if(width > 1000) {
+                    if ($(this).width() >= $(this).height()) {
+                        $(this).css("width", "auto");
+                        $(this).css("height", "13vw");
+                    }
+                    else
+                    {
+                        $(this).css("width", "15vw");
+                        $(this).css("height", "auto");
+                    }
+                }
+                else if(width <= 1000 && width > 500)
+                {
+                    if ($(this).width() >= $(this).height()) {
+                        $(this).css("width", "auto");
+                        $(this).css("height", "31vw");
+                    }
+                    else
+                    {
+                        $(this).css("width", "36vw");
+                        $(this).css("height", "auto");
+                    }
+                }
+                else
+                {
+                    if ($(this).width() >= $(this).height()) {
+                        $(this).css("width", "auto");
+                        $(this).css("height", "68vw");
+                    }
+                    else
+                    {
+                        $(this).css("width", "79vw");
+                        $(this).css("height", "auto");
+                    }
+                }
+            });
+        });
+
+
+    }
+    setInterval(function(){ imageResize()},1000);
+    function imageResize()
+    {
+        let width = $('body').innerWidth();
+        if(width > 1000) {
+            let news = document.getElementsByClassName("new");
+            for (let i = 0; i < news.length; i++) {
+                let image = news[i].getElementsByClassName("newImage");
+                let img = image[0].getElementsByTagName("img");
+
+                if (img[0].style.width === "auto") {
+                    img[0].style.width = "auto";
+                    img[0].style.height = "13vw";
+                } else {
+                    img[0].style.width = "15vw";
+                    img[0].style.height = "auto";
+                }
             }
         }
+        else if(width <= 1000 && width > 500)
+        {
+            let news = document.getElementsByClassName("new");
+            for (let i = 0; i < news.length; i++) {
+                let image = news[i].getElementsByClassName("newImage");
+                let img = image[0].getElementsByTagName("img");
 
+                if (img[0].style.width === "auto") {
+                    img[0].style.width = "auto";
+                    img[0].style.height = "31vw";
+                } else {
+                    img[0].style.width = "36vw";
+                    img[0].style.height = "auto";
+                }
+            }
+        }
+        else
+        {
+            let news = document.getElementsByClassName("new");
+            for (let i = 0; i < news.length; i++) {
+                let image = news[i].getElementsByClassName("newImage");
+                let img = image[0].getElementsByTagName("img");
+
+                if (img[0].style.width === "auto") {
+                    img[0].style.width = "auto";
+                    img[0].style.height = "68vw";
+                } else {
+                    img[0].style.width = "79vw";
+                    img[0].style.height = "auto";
+                }
+            }
+        }
     }
 
 }

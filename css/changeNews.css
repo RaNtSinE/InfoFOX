@@ -154,6 +154,26 @@ body
 }
 
 
+#submit {
+    border: none;
+    background: #F3F3F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 1px 20px;
+    color: #093D64;
+    font-size: 15px;
+}
+
+#submit:hover
+{
+    background: #C3C3C3;
+}
+
+label
+{
+    display: none;
+}
+
 .btnNews a{
     color: #093D64;
     background: #F3F3F3;
@@ -182,12 +202,12 @@ body
     margin-left: 298px;
 }
 
-.save
+.save, .saveAdd
 {
     margin-left: 28px;
 }
 
-.save a
+.save a, .saveAdd a
 {
     padding: 11px 20px;
 }
@@ -428,5 +448,9 @@ body
     }
     .redactNews {
         padding-bottom: 30px;
+    }
+    #submit
+    {
+        width: 77vw;
     }
 }

@@ -7,11 +7,15 @@ body {
   font-family: "Roboto", serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
   overflow-x: hidden;
+  font-size: 15px;
   background: linear-gradient(90deg, #093D64 0%, #DF8053 100%);
   background-size:101%;
   background-attachment: fixed;
+}
+
+center {
+  display: none!important;
 }
 
 .content

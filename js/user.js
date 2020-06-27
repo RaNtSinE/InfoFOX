@@ -132,7 +132,7 @@ function userScript(prof_id)
                                 type: "PUT",
                                 url: pathToServer + "/api/userpage/profile/" + prof_id + "/change/" + infoblock[2].value,
                                 headers: {
-                                    "Authorization":'Token ' + localStorage.getItem("token")
+                                    "Authorization":localStorage.getItem("token")
                                 },
                                 data: {title: infoblock[0].value, content: infoblock[1].value }
                             }).done(function () {
@@ -148,7 +148,7 @@ function userScript(prof_id)
                                 type: "POST",
                                 url: pathToServer + "/api/userpage/profile/" + prof_id + "/add/",
                                 headers: {
-                                    "Authorization":'Token ' + localStorage.getItem("token")
+                                    "Authorization":localStorage.getItem("token")
                                 },
                                 data: {title: infoblock[0].value, content: infoblock[1].value }
                             }).done(function (data, status, xhr) {
@@ -230,11 +230,14 @@ function userScript(prof_id)
                 check[j] = 0;
                 inputCheck[j] = 0;
 
+                let savbtn = document.getElementsByClassName('add');
+                savbtn[0].style.display = "flex";
+
                 let request = $.ajax({
                     url: pathToServer + "/api/userpage/profile/" + prof_id + "/delete/" + infoblock[2].value,
                     type: "DELETE",
                     headers: {
-                        "Authorization":'Token ' + localStorage.getItem("token")
+                        "Authorization":localStorage.getItem("token")
                     },
                 });
                 request.done(function(status) {
@@ -248,8 +251,8 @@ function userScript(prof_id)
     let newdiv = document.createElement("div");
     newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
         "        <div class=\"shading\">\n" +
-        "            <div class=\"wind\">\n" +
-        "                <div class=\"right\">\n" +
+        "            <div class=\"wind deleteWind\">\n" +
+        "                <div class=\"ChangeInfo DeleteInfo\">\n" +
         "                    <p>Удалить блок?</p>\n" +
         "                </div>\n" +
         "\n" +
@@ -285,11 +288,20 @@ function userScript(prof_id)
     var $block = $(newdiv).clone();
 
     $('.add').click(function() {
+
         $(this).before($block.clone());
         jQuery_1_3_2("textarea[class*=expand]").TextAreaExpander();
         addDeleteListeners();
         addSaveListener();
         addInputListeners();
+        let blks = document.getElementsByClassName('userInfo');
+
+        if (blks.length > 30)
+        {
+            let savbtn = document.getElementsByClassName('add');
+            savbtn[0].style.display = "none";
+            blks[29].style.marginBottom = "100px";
+        }
     });
 
 }

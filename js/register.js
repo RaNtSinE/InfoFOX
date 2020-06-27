@@ -82,9 +82,9 @@ $('.create').on('click',function()
         $.ajax({
             type: "POST",
             url: pathToServer + "/auth/users/",
-            data: {username: username.value, email:email.value, password: password.value, recaptcha: captcha}
+            data: {username: username.value, email:email.value, password: password.value, re_password: repeatPassword.value, recaptcha: captcha}
         }).done(function (data) {
-            document.location.href = "/";
+            document.location.href = "./postRegister";
         }).fail(function (data) {
             // alert(JSON.stringify(data));
             let errors = document.getElementsByClassName("errorlist")[0]
@@ -94,10 +94,10 @@ $('.create').on('click',function()
                 username.value = '';
                 username.placeholder = "Пользователь с данным именем уже существует";
             }
-            if (email !== undefined) {
+            if (username == undefined && email !== undefined) {
                 $('#id_email').addClass('wrong');
                 email.value = '';
-                email.placeholder = data.responseJSON.email;
+                email.placeholder = "Указана некорректная почта";
             }
             if (recaptcha !== undefined) {
                 let errors = document.getElementsByClassName("errorlist")[0]

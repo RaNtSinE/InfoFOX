@@ -78,13 +78,15 @@
     <div class="redactNewsTitle">
         <p>Редактирование новости</p>
     </div>
-    <div class="redactNews">
+
+    <form class="redactNews" id="redactedNews" enctype="multipart/form-data" action="#" method="post">
         <div class="blockWithName">
-            <textarea name="name" rows="3" class="form-control block_name" maxlength="250"
-                      placeholder="Заголовок" autocomplete="off"></textarea>
+            <label for="title">title</label>
+            <textarea name="title" id="title" rows="3" class="form-control block_name" maxlength="250"
+                      placeholder="Заголовок" autocomplete="off" id="id_name"></textarea>
         </div>
         <div class="blockWithFile">
-            <input type="file" name="file" id="file" class="input-file">
+            <input type="file" name="img" id="file" class="input-file">
             <label for="file" class="btn btn-tertiary js-labelFile">
                 <i class="icon fa fa-check">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +106,8 @@
             </label>
         </div>
         <div class="blockWithContent">
-            <textarea name="content" rows="8" class="form-control block_content" maxlength="650"
+            <label for="content">content</label>
+            <textarea name="content" id="content" rows="8" class="form-control block_content" maxlength="650"
                       placeholder="Текст новости" autocomplete="off"></textarea>
         </div>
         <div class="shading">
@@ -123,9 +126,9 @@
             <a href="./news">Отмена</a>
         </div>
         <div class="btnNews save">
-            <a>Сохранить</a>
+            <input type="submit" id="submit" value="Сохранить">
         </div>
-    </div>
+    </form>
 </div>
 <footer>
     <div class="upline"></div>
@@ -138,9 +141,9 @@
         <div class="social">
             <ul>
                 <li class="soc"><p>Мы в социальных сетях</p></li>
-                <li class="firstSoc"><a href="">ВКонтакте</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Telegram</a></li>
+                <li class="firstSoc"><a href="https://vk.com/public196214243">ВКонтакте</a></li>
+                <li><a href="https://www.facebook.com/groups/254087699024422/">Facebook</a></li>
+                <li><a href="https://t.me/infofox1">Telegram</a></li>
             </ul>
         </div>
         <div class="vac">

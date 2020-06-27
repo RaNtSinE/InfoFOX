@@ -3,6 +3,13 @@
 let isAdmin = "";
 let isLogin = "";
 let pathToServer = "https://coolstorybob.pythonanywhere.com";
+let token = "";
+if(localStorage.getItem("token") != "" && localStorage.getItem("token") != null)
+{
+    token = localStorage.getItem("token").split(' ');
+    token = token[0];
+}
+let isVk = "";
 
 userStatus();
 function userStatus()
@@ -11,7 +18,7 @@ function userStatus()
         type: "GET",
         url: pathToServer + "/auth/is_admin/",
         headers: {
-            "Authorization":'Token ' + localStorage.getItem("token")
+            "Authorization":localStorage.getItem("token")
         }
     }).done(function (data) {
         if(data.is_admin)
@@ -29,11 +36,22 @@ function userStatus()
         else {
             isLogin = false;
         }
-        loadMenu();
+        if (token === "Bearer")
+        {
+            isVk = true;
+        }
+        else
+        {
+            isVk = false;
+        }
         try{
             allNews();
         }
         catch (e) {
+        }
+        try {
+            loadMenu();
+        } catch (e) {
         }
         try {
             jobs();
@@ -84,11 +102,23 @@ function userStatus()
         else {
             isLogin = false;
         }
-        loadMenu();
+        if (token === "Bearer")
+        {
+            isVk = true;
+        }
+        else
+        {
+            isVk = false;
+        }
+
         try{
             allNews();
         }
         catch (e) {
+        }
+        try {
+            loadMenu();
+        } catch (e) {
         }
         try {
             jobs();

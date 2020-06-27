@@ -3,7 +3,7 @@ function changeJob() {
         type: "GET",
         url: pathToServer + "/api/vacancy/" + localStorage.job_id + "/",
         headers: {
-            "Authorization":'Token ' + localStorage.getItem("token")
+            "Authorization":localStorage.getItem("token")
         }
     }).done(function (data) {
         document.getElementById("id_name").value = data.name;
@@ -25,7 +25,7 @@ function changeJob() {
                 url: pathToServer + "/api/vacancy/change/" + localStorage.getItem("job_id"),
                 data: {name: name, description: description, content: content},
                 headers: {
-                    "Authorization":'Token ' + localStorage.getItem("token")
+                    "Authorization":localStorage.getItem("token")
                 }
             }).done(function () {
                 delete localStorage.job_id;
@@ -49,7 +49,7 @@ function changeJob() {
                 type: "DELETE",
                 url: pathToServer + "/api/vacancy/delete/" + localStorage.getItem("job_id"),
                 headers: {
-                    "Authorization":'Token ' + localStorage.getItem("token")
+                    "Authorization":localStorage.getItem("token")
                 }
             }).done(function () {
                 delete localStorage.job_id;

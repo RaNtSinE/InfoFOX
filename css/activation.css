@@ -23,6 +23,16 @@ body
     padding-left: 10px;
 }
 
+.blockWithBraclet_code .wrong
+{
+    border: 1px solid red;
+}
+
+.blockWithBraclet_code .wrong::placeholder
+{
+    color: red;
+}
+
 .activationHeader {
     width: 300px;
     border-bottom: 1px solid #093D64;

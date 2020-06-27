@@ -30,6 +30,4 @@ function activation()
             }
         }, false);
     }
-
-
 }

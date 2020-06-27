@@ -26,6 +26,12 @@
   margin-bottom: -24px;
 }
 
+
+.noBrac {
+  font-size: 18px;
+  text-align: center;
+}
+
 .content__bracelet-block {
   display: block;
   cursor: pointer;
@@ -119,6 +125,19 @@
 
 .content__btns-cutoff:hover {
   background-color: #295D94;
+  color: #F3F3F3;
+}
+
+@media screen and (max-width: 1000px) {
+  .content__btns-cutoff:hover
+  {
+    background-color: #093D64!important;
+  }
+  .content__btns-back:hover
+  {
+    color: #093D64!important;
+    border: 1px solid #093D64!important;
+  }
 }
 
 @media screen and (max-width: 393px) {

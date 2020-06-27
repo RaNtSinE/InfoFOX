@@ -171,7 +171,7 @@
         type: "POST",
         url: pathToServer + "/auth/token/logout/",
         headers: {
-          "Authorization":'Token ' + localStorage.getItem("token")
+          "Authorization":localStorage.getItem("token")
         }
       }).done(function (data, textStatus, xhr) {
         localStorage.token = "";

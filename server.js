@@ -14,7 +14,6 @@ http.createServer(function (request, response) {
     let profile = /^\.\/profile\?id=[a-z0-9_-]+$/i;
     let bracelet = /^\.\/bracelet\?id=[a-z0-9_-]+$/i;
     let disconnect = /^\.\/disconnect\?brac_id=[a-z0-9_-]+$/i;
-
     var filePath = '.' + request.url;
     console.log(filePath);
     if (filePath == './')
@@ -84,6 +83,11 @@ http.createServer(function (request, response) {
     if(filePath.search(activation) === 0)
     {
         filePath ='./activation.html';
+    }
+    else
+    if(filePath == './vk_login')
+    {
+        filePath ='./vkAuth.html';
     }
     else
     if(filePath.search(login) === 0)

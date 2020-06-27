@@ -10,7 +10,7 @@ function addJob()
             url: pathToServer + "/api/vacancy/add/",
             data: {name: name, description: description, content: content},
             headers: {
-                "Authorization":'Token ' + localStorage.getItem("token")
+                "Authorization":localStorage.getItem("token")
             }
         }).done(function () {
             document.location.href = "jobs";

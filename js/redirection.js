@@ -42,14 +42,22 @@ function getAllUrlParams(url) {
 
 let brac_id = getAllUrlParams().id;
 
-$.ajax({
-    type: "GET",
-    url: "https://coolstorybob.pythonanywhere.com/api/userpage/bracelet/" + brac_id,
-}).done(function (data) {
-    document.location.href = "./profile?id=" + data.profile_id;
-}).fail(function (xhr, textStatus) {
-    if(xhr.status == 423)
-    {
-        document.location.href = "./activation?id=" + brac_id;
-    }
-});
+    $.ajax({
+        type: "GET",
+        url: "https://coolstorybob.pythonanywhere.com/api/userpage/bracelet/" + brac_id,
+    }).done(function (data) {
+        document.location.href = "./profile?id=" + data.profile_id;
+    }).fail(function (xhr, textStatus) {
+        if(xhr.status == 423)
+        {
+            if (localStorage.getItem("token") != "" && localStorage.getItem("token") != null)
+            {
+                document.location.href = "./activation?id=" + brac_id;
+            }
+            else {
+                document.location.href = "./login";
+            }
+        }
+    });
+
+

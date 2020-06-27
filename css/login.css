@@ -79,19 +79,19 @@ label
 
 
 
-.authorization
-{
+.authorization {
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 23px;
     text-align: center;
-
     color: #313131;
     margin-top: 35px;
-
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     border-bottom: 1px solid #093d64;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .label
@@ -108,7 +108,7 @@ label
 
 #id_username, #id_mail, #id_password, #id_password_1, #id_password_2,.forgotten
 {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 #id_username, #id_mail, #id_password, #id_password_1, #id_password_2
@@ -116,7 +116,7 @@ label
     border: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: calc(500px - 64px);
+    width: calc(500px - 100px);
     padding-top: 8px;
     padding-bottom: 8px;
     margin-bottom: 0px;
@@ -169,7 +169,7 @@ label
     position: absolute;
     left: calc(50vw - 152px);
     margin-top: 42px;
-    z-index: 20;
+    z-index: 1;
 }
 
 .hide
@@ -183,7 +183,7 @@ label
     opacity: 0;
 }
 
-.enter, .create{
+.enter, .create {
     background: #093d64;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -201,12 +201,17 @@ label
     margin-top: -200px;
     z-index: 0;
     outline: none;
-
 }
 
 .create
 {
     display: none;
+    left: calc(49.3vw - 67px);
+}
+
+.enter
+{
+    margin-top: -270px;
 }
 
 .enter:hover, .create:hover
@@ -402,7 +407,10 @@ label
 
 @media(max-width: 660px)
 {
-
+    .authorization
+    {
+        width: 50vw;
+    }
     #login {
         width: 77vw;
         margin-left: calc(10vw - -5px);
@@ -426,7 +434,7 @@ label
     }
 
     #id_username, #id_mail, #id_password, #id_password_1, #id_password_2{
-        width: calc(77vw - 64px);
+        width: calc(77vw - 100px);
     }
     .sub
     {
@@ -455,13 +463,20 @@ label
     }
 }
 
+@media(max-width: 500px)
+{
+    .authorization {
+        font-size: 6vw;
+    }
+}
+
 @media(max-width: 470px)
 {
     .g-recaptcha {
         left: auto;
-        margin-left: 5vw;
+        margin-left: calc(37vw - 146px);
         overflow: hidden;
-        width: 65vw;
+        transform: scale(0.9);
     }
 
     .label-forgot-info {
@@ -661,7 +676,7 @@ ul li.import-field{
 
 .VKlogin {
     position: absolute;
-    margin-top: -117px;
+    margin-top: -190px;
     display: flex;
     margin-left: calc(49.4vw - 125px);
 }

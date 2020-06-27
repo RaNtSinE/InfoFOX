@@ -1,18 +1,101 @@
 function loadActivation()
 {
+    function getAllUrlParams(url) {
+
+        var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+        var obj = {};
+
+        if (queryString) {
+
+            queryString = queryString.split('#')[0];
+
+            var arr = queryString.split('&');
+
+            for (var i=0; i<arr.length; i++) {
+                var a = arr[i].split('=');
+                var paramNum = undefined;
+                var paramName = a[0].replace(/\[\d*\]/, function(v) {
+                    paramNum = v.slice(1,-1);
+                    return '';
+                });
+                var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+                paramName = paramName.toLowerCase();
+                paramValue = paramValue.toLowerCase();
+                if (obj[paramName]) {
+                    if (typeof obj[paramName] === 'string') {
+                        obj[paramName] = [obj[paramName]];
+                    }
+                    if (typeof paramNum === 'undefined') {
+                        obj[paramName].push(paramValue);
+                    }
+                    else {
+                        obj[paramName][paramNum] = paramValue;
+                    }
+                }
+                else {
+                    obj[paramName] = paramValue;
+                }
+            }
+        }
+
+        return obj;
+    }
+
+    let brac_id = getAllUrlParams().id;
+
     $.ajax({
         type: "GET",
-        url: pathToServer + "/api/userpage/",
+        url: pathToServer + "/api/userpage/bracelet/" + brac_id,
         headers: {
-            "Authorization":'Token ' + localStorage.getItem("token")
-        }
+            "Authorization":localStorage.getItem("token")
+        },
     }).done(function (data) {
-        loadProf(data)
+        document.location.href = "./404";
     }).fail(function (xhr, textStatus) {
+        $.ajax({
+            type: "GET",
+            url: pathToServer + "/api/userpage/",
+            headers: {
+                "Authorization":localStorage.getItem("token")
+            }
+        }).done(function (data) {
+            loadProf(data)
+        }).fail(function (xhr, textStatus) {
+            document.location.href = "./login";
+        });
     });
 
     function loadProf(data)
     {
+
+        let content = document.getElementsByClassName('content')[0];
+        content.insertAdjacentHTML('afterbegin', '    <div class="activation">\n' +
+            '        <div class="activationHeader">\n' +
+            '            <p>Активация браслета</p>\n' +
+            '        </div>\n' +
+            '        <div class="activationInfo">\n' +
+            '            <p>Отсканированный браслет еще не\n' +
+            '            активирован. Введите код браслета для его активации.</p>\n' +
+            '        </div>\n' +
+            '        <div class="blockWithBraclet_code">\n' +
+            '            <input type="text" name="name" maxlength="65" class="form-control braclet_code"\n' +
+            '                   placeholder="Введите код браслета" autocomplete="off">\n' +
+            '        </div>\n' +
+            '        <div class="changeProfileText">\n' +
+            '            <p>Выберите профиль, к которому хотите\n' +
+            '            прикрепить браслет</p>\n' +
+            '        </div>\n' +
+            '        <div class="profiles">\n' +
+            '        </div>\n' +
+            '        <div class="activationButton">\n' +
+            '            <a>Активировать</a>\n' +
+            '        </div>\n' +
+            '        <div class="errorMessage">\n' +
+            '            <p>Неверный код браслета</p>\n' +
+            '        </div>\n' +
+            '    </div>');
+
         if (data.length <= 0)
         {
             let info = document.getElementsByClassName('changeProfileText');
@@ -82,49 +165,7 @@ function loadActivation()
             });
 
 
-        function getAllUrlParams(url) {
 
-            var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
-
-            var obj = {};
-
-            if (queryString) {
-
-                queryString = queryString.split('#')[0];
-
-                var arr = queryString.split('&');
-
-                for (var i=0; i<arr.length; i++) {
-                    var a = arr[i].split('=');
-                    var paramNum = undefined;
-                    var paramName = a[0].replace(/\[\d*\]/, function(v) {
-                        paramNum = v.slice(1,-1);
-                        return '';
-                    });
-                    var paramValue = typeof(a[1])==='undefined' ? true : a[1];
-                    paramName = paramName.toLowerCase();
-                    paramValue = paramValue.toLowerCase();
-                    if (obj[paramName]) {
-                        if (typeof obj[paramName] === 'string') {
-                            obj[paramName] = [obj[paramName]];
-                        }
-                        if (typeof paramNum === 'undefined') {
-                            obj[paramName].push(paramValue);
-                        }
-                        else {
-                            obj[paramName][paramNum] = paramValue;
-                        }
-                    }
-                    else {
-                        obj[paramName] = paramValue;
-                    }
-                }
-            }
-
-            return obj;
-        }
-
-        let brac_id = getAllUrlParams().id;
 
         let profs = document.getElementsByClassName("profileBlock");
         let profileCheck = [];
@@ -162,19 +203,61 @@ function loadActivation()
         }
 
         $('.activationButton').on('click', function () {
+            let code = document.getElementsByClassName('braclet_code')[0];
+            if(code.value.length < 1)
+            {
+                code.classList.add("wrong");
+                code.placeholder = "Это поле должно быть заполненным";
+            }
+            else
+            if(data.length > 0)
+            {
+                code = code.value;
+                let active = document.getElementsByClassName('activated')[0];
+                profile_id = active.getElementsByClassName('profile_id')[0].value;
+                $.ajax({
+                    type: "POST",
+                    url: pathToServer + "/api/userpage/bracelet/registration/" + brac_id,
+                    headers: {
+                        "Authorization":localStorage.getItem("token")
+                    },
+                    data: {unique_code: code, profile_id: profile_id}
+                }).done(function (data) {
+                    document.location.href = "./userpage";
+                }).fail(function (xhr, textStatus) {
+                });
+            }
+            else
+            {
+                code = code.value;
+                $.ajax({
+                    type: "POST",
+                    url: pathToServer + "/api/userpage/add/",
+                    headers: {
+                        "Authorization":localStorage.getItem("token")
+                    },
+                    data: {name: "Название профиля"}
+                }).done(function (data) {
+                    $.ajax({
+                        type: "POST",
+                        url: pathToServer + "/api/userpage/bracelet/registration/" + brac_id,
+                        headers: {
+                            "Authorization":localStorage.getItem("token")
+                        },
+                        data: {unique_code: code, profile_id: data.profile_id}
+                    }).done(function (data) {
+                        document.location.href = "./userpage";
+                    }).fail(function (xhr, textStatus) {
+                    });
+                }).fail(function (xhr, textStatus) {
+                });
 
-            let code = document.getElementsByClassName('braclet_code')[0].value;
-            $.ajax({
-                type: "POST",
-                url: pathToServer + "/api/userpage/bracelet/registration/" + brac_id,
-                headers: {
-                    "Authorization":'Token ' + localStorage.getItem("token")
-                },
-                data: {unique_code: code, profile_id: profile_id}
-            }).done(function (data) {
-                document.location.href = "./userpage";
-            }).fail(function (xhr, textStatus) {
-            });
+            }
+        });
+        $(".braclet_code").on("input", function () {
+            let code = document.getElementsByClassName('braclet_code')[0];
+                code.classList.remove("wrong");
+                code.placeholder = "Введите код браслета";
         });
     }
 }

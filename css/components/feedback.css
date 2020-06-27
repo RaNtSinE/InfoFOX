@@ -35,6 +35,7 @@
 #letterGhost.almostOpen
 {
   display: block;
+  font-size: 15px;
 }
 
 #letterWindow.letterOpen
@@ -43,8 +44,8 @@
 }
 
 .feedback__inner .wrong {
-  color: #FF0000;
   opacity: 1;
+  border: 1px solid red;
 }
 
 .feedback__inner .done {
@@ -94,6 +95,11 @@
   border-left: 16px solid;
   border-color: #093D64 transparent transparent transparent;
 }
+
+#letterAddress {
+  font-size: 15px;
+}
+
 
 .feedback__select--hide {
   display: none;
@@ -222,5 +228,19 @@
     width: 320px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+
+  .feedback__select-outer {
+    width: 300px;
+  }
+
+  .feedback__form-address, .feedback__form-content {
+    width: 290px;
+    margin-left: 10px;
+  }
+
+  .feedback__letter-submit {
+    margin-right: 0;
   }
 }

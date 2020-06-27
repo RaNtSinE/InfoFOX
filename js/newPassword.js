@@ -1,10 +1,54 @@
-$('.enter').on('click',function () {
+
+function getAllUrlParams(url) {
+
+    var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+    var obj = {};
+
+    if (queryString) {
+
+        queryString = queryString.split('#')[0];
+
+        var arr = queryString.split('&');
+
+        for (var i=0; i<arr.length; i++) {
+            var a = arr[i].split('=');
+            var paramNum = undefined;
+            var paramName = a[0].replace(/\[\d*\]/, function(v) {
+                paramNum = v.slice(1,-1);
+                return '';
+            });
+            var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+            paramName = paramName.toLowerCase();
+            paramValue = paramValue.toLowerCase();
+            if (obj[paramName]) {
+                if (typeof obj[paramName] === 'string') {
+                    obj[paramName] = [obj[paramName]];
+                }
+                if (typeof paramNum === 'undefined') {
+                    obj[paramName].push(paramValue);
+                }
+                else {
+                    obj[paramName][paramNum] = paramValue;
+                }
+            }
+            else {
+                obj[paramName] = paramValue;
+            }
+        }
+    }
+
+    return obj;
+}
+
+let restoreToken =getAllUrlParams().token;
+
+$('.sub').on('click',function () {
     let newPassword = document.getElementById("id_password_1");
     let confirmNewPassword = document.getElementById("id_password_2");
 
     // Получение токена из GET
     let regexp = /_ijt=([^&]+)/i;
-    let token = "";
     if(!!regexp.exec(document.location.search))
         token = regexp.exec(document.location.search)[1];
 
@@ -28,14 +72,14 @@ $('.enter').on('click',function () {
     }
 
     // FIXME: Проверка на корректность и длину
-    let pattern = /^[a-z0-9_-]+[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+    let pattern = /^[a-z0-9_-]+$/i;
     if(newPassword.value != ""){
         if(newPassword.value.search(pattern) !== 0){
             $('#id_password_1').addClass('wrong');
             newPassword.placeholder = "Некорректный пароль";
             success = 0;
         }
-        if(newPassword.value.size() <= 6){
+        if(newPassword.value.length <= 6){
             $('#id_password_1').addClass('wrong');
             newPassword.placeholder = "Короткий пароль";
             success = 0;
@@ -45,7 +89,9 @@ $('.enter').on('click',function () {
     // FIXME: Проверка на совпадение паролей
     if(newPassword.value != confirmNewPassword.value){
         success = 0;
-        newPassword.placeholder = "Пароли не совпадают";
+        let message = document.getElementsByClassName('messagePas')[0];
+        message.classList.add("wrongMes");
+        message.innerHTML = "Пароли не совпадают";
     }
 
     if(success === 1)
@@ -53,30 +99,12 @@ $('.enter').on('click',function () {
         $.ajax({
             type: "POST",
             url: pathToServer + "/password_reset/confirm/",
-            data: {password: newPassword.value, token: token}
+            data: {password: newPassword.value, token: restoreToken}
         }).done(function(data){
-            // TODO
-            // Я не понимаю, что тута)
-            if(data.email_sent === true)
-            {
-                forg = document.getElementById("forgotWindow");
-                forgPost = document.getElementById("forgotPostWindow");
-                forgPost.classList.add("forgOpen");
-                setTimeout(function () {
-                    forg.classList.add("almostHide");
-                    setTimeout(function () {
-                        forg.classList.add("hide");
-                    }, 500)
-                }, 100);
-            }
-            else
-            {
-                $('#messageForg').addClass('wrong');
-                msg.innerHTML = "Ошибка отправки, " + data.error_msg;
-            }
+            document.location.href = "./";
         }).fail(function () {
             $('#messageForg').addClass('wrong');
-            msg.innerHTML = "Сервер недоступен";
+            // msg.innerHTML = "Сервер недоступен";
         });
     }
 });
