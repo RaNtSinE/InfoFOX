@@ -95,7 +95,7 @@
   border-color: #093D64 transparent transparent transparent;
 }
 
-#letterAddress {
+#letterAddress, #letterContent, .feedback__select {
   font-size: 15px;
 }
 

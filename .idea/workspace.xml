@@ -41,7 +41,7 @@
       <workItem from="1593084249742" duration="8734000" />
       <workItem from="1593118481455" duration="2946000" />
       <workItem from="1593123118192" duration="9948000" />
-      <workItem from="1593249897033" duration="2295000" />
+      <workItem from="1593249897033" duration="4885000" />
     </task>
     <task id="LOCAL-00001" summary="Артём, ты доволен?">
       <created>1593014564650</created>
@@ -85,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593250866534</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bug 24 fixed">
+      <created>1593252241792</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593252241792</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,13 +105,14 @@
     <MESSAGE value="Login page update" />
     <MESSAGE value="Bug 30 fixed" />
     <MESSAGE value="Bug 40 fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug 40 fixed" />
+    <MESSAGE value="Bug 24 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug 24 fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593250864765">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593252239653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593250864765" />
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593252239653" />
     <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593250853245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
