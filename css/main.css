@@ -342,7 +342,7 @@ button:focus {
 
 .products
 {
-    background: #FFF4F0;
+    background: #DDDDDD;
     padding-bottom: 40px;
 }
 
@@ -421,7 +421,7 @@ button:focus {
 .products .color
 {
     width: 100%;
-    background: #FFF4F0;
+    background: #DDDDDD;
     margin-top: 25px;
 }
 
@@ -519,7 +519,7 @@ button:focus {
 
 .news
 {
-    background: #FFF4F0;
+    background: #DDDDDD;
     padding-bottom: 40px;
 }
 
@@ -543,7 +543,7 @@ button:focus {
 .news .color
 {
     width: 100%;
-    background: #FFF4F0;
+    background: #DDDDDD;
 }
 
 #blockWithNews
@@ -679,7 +679,7 @@ button:focus {
 
 .jobs
 {
-    background: #FFF4F0;
+    background: #DDDDDD;
     padding-bottom: 170px;
 }
 

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c226cea2-be73-4bad-a3b3-4c50d2dd51bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/loadProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593252241792</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bug 51 fixed">
+      <created>1593295510230</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593295510230</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,13 +112,14 @@
     <MESSAGE value="Bug 30 fixed" />
     <MESSAGE value="Bug 40 fixed" />
     <MESSAGE value="Bug 24 fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug 24 fixed" />
+    <MESSAGE value="Bug 51 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug 51 fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593252239653">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593295508247">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593252239653" />
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593295508247" />
     <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593250853245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
