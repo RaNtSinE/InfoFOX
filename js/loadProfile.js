@@ -661,15 +661,17 @@ function loadProfile() {
                 $('.emailSave').on('click', function () {
                     success = 1;
                     let email = this.parentNode.getElementsByClassName('emailChangeEmail')[0].value;
-                    let msg = this.parentNode.getElementsByClassName('error')[0];
+                    let msg = this.parentNode.getElementsByClassName('emailChangeEmail')[0];
                     let pattern = /^[a-z0-9_.-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
                     if (email.length < 1) {
                         msg.classList.add('wrong');
-                        msg.innerHTML = "Все поля должны быть заполнены";
+                        msg.value = "";
+                        msg.placeholder = "Поле должно быть заполнено";
                         success = 0;
                     } else if (email.search(pattern) !== 0) {
                         msg.classList.add('wrong');
-                        msg.innerHTML = "Некорректный email";
+                        msg.value = "";
+                        msg.placeholder = "Некорректный email";
                         success = 0;
                     }
                     if (success === 1) {

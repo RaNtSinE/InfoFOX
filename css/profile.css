@@ -546,9 +546,20 @@ body
     display: none;
 }
 
+.emailChangeEmail.wrong
+{
+    border: 1px solid red;
+    border: 1px solid red;
+}
+
+.emailChangeEmail.wrong::placeholder
+{
+    color: red;
+}
+
 .wind .wrong
 {
-    display: block;
+    /*display: block;*/
 }
 
 .wind .done
