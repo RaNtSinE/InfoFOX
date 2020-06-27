@@ -96,11 +96,18 @@
   border-color: #093D64 transparent transparent transparent;
 }
 
+<<<<<<< HEAD
 #letterAddress {
   font-size: 15px;
 }
 
 
+=======
+#letterAddress, #letterContent, .feedback__select {
+  font-size: 15px;
+}
+
+>>>>>>> a098337f28ecd623e3d8c9419133ed7f5d9b1f8a
 .feedback__select--hide {
   display: none;
 }

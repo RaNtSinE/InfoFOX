@@ -84,9 +84,15 @@ $('.create').on('click',function()
             url: pathToServer + "/auth/users/",
             data: {username: username.value, email:email.value, password: password.value, re_password: repeatPassword.value, recaptcha: captcha}
         }).done(function (data) {
+<<<<<<< HEAD
             document.location.href = "./postRegister";
         }).fail(function (data) {
             // alert(JSON.stringify(data));
+=======
+            document.location.href = "/";
+        }).fail(function (data) {
+            alert(JSON.stringify(data));
+>>>>>>> a098337f28ecd623e3d8c9419133ed7f5d9b1f8a
             let errors = document.getElementsByClassName("errorlist")[0]
                 .getElementsByTagName("li");
             if (username !== undefined) {
