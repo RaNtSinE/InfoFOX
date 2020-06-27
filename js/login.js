@@ -23,11 +23,7 @@ $('.enter').on('click',function()
             url: pathToServer + "/auth/token/login",
             data: {username: username.value, password: password.value}
         }).done(function (data) {
-<<<<<<< HEAD
             localStorage.setItem('token', "Token " + data.auth_token);
-=======
-            localStorage.setItem('token', data.auth_token);
->>>>>>> a098337f28ecd623e3d8c9419133ed7f5d9b1f8a
             document.location.href = "./";
         }).fail(function () {
             let errors = document.getElementsByClassName("errorlist")[0]
@@ -47,11 +43,6 @@ $('#id_password').on('input',function () {
     let errors = document.getElementsByClassName("errorlist")[0]
         .getElementsByTagName("li");
     errors[0].innerHTML = "";
-});
-
-//Вход через вк
-$('.VKlogin').on('click', function () {
-
 });
 
 var path = location.pathname.split('/');
