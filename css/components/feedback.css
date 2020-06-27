@@ -95,6 +95,10 @@
   border-color: #093D64 transparent transparent transparent;
 }
 
+#letterAddress {
+  font-size: 15px;
+}
+
 .feedback__select--hide {
   display: none;
 }

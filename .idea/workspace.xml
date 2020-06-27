@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c226cea2-be73-4bad-a3b3-4c50d2dd51bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/components/feedback.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/components/feedback.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
       <workItem from="1593084249742" duration="8734000" />
       <workItem from="1593118481455" duration="2946000" />
       <workItem from="1593123118192" duration="9948000" />
-      <workItem from="1593249897033" duration="947000" />
+      <workItem from="1593249897033" duration="2295000" />
     </task>
     <task id="LOCAL-00001" summary="Артём, ты доволен?">
       <created>1593014564650</created>
@@ -78,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593250096561</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bug 40 fixed">
+      <created>1593250866534</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593250866534</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,21 +97,22 @@
     <MESSAGE value="Register update (recovery)" />
     <MESSAGE value="Login page update" />
     <MESSAGE value="Bug 30 fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug 30 fixed" />
+    <MESSAGE value="Bug 40 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug 40 fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593250093452">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1593250864765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593250093452" />
-    <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593123156062">
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593250864765" />
+    <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593250853245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593123156062" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1593118845865">
+    <state x="768" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593250853245" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1593252141075">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593118845865" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593252141075" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593130049041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
