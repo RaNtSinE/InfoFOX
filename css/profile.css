@@ -646,9 +646,18 @@ body
     border: 1px solid red;
 }
 
+<<<<<<< HEAD
 .profileFrame__changePassword .wrong
+=======
+.emailChangeEmail.wrong::placeholder
 {
-    display: block;
+    color: red;
+}
+
+.wind .wrong
+>>>>>>> 16a9a4394bc2df48a9912cf21ca6ea0ad528d710
+{
+    /*display: block;*/
 }
 
 .emailChangeEmail.wrong::-webkit-input-placeholder
