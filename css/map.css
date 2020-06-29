@@ -7,8 +7,11 @@
     position: absolute;
     z-index: -50;
     border: 3px solid #DCB0A7;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 100%;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 .ellipse_1
@@ -323,6 +326,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     height: 500px;
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     background: #093D64;
 }
@@ -413,10 +417,10 @@
     }
 }
 
- .ymaps-2-1-76-gotoymaps
- {
-     display: none;
- }
+.ymaps-2-1-76-gotoymaps
+{
+    display: none;
+}
 
 #map .ymaps-2-1-76-zoom__runner
 {
@@ -435,6 +439,7 @@
 .ymaps-2-1-76-zoom__scale {
     background: #093D64!important;
     border: none!important;
+    -webkit-box-shadow: none!important;
     box-shadow: none!important;
     width: 4px!important;
     left: 18px!important;
@@ -477,7 +482,7 @@
 
 .ymaps-2-1-76-balloon__tail
 {
-  display: none!important;
+    display: none!important;
 }
 
 .ymaps-2-1-76-balloon {
@@ -485,6 +490,7 @@
     left: 9px!important;
     background: #093D64!important;
     border: 3px solid #093D64!important;
+    -webkit-box-sizing: border-box!important;
     box-sizing: border-box!important;
 }
 

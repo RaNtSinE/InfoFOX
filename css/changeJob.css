@@ -39,6 +39,35 @@ label
     background: #093D64;
 }
 
+.wrongF
+{
+    border: 1px solid red!important;
+}
+
+.wrongF::-webkit-input-placeholder
+{
+    color: red!important;
+}
+
+.wrongF::-moz-placeholder
+{
+    color: red!important;
+}
+
+.wrongF:-ms-input-placeholder
+{
+    color: red!important;
+}
+
+.wrongF::-ms-input-placeholder
+{
+    color: red!important;
+}
+
+.wrongF::placeholder
+{
+    color: red!important;
+}
 
 .form-control
 {
@@ -58,6 +87,22 @@ label
 
     resize: none;
     outline: none;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #313131;
+}
+
+.form-control::-moz-placeholder {
+    color: #313131;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #313131;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #313131;
 }
 
 .form-control::placeholder {
@@ -165,7 +210,7 @@ input[name]
 
 
 .wind {
-    width: 500px;
+    width: 435px;
     position: fixed;
     top: 37vh;
     right: 0;
@@ -181,6 +226,7 @@ input[name]
     text-align: center;
     color: #f3f3f3;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -227,6 +273,7 @@ input[name]
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #093D64;
@@ -249,7 +296,9 @@ input[name]
     z-index: 3;
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     background: #F3F3F3;

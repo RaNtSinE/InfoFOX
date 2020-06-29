@@ -82,6 +82,8 @@ body
     margin-left: 34px;
     width: 244px;
     height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -106,11 +108,13 @@ body
     padding-left: 34px;
 }
 
-.fileText{
-    width: 80px;
+.fileText {
+    width: 140px;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 18px;
+    overflow: hidden;
+    max-height: 72px;
 }
 
 .js-fileName
@@ -148,6 +152,8 @@ body
 .btnNews {
     height: 40px;
     float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 34px;
     margin-top: 20px;
@@ -157,6 +163,7 @@ body
 #submit {
     border: none;
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 1px 20px;
@@ -177,6 +184,7 @@ label
 .btnNews a{
     color: #093D64;
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 11px 28px;
@@ -189,7 +197,9 @@ label
 
 .cancel, .cancelAdd
 {
-    margin-left: 150px;
+    float: right;
+    margin-right: 28px;
+    margin-left: 0;
 }
 
 
@@ -197,14 +207,10 @@ label
     padding: 11px 31px;
 }
 
-.cancelAdd
-{
-    margin-left: 298px;
-}
-
-.save, .saveAdd
-{
-    margin-left: 28px;
+.save, .saveAdd {
+    margin-right: 33px;
+    margin-left: 0;
+    float: right;
 }
 
 .save a, .saveAdd a
@@ -243,6 +249,7 @@ label
     text-align: center;
     color: #f3f3f3;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -289,6 +296,7 @@ label
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #093D64;
@@ -311,7 +319,9 @@ label
     z-index: 3;
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     background: #F3F3F3;
@@ -343,6 +353,46 @@ label
 {
     color: #C3C3C3!important;
     border: 1px solid #C3C3C3;
+}
+
+.wrongF
+{
+    border: 1px solid red;
+}
+
+.wrongF::-webkit-input-placeholder
+{
+    color: red;
+}
+
+.wrongF::-moz-placeholder
+{
+    color: red;
+}
+
+.wrongF:-ms-input-placeholder
+{
+    color: red;
+}
+
+.wrongF::-ms-input-placeholder
+{
+    color: red;
+}
+
+.wrongF::placeholder
+{
+    color: red;
+}
+
+.wrongF .btn-tertiary
+{
+    border: 1px solid red;
+}
+
+.blockWithFile
+{
+    border: none!important;
 }
 
 @media(max-width: 680px)
@@ -380,11 +430,7 @@ label
     }
 
     .cancel, .cancelAdd {
-        margin-left: calc(77.6vw - 377px);
-    }
 
-    .cancelAdd {
-        margin-left: calc(83vw - 264px);
     }
 
     .deleteNews {

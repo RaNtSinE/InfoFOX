@@ -182,8 +182,8 @@ function loadUser()
                         '           <div class="backWarn">\n' +
                         '                   <p>Несохраненные результаты исчезнут</p>\n' +
                         '           </div>\n' +
-                        '           <a class="close closeBack">Отмена</a>\n' +
                         '           <a class="backToProfile">Вернуться</a>\n' +
+                        '           <a class="close closeBack">Отмена</a>\n' +
                         '       </div>\n' +
                         '   </div>\n' +
                         '   <div class="back"><a>Назад</a></div>\n' +
@@ -212,6 +212,13 @@ function loadUser()
             for (let i = 0; i < data.length; i++) {
                 user[0].insertAdjacentHTML('beforeend', '<div class="userInfo"></div>');
             }
+        }
+
+        let checkBlocks = document.getElementsByClassName('userInfo');
+        if(checkBlocks.length < 1)
+        {
+            let container = document.getElementById('nologgined');
+            container.insertAdjacentHTML('afterbegin', '<p class="spaceProfile">Профиль пуст</p>');
         }
 
         let count = 0;
@@ -244,13 +251,13 @@ function loadUser()
                                 ),
                                 React.createElement(
                                     'a',
-                                    {className: "close"},
-                                    'Отмена'
+                                    {className: "delete"},
+                                    'Удалить'
                                 ),
                                 React.createElement(
                                     'a',
-                                    {className: "delete"},
-                                    'Удалить'
+                                    {className: "close"},
+                                    'Отмена'
                                 )
                             ),
                         ),

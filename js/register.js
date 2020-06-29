@@ -86,23 +86,22 @@ $('.create').on('click',function()
         }).done(function (data) {
             document.location.href = "./postRegister";
         }).fail(function (data) {
-            // alert(JSON.stringify(data));
             let errors = document.getElementsByClassName("errorlist")[0]
                 .getElementsByTagName("li");
-            if (username !== undefined) {
+            if(data.responseJSON.username != undefined) {
                 $('#id_username').addClass('wrong');
-                username.value = '';
-                username.placeholder = "Пользователь с данным именем уже существует";
+                $('#wrongName').addClass('wrongName');
+                let msg = document.getElementById('wrongName').getElementsByTagName('p')[0];
+                msg.innerHTML = data.responseJSON.username;
             }
-            if (username == undefined && email !== undefined) {
-                $('#id_email').addClass('wrong');
-                email.value = '';
-                email.placeholder = "Указана некорректная почта";
+            if (data.responseJSON.email != undefined) {
+                $('#id_mail').addClass('wrong');
+                $('#wrongEmail').addClass('wrongEmail');
+                let msg = document.getElementById('wrongEmail').getElementsByTagName('p')[0];
+                msg.innerHTML = data.responseJSON.email;
             }
             if (recaptcha !== undefined) {
-                let errors = document.getElementsByClassName("errorlist")[0]
-                    .getElementsByTagName("li");
-                errors[0].innerHTML = "Ошибка ввода капчи";
+                grecaptcha.reset();
             }
         });
     }

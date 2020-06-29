@@ -4,7 +4,7 @@ $(document).ready(function(){
         items:3,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 7000,
+        autoplayTimeout: 10000,
         navText : ["",""],
         loop:true,
         margin:10,

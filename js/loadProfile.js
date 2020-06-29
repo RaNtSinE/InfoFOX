@@ -127,13 +127,13 @@ function loadProfile() {
                                     ),
                                     React.createElement(
                                         'a',
-                                        {className: "close"},
-                                        "Отмена"
+                                        {className: "emailSave"},
+                                        "Сохранить"
                                     ),
                                     React.createElement(
                                         'a',
-                                        {className: "emailSave"},
-                                        "Сохранить"
+                                        {className: "close"},
+                                        "Отмена"
                                     )
                                 ),
                             ),
@@ -215,13 +215,13 @@ function loadProfile() {
                                     ),
                                     React.createElement(
                                         'a',
-                                        {className: "close"},
-                                        "Отмена"
+                                        {className: "passwordSave"},
+                                        "Сохранить"
                                     ),
                                     React.createElement(
                                         'a',
-                                        {className: "passwordSave"},
-                                        "Сохранить"
+                                        {className: "close"},
+                                        "Отмена"
                                     )
                                 ),
                             ),
@@ -258,7 +258,6 @@ function loadProfile() {
                 "Authorization": localStorage.getItem("token")
             }
         }).done(function (data) {
-            // alert(JSON.stringify(data));
             profileAdd(data);
             bracAdd(data);
         }).fail(function (xhr, textStatus) {
@@ -266,7 +265,6 @@ function loadProfile() {
 
         function profileAdd(data) {
             let profileFrame__add = document.getElementsByClassName('profileFrame__addBlock');
-            // let profileFrame__brac = document.getElementsByClassName('profileFrame__bracletes')[0];
             let count = 0;
 
             for (let i = 0; i < data.length; i++) {
@@ -277,8 +275,8 @@ function loadProfile() {
                     '                    <div class="ChangeInfo DeleteInfo">\n' +
                     '                        <p>Удалить профиль?</p>\n' +
                     '                    </div>\n' +
-                    '                    <a class="close">Отмена</a>\n' +
                     '                    <a class="delete">Удалить</a>\n' +
+                    '                    <a class="close">Отмена</a>\n' +
                     '                </div>\n' +
                     '            </div>\n' +
                     '            <a class="profileFrame__deleteBlock">\n' +
@@ -318,8 +316,21 @@ function loadProfile() {
                         'div',
                         {className: "profileFrame__profileTitle"},
                         React.createElement(
-                            'input',
-                            {type: "text", className: "profile_name", defaultValue: this.props.Name, maxLength: "30"},
+                            'div',
+                            {className: "inpBord"},
+                            React.createElement(
+                                'span',
+                                {className: "profileName", contentEditable: "true"},
+                                this.props.Name
+                            ),
+                            React.createElement(
+                                'div',
+                                {className: "inpImg"},
+                                React.createElement(
+                                    'img',
+                                    {src: "img/pen.png"}
+                                )
+                            )
                         )
                     );
                 }
@@ -334,23 +345,62 @@ function loadProfile() {
                     count++;
                 });
             let profes = document.getElementsByClassName('profileFrame__profileBlock');
+            for (let i = 0; i < profes.length; i++)
+            {
+                profes[i].getElementsByClassName('profileName')[0].setAttribute('onPaste', "return false;");
+                profes[i].getElementsByClassName('profileName')[0].setAttribute('ondrag', "return false;");
+                profes[i].getElementsByClassName('profileName')[0].setAttribute('ondrop', "return false;");
+            }
             if (profes.length > 9) {
                 let addBlock = document.getElementsByClassName('profileFrame__addBlock');
                 addBlock[0].style.display = "none"
             }
             profile();
-            $('.profile_name').on("focusout", function () {
-                bracDelete();
-                $.ajax({
-                    type: "GET",
-                    url: pathToServer + "/api/userpage/",
-                    headers: {
-                        "Authorization": localStorage.getItem("token")
-                    }
-                }).done(function (data) {
-                    bracAdd(data);
-                }).fail(function (xhr, textStatus) {
-                });
+            $('.inpBord').on('click',function () {
+                this.getElementsByClassName('profileName')[0].focus();
+                this.getElementsByClassName('profileName')[0].selectionStart = this.getElementsByClassName('profileName')[0].innerHTML.length;
+            });
+
+            $('.profileName').on("keydown paste", function (e) {
+                if(e.ctrlKey===true && (e.keyCode == 118 || e.keyCode == 86))
+                    e.preventDefault();
+            });
+
+            $('.profileName').on('keydown paste', function (event) {
+                if($(this).text().length === 30 && event.keyCode != 8 && event.keyCode != 37 && event.keyCode != 38 && event.keyCode != 39 && event.keyCode != 40)
+                {
+                    event.preventDefault();
+                }
+            });
+            $('.profileName').on("focus", function () {
+                this.parentNode.classList.add("focused");
+                this.parentNode.getElementsByClassName("inpImg")[0].classList.add("focusedImg");
+            });
+            $('.profileName').on("focusout", function () {
+                if(this.innerHTML.length < 1)
+                {
+                    this.setAttribute("placeholder", "Заполните это поле");
+                    this.parentNode.classList.add("wrongFi");
+                    this.focus();
+                }
+                else
+                {
+                    this.setAttribute("placeholder", "");
+                    this.parentNode.classList.remove("wrongFi");
+                    this.parentNode.classList.remove("focused");
+                    this.parentNode.getElementsByClassName("inpImg")[0].classList.remove("focusedImg");
+                    bracDelete();
+                    $.ajax({
+                        type: "GET",
+                        url: pathToServer + "/api/userpage/",
+                        headers: {
+                            "Authorization": localStorage.getItem("token")
+                        }
+                    }).done(function (data) {
+                        bracAdd(data);
+                    }).fail(function (xhr, textStatus) {
+                    });
+                }
             })
         }
 
@@ -390,8 +440,8 @@ function loadProfile() {
                         '                       <div class="blockWithProf">' +
                         '                       </div>' +
                         '                   </div>' +
-                        '                    <a class="close">Отмена</a>\n' +
                         '                    <a class="Ok">OK</a>\n' +
+                        '                    <a class="close">Отмена</a>\n' +
                         '                </div>\n' +
                         '            </div>\n' +
                         '            <a class="settings">\n' +
@@ -402,8 +452,8 @@ function loadProfile() {
                         '                </svg>\n' +
                         '            </a>\n' +
                         '        </div>');
-                    // alert(JSON.stringify(data[i].bracelets[j]));
                     bracelets.push({
+                        prof_id: data[i].id,
                         name: data[i].name,
                         id: data[i].bracelets[j].id,
                         unique_code: data[i].bracelets[j].unique_code
@@ -486,8 +536,12 @@ function loadProfile() {
                                 {className: "desc3"},
                                 this.props.Name
                             ),
+                        ),
+                        React.createElement(
+                            'input',
+                            {type: "hidden", className: "bracProfId", value: this.props.Prof_id},
                         )
-                    );
+                    )
                 }
             }
 
@@ -497,7 +551,8 @@ function loadProfile() {
                         React.createElement(ProfileBracelets, {
                             Name: bracelets[count].name,
                             Id: bracelets[count].id,
-                            Code: bracelets[count].unique_code
+                            Code: bracelets[count].unique_code,
+                            Prof_id: bracelets[count].prof_id
                         }),
                         domContainer
                     );
@@ -506,7 +561,6 @@ function loadProfile() {
 
 
             let profileCheck = [];
-            // profileCheck[0] = 0;
             let profile_id = -1;
             let brac_id = -1;
             let unique_code = -1;
@@ -517,6 +571,7 @@ function loadProfile() {
                 brac_id = settings.parentNode.getElementsByClassName('desc2')[0].innerHTML;
                 unique_code = settings.parentNode.getElementsByClassName('desc1')[0].innerHTML;
                 let namePr = settings.parentNode.getElementsByClassName('desc3')[0].innerHTML;
+                let prof_id = settings.parentNode.getElementsByClassName('bracProfId')[0].value;
                 let allProf = settings.parentNode.getElementsByClassName('blockWithProf')[0];
                 let names = [];
                 for (let i = 0; i < profiles.length; i++) {
@@ -525,7 +580,7 @@ function loadProfile() {
                 }
 
                 for (let i = 0; i < profiles.length; i++) {
-                    if (namePr === names[i]) {
+                    if (prof_id === profiles[i].getElementsByClassName('profile_id')[0].value) {
                         profiles[i].classList.add("activated");
                         profile_id = profiles[i].getElementsByClassName('profile_id')[0].value;
                     }
@@ -644,14 +699,14 @@ function loadProfile() {
                         });
                     }
                 }
-                $('.profile_name').on('input', function () {
+                $('.profileName').on('focusout', function () {
                     $.ajax({
                         type: "PUT",
-                        url: pathToServer + "/api/userpage/profile/" + this.parentNode.parentNode.parentNode.getElementsByClassName('profile_id')[0].value,
+                        url: pathToServer + "/api/userpage/profile/" + this.parentNode.parentNode.parentNode.parentNode.getElementsByClassName('profile_id')[0].value,
                         headers: {
                             "Authorization": localStorage.getItem("token")
                         },
-                        data: {name: this.value}
+                        data: {name: this.innerHTML}
                     }).done(function (data) {
                     }).fail(function (xhr, textStatus) {
                     });
@@ -661,15 +716,17 @@ function loadProfile() {
                 $('.emailSave').on('click', function () {
                     success = 1;
                     let email = this.parentNode.getElementsByClassName('emailChangeEmail')[0].value;
-                    let msg = this.parentNode.getElementsByClassName('error')[0];
+                    let msg = this.parentNode.getElementsByClassName('emailChangeEmail')[0];
                     let pattern = /^[a-z0-9_.-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
                     if (email.length < 1) {
                         msg.classList.add('wrong');
-                        msg.innerHTML = "Все поля должны быть заполнены";
+                        msg.value = "";
+                        msg.placeholder = "Поле должно быть заполнено";
                         success = 0;
                     } else if (email.search(pattern) !== 0) {
                         msg.classList.add('wrong');
-                        msg.innerHTML = "Некорректный email";
+                        msg.value = "";
+                        msg.placeholder = "Некорректный email";
                         success = 0;
                     }
                     if (success === 1) {
@@ -694,18 +751,38 @@ function loadProfile() {
                     let oldPassword = this.parentNode.getElementsByClassName('OldPassword')[0].value;
                     let newPassword = this.parentNode.getElementsByClassName('NewPassword')[0].value;
                     let repeatPassword = this.parentNode.getElementsByClassName('RepeatPassword')[0].value;
+                    let oldPasswordfc = this.parentNode.getElementsByClassName('OldPassword')[0];
+                    let newPasswordfc = this.parentNode.getElementsByClassName('NewPassword')[0];
+                    let repeatPasswordfc = this.parentNode.getElementsByClassName('RepeatPassword')[0];
                     let msg = this.parentNode.getElementsByClassName('error')[0];
                     if (oldPassword.length < 1 || newPassword.length < 1 || repeatPassword.length < 1) {
-                        msg.classList.add('wrong');
-                        msg.innerHTML = "Все поля должны быть заполнены";
-                        success = 0;
-                    } else if (newPassword.length < 8) {
-                        msg.classList.add('wrong');
-                        msg.innerHTML = "Новый пароль должен быть не меньше 8 символов";
+                        // success = 0;
+
+                        if (oldPassword.length < 1)
+                        {
+                            oldPasswordfc.classList.add('wrongF');
+                            oldPasswordfc.placeholder = "Поле должно быть заполнено";
+                        }
+                        if (newPassword.length < 1)
+                        {
+                            newPasswordfc.classList.add('wrongF');
+                            newPasswordfc.placeholder = "Поле должно быть заполнено";
+                        }
+                        if (repeatPassword.length < 1)
+                        {
+                            repeatPasswordfc.classList.add('wrongF');
+                            repeatPasswordfc.placeholder = "Поле должно быть заполнено";
+                        }
+                    }
+                    if (newPassword.length < 8 && newPassword.length > 0) {
+                        newPasswordfc.classList.add('wrongF');
+                        newPasswordfc.value = "";
+                        newPasswordfc.placeholder = "Новый пароль должен быть не меньше 8 символов";
                         success = 0;
                     } else if (newPassword != repeatPassword) {
-                        msg.classList.add('wrong');
-                        msg.innerHTML = "Поля для нового пароля не совпадают";
+                        repeatPasswordfc.classList.add('wrongF');
+                        repeatPasswordfc.value = "";
+                        repeatPasswordfc.placeholder = "Поля для нового пароля не совпадают";
                         success = 0;
                     }
                     if (success === 1) {
@@ -729,21 +806,84 @@ function loadProfile() {
                                     password: newPassword
                                 }
                             }).done(function (data) {
-                                localStorage.setItem('token', "Token" + data.auth_token);
+                                localStorage.setItem('token', "Token " + data.auth_token);
                             }).fail(function () {
                             });
                         }).fail(function (xhr, textStatus) {
                             if (xhr.responseJSON.current_password == "Неправильный пароль.") {
-                                msg.classList.add('wrong');
-                                msg.innerHTML = "Неправильный пароль";
+                                oldPasswordfc.classList.add('wrongF');
+                                oldPasswordfc.value = "";
+                                oldPasswordfc.placeholder = "Пароль неверен";
                             }
                         });
                     }
+                });
+                $('.profileFrame__changePassword .close').on('click',function () {
+                    document.getElementsByClassName('OldPassword')[0].value = "";
+                    document.getElementsByClassName('NewPassword')[0].value = "";
+                    document.getElementsByClassName('RepeatPassword')[0].value  = "";
+                    document.getElementsByClassName('OldPassword')[0].classList.remove('wrongF');
+                    document.getElementsByClassName('NewPassword')[0].classList.remove('wrongF');
+                    document.getElementsByClassName('RepeatPassword')[0].classList.remove('wrongF');
+                    document.getElementsByClassName('OldPassword')[0].placeholder = "Введите старый пароль";
+                    document.getElementsByClassName('NewPassword')[0].placeholder = "Введите новый пароль";
+                    document.getElementsByClassName('RepeatPassword')[0].placeholder = "Повторите новый пароль";
                 });
             }
 
             addListeners();
             listenerAdd();
+
+            function addSomeList() {
+                $('.profileName').on('keydown paste', function (event) {
+                    if($(this).text().length === 30 && event.keyCode != 8 && event.keyCode != 37 && event.keyCode != 38 && event.keyCode != 39 && event.keyCode != 40)
+                    {
+                        event.preventDefault();
+                    }
+                });
+                $('.profileName').on("keydown paste", function (e) {
+                    if(e.ctrlKey===true && (e.keyCode == 118 || e.keyCode == 86))
+                        e.preventDefault();
+                });
+                let inpBord = document.getElementsByClassName('inpBord');
+                inpBord = inpBord[inpBord.length - 1];
+                inpBord.addEventListener('click',function () {
+                    this.getElementsByClassName('profileName')[0].focus();
+                }, false);
+                let profName = document.getElementsByClassName('profileName');
+                profName = profName[profName.length-1];
+                profName.addEventListener("focus", function () {
+                    this.parentNode.classList.add("focused");
+                    this.parentNode.getElementsByClassName("inpImg")[0].classList.add("focusedImg");
+                },false);
+
+                profName.addEventListener("focusout", function () {
+                    if(this.innerHTML.length < 1)
+                    {
+                        this.setAttribute("placeholder", "Заполните это поле");
+                        this.parentNode.classList.add("wrongFi");
+                        this.focus();
+                    }
+                    else
+                    {
+                        this.setAttribute("placeholder", "");
+                        this.parentNode.classList.remove("wrongFi");
+                        this.parentNode.classList.remove("focused");
+                        this.parentNode.getElementsByClassName("inpImg")[0].classList.remove("focusedImg");
+                        bracDelete();
+                        $.ajax({
+                            type: "GET",
+                            url: pathToServer + "/api/userpage/",
+                            headers: {
+                                "Authorization": localStorage.getItem("token")
+                            }
+                        }).done(function (data) {
+                            bracAdd(data);
+                        }).fail(function (xhr, textStatus) {
+                        });
+                    }
+                },false);
+            }
 
             function listenerAdd() {
                 $('.profileFrame__addBlock').on('click', function () {
@@ -757,6 +897,10 @@ function loadProfile() {
                         data: {name: "Название профиля"}
                     }).done(function (data) {
                         createNewProfile(data);
+
+                        let profiles = document.getElementsByClassName('profileFrame__profileBlock');
+                        deleteCheck[profiles.length - 1] = 0;
+
                         bracDelete();
                         addDelete();
                         $.ajax({
@@ -803,7 +947,15 @@ function loadProfile() {
                             '                    </defs>\n' +
                             '                </svg>\n' +
                             '            </a>\n' +
-                            '            <a class="profileFrame__block"><div class="profileFrame__profileTitle"><input type="text" maxlength="30" class="profile_name" value="Название профиля"></div></a>\n' +
+                            '            <a class="profileFrame__block"><div class="profileFrame__profileTitle">' +
+                            '                   <div class="inpBord">' +
+                            '                       <span class="profileName" contenteditable="true" onpaste="return false;" ondrag="return false" ondrop="return false">Название профиля</span>' +
+                            '                       <div class="inpImg">' +
+                            '                           <img src="img/pen.png">' +
+                            '                       </div>' +
+                            '                   </div>' +
+                            '               </div>' +
+                            '            </a>\n' +
                             '            <div class="profileFrame__linkBrac">\n' +
                             '                <a href="./disconnect?brac_id=' + data.profile_id + '">Перейти к браслетам</a>\n' +
                             '            </div>\n' +
@@ -812,12 +964,11 @@ function loadProfile() {
                             '            </div>\n' +
                             '            <input class="profile_id" name="profile_id" type="hidden" value="' + data.profile_id + '"> \n' +
                             '        </div>');
+                        addSomeList();
                     }
-
                     addListeners();
                 });
             }
         }
     }
-
 }

@@ -7,41 +7,14 @@ body
 {
     width: 100%;
     height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#093D64), to(#DF8053));
+    background: -o-linear-gradient(left, #093D64 0%, #DF8053 100%);
     background: linear-gradient(90deg, #093D64 0%, #DF8053 100%);
     background-size:101%;
     background-attachment: fixed;
     font-style: normal;
     font-weight: normal;
 }
-
-/**, *:after,*:before*/
-/*{*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*}*/
-
-/*h3*/
-/*{*/
-/*    margin-bottom:1em;*/
-/*}*/
-
-/*ul*/
-/*{*/
-/*    list-style: none;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-
-/*a*/
-/*{*/
-/*    text-decoration: none;*/
-/*    outline: none;*/
-/*}*/
-/*p*/
-/*{*/
-/*    text-decoration: none;*/
-/*    outline: none;*/
-/*}*/
 
 footer .upline {
     width: 100%;
@@ -367,5 +340,4 @@ footer .downline {
         margin-left: 0px;
     }
 }
-
 

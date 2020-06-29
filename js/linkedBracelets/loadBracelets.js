@@ -52,11 +52,57 @@ function loadActivation()
             "Authorization":localStorage.getItem("token")
         }
     }).done(function (data) {
+        let backbtn = document.getElementsByClassName('content__btns-back')[0];
+        backbtn.insertAdjacentHTML("afterend", '<a class="content__btns-cutoff">Отвязать</a>');
+        $('.content__btns-cutoff').on("click", function () {
+            let active = document.getElementsByClassName('activated')[0];
+            let id_brac = active.getElementsByClassName('profileContent__description-id')[0].innerHTML;
+            id_brac = id_brac.split('\t');
+            id_brac = id_brac[id_brac.length - 1];
+
+            $.ajax({
+                type: "POST",
+                url: pathToServer + "/api/userpage/profile/" + id + "/disconnect/",
+                headers: {
+                    "Authorization":localStorage.getItem("token")
+                },
+                data: {id: id_brac}
+            }).done(function (data) {
+                delBrac();
+                activation();
+                let blocksBrac = document.getElementsByClassName('content__bracelet-block');
+                if(blocksBrac.length <= 0)
+                {
+                    try
+                    {
+                        let btn = document.getElementsByClassName('content__btns-cutoff');
+                        btn[0].remove();
+                    }
+                    catch (e) {
+                    }
+                    let profiles = document.getElementsByClassName('content__bracelets');
+                    profiles[0].insertAdjacentHTML("beforeend", '<div class="noBrac"><p>К данному профилю не привязано ни одного браслета</p></div>');
+                    let backbtn = document.getElementsByClassName('content__btns-back')[0];
+                    backbtn.parentNode.classList.add('alone');
+                }
+            }).fail(function (xhr, textStatus) {
+            });
+
+        });
         addBrac(data);
     }).fail(function (xhr, textStatus) {
+
         let profiles = document.getElementsByClassName('content__bracelets');
         profiles[0].insertAdjacentHTML("beforeend", '<div class="noBrac"><p>К данному профилю не привязано ни одного браслета</p></div>');
+        let backbtn = document.getElementsByClassName('content__btns-back')[0];
+        backbtn.parentNode.classList.add('alone');
     });
+
+    function delBrac()
+    {
+        let blocksBrac = document.getElementsByClassName('activated');
+        blocksBrac[0].remove();
+    }
 
     function addBrac(bracelets)
     {
@@ -131,25 +177,7 @@ function loadActivation()
 
             activation();
 
-            $('.content__btns-cutoff').on("click", function () {
-                let active = document.getElementsByClassName('activated')[0];
-                let id_brac = active.getElementsByClassName('profileContent__description-id')[0].innerHTML;
-                id_brac = id_brac.split('\t');
-                id_brac = id_brac[id_brac.length - 1];
 
-                $.ajax({
-                    type: "POST",
-                    url: pathToServer + "/api/userpage/profile/" + id + "/disconnect/",
-                    headers: {
-                        "Authorization":localStorage.getItem("token")
-                    },
-                    data: {id: id_brac}
-                }).done(function (data) {
-                    document.location.href = "./userpage";
-                }).fail(function (xhr, textStatus) {
-                });
-
-            });
     }
 
 }

@@ -41,6 +41,7 @@ input, textarea
 
 .red-border
 {
+    -webkit-box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.47);
     box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.47);
 }
 
@@ -145,6 +146,8 @@ input, textarea
     cursor: pointer;
     position: relative;
     opacity: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     z-index: 1;
     margin-left: calc(46.25vw - 410px);
@@ -157,6 +160,10 @@ input, textarea
     font-size: 15px;
     line-height: 18px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
     /* top: 1px; */
     margin-top: 0px;
@@ -165,11 +172,13 @@ input, textarea
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #00B1DF;
+    color: #093D64;
     width: 150px;
     margin-left: calc(46.25vw - 410px);
     position: relative;
     opacity: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -186,9 +195,11 @@ input, textarea
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #00B1DF;
+    color: #093D64;
     width: 275px;
     margin-left: calc(46.25vw - 410px);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     opacity: 0;
 }
@@ -225,18 +236,15 @@ input, textarea
     -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
     cursor: pointer;
-    width: calc(47.1vw + 35px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: calc(26.25vw - 43px);
     margin-bottom: 100px;
-    width: 902px;                                   /*imp*/
+    width: 902px;
     margin-left: calc(46.25vw - 410px);
 }
 
 .plus {
-    width: calc(60.1vw + 35px);
     background: #093D64;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -309,6 +317,7 @@ input, textarea
     text-align: center;
     color: #f3f3f3;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -356,6 +365,7 @@ input, textarea
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #093D64;
@@ -378,7 +388,9 @@ input, textarea
     z-index: 3;
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     background: #F3F3F3;
@@ -455,6 +467,7 @@ input, textarea
 .back a
 {
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     font-size: 15px;
@@ -495,6 +508,12 @@ input, textarea
     margin-top: 24px;
 }
 
+.spaceProfile
+{
+    text-align: center;
+    font-size: 30px;
+}
+
 @media (max-width: 1050px)
 {
     .userInfo {
@@ -528,6 +547,15 @@ input, textarea
     }
     .back {
         margin-left: calc(89.6vw - 141px);
+    }
+    .add:hover div svg .plusInCircle
+    {
+        fill: #093D64;
+    }
+
+    .add:hover div
+    {
+        background: #093D64;
     }
 }
 
@@ -563,7 +591,7 @@ input, textarea
     .deleteWind .backToProfile
     {
         margin-top: 30px;
-        margin-right: calc(39.4vw - 57px)!important;
+        margin-right: calc(39.55vw - 58px)!important;
     }
 
     .DeleteInfo {

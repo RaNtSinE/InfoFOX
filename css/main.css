@@ -14,8 +14,11 @@ button:focus {
     position: absolute;
     z-index: -50;
     border: 3px solid #DCB0A7;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 100%;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 .ellipse_1
@@ -306,24 +309,21 @@ button:focus {
     color: #F3F3F3;
 }
 
-.first .item .item_more
-{
+.first .item .item_more {
     font-family: Roboto;
     font-weight: bold;
     font-style: normal;
     font-size: 1.3vw;
     line-height: 35px;
     text-transform: uppercase;
-
     color: #FFFFFF;
-
     position: relative;
     padding: 1.2vw 4vw;
     background: #093D64;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    left: 35px;
+    left: 6vw;
     top: 1.6vw;
     white-space: nowrap;
 }
@@ -414,6 +414,7 @@ button:focus {
 .products .second .item
 {
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     width: 19vw;
 }
@@ -564,6 +565,7 @@ button:focus {
     padding: 1.5vw;
     margin: 1.8vw 2vw;
     border-radius: 5px;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -574,6 +576,8 @@ button:focus {
     left: 50%;
     top: 50%;
     margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -710,6 +714,7 @@ button:focus {
 
 .jobs .grad
 {
+    background: -o-linear-gradient(358.58deg, rgba(9, 61, 100, 0.76) 59.86%, rgba(196, 196, 196, 0) 94.72%);
     background: linear-gradient(91.42deg, rgba(9, 61, 100, 0.76) 59.86%, rgba(196, 196, 196, 0) 94.72%);
     width: 40vw;
     height: 24vw;
@@ -723,6 +728,7 @@ button:focus {
     padding-left: 8vw;
     width: 17vw;
     padding-top: 3vw;
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
 
@@ -836,7 +842,7 @@ button:focus {
     .first .item .item_more {
         font-size: 2.9vw;
         padding: 1.2vw 3vw;
-        left: 11.5vw;
+        left: 11.2vw;
         top: 1.6vw;
     }
 
@@ -1042,7 +1048,7 @@ button:focus {
     .first .item .item_more {
         font-size: 3.9vw;
         padding: 1.2vw 3vw;
-        left: 7vw;
+        left: 5.1vw;
         top: 1.6vw;
     }
 
@@ -1160,14 +1166,23 @@ button:focus {
     .content .second .owl-nav .owl-prev {
         background-position-x: 25px;
     }
+    .content .second .owl-nav .owl-prev:hover {
+        background-position-x: 25px;
+    }
 }
 @media (max-width: 375px) {
     .content .second .owl-nav .owl-prev {
         background-position-x: 22px;
     }
+    .content .second .owl-nav .owl-prev:hover {
+        background-position-x: 22px;
+    }
 }
 @media (max-width: 320px) {
     .content .second .owl-nav .owl-prev {
+        background-position-x: 21px;
+    }
+    .content .second .owl-nav .owl-prev:hover  {
         background-position-x: 21px;
     }
 }

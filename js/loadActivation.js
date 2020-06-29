@@ -44,6 +44,8 @@ function loadActivation()
 
     let brac_id = getAllUrlParams().id;
 
+    localStorage.setItem('id_brac_for_vk',"");
+
     $.ajax({
         type: "GET",
         url: pathToServer + "/api/userpage/bracelet/" + brac_id,
@@ -165,8 +167,6 @@ function loadActivation()
             });
 
 
-
-
         let profs = document.getElementsByClassName("profileBlock");
         let profileCheck = [];
         profileCheck[0] = 1;
@@ -202,6 +202,8 @@ function loadActivation()
             }, false);
         }
 
+        let haveAProfile = 0;
+        let newProfileId = 0;
         $('.activationButton').on('click', function () {
             let code = document.getElementsByClassName('braclet_code')[0];
             if(code.value.length < 1)
@@ -225,33 +227,58 @@ function loadActivation()
                 }).done(function (data) {
                     document.location.href = "./userpage";
                 }).fail(function (xhr, textStatus) {
+                    let msg = document.getElementsByClassName("errorMessage")[0];
+                    msg.classList.add("activeErrorMessage");
                 });
             }
             else
             {
-                code = code.value;
-                $.ajax({
-                    type: "POST",
-                    url: pathToServer + "/api/userpage/add/",
-                    headers: {
-                        "Authorization":localStorage.getItem("token")
-                    },
-                    data: {name: "Название профиля"}
-                }).done(function (data) {
+                if(haveAProfile === 0)
+                {
+                    code = code.value;
+                    $.ajax({
+                        type: "POST",
+                        url: pathToServer + "/api/userpage/add/",
+                        headers: {
+                            "Authorization":localStorage.getItem("token")
+                        },
+                        data: {name: "Название профиля"}
+                    }).done(function (data) {
+                        haveAProfile = 1;
+                        newProfileId = data.profile_id;
+                        $.ajax({
+                            type: "POST",
+                            url: pathToServer + "/api/userpage/bracelet/registration/" + brac_id,
+                            headers: {
+                                "Authorization":localStorage.getItem("token")
+                            },
+                            data: {unique_code: code, profile_id: data.profile_id}
+                        }).done(function (data) {
+                            document.location.href = "./userpage";
+                        }).fail(function (xhr, textStatus) {
+                            let msg = document.getElementsByClassName("errorMessage")[0];
+                            msg.classList.add("activeErrorMessage");
+                        });
+                    }).fail(function (xhr, textStatus) {
+                    });
+                }
+                else
+                {
+                    code = code.value;
                     $.ajax({
                         type: "POST",
                         url: pathToServer + "/api/userpage/bracelet/registration/" + brac_id,
                         headers: {
                             "Authorization":localStorage.getItem("token")
                         },
-                        data: {unique_code: code, profile_id: data.profile_id}
+                        data: {unique_code: code, profile_id: newProfileId}
                     }).done(function (data) {
                         document.location.href = "./userpage";
                     }).fail(function (xhr, textStatus) {
+                        let msg = document.getElementsByClassName("errorMessage")[0];
+                        msg.classList.add("activeErrorMessage");
                     });
-                }).fail(function (xhr, textStatus) {
-                });
-
+                }
             }
         });
         $(".braclet_code").on("input", function () {

@@ -207,6 +207,11 @@ body
     {
         width: 78vw;
     }
+    .settings {
+        margin-right: 0!important;
+        border: 1px solid #F3F3F3;
+        border-radius: 5px;
+    }
 }
 
 @media(max-width:400px)
@@ -221,6 +226,8 @@ body
 
 .addNew
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -228,6 +235,8 @@ body
 {
     height: 300px;
     padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .addNew svg{
@@ -253,6 +262,8 @@ body
 .settings
 {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     right: 0;
     margin-right: -45px;

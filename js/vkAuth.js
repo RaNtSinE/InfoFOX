@@ -24,7 +24,14 @@ else
         data: {grant_type: "convert_token", client_id: "FkRzR3USRmaB6uNWkHvkysE4K1d8vbBmiwymnOGW", backend: "vk-oauth2", token: first}
     }).done(function (data) {
         localStorage.setItem('token', "Bearer " + data.access_token);
-        document.location.href = "./userpage";
+        if(localStorage.getItem('id_brac_for_vk') !== "")
+        {
+            document.location.href = "./bracelet?id=" + localStorage.getItem("id_brac_for_vk");
+        }
+        else
+        {
+            document.location.href = "./userpage";
+        }
     }).fail(function () {
         let errors = document.getElementsByClassName("errorlist")[0]
             .getElementsByTagName("li");

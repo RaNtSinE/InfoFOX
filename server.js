@@ -14,6 +14,7 @@ http.createServer(function (request, response) {
     let profile = /^\.\/profile\?id=[a-z0-9_-]+$/i;
     let bracelet = /^\.\/bracelet\?id=[a-z0-9_-]+$/i;
     let disconnect = /^\.\/disconnect\?brac_id=[a-z0-9_-]+$/i;
+    let loginActivation = /^\.\/login\?id=[a-z0-9_-]+$/i;
     var filePath = '.' + request.url;
     console.log(filePath);
     if (filePath == './')
@@ -91,6 +92,11 @@ http.createServer(function (request, response) {
     }
     else
     if(filePath.search(login) === 0)
+    {
+        filePath ='./login.html';
+    }
+    else
+    if(filePath.search(loginActivation) === 0)
     {
         filePath ='./login.html';
     }

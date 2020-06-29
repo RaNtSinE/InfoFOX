@@ -24,7 +24,11 @@ function level()
             {
                 for(let j = (i / 3) * 3 - 1; j < textInput.length; j ++)
                 {
-                    textInput[j].style.height = maxHeight + 'px';
+                    try {
+                        textInput[j].style.height = maxHeight + 'px';
+                    }
+                    catch (e) {
+                    }
                 }
             }
         }
@@ -86,7 +90,11 @@ function levelTitle()
             {
                 for(let j = (i / 3) * 3 - 1; j < textTitle.length; j ++)
                 {
-                    textTitle[j].style.height = 'calc(' + maxHeight + 'px - 20px)';
+                    try {
+                        textTitle[j].style.height = 'calc(' + maxHeight + 'px - 20px)';
+                    }
+                    catch (e) {
+                    }
                 }
             }
         }

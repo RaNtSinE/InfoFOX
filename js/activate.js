@@ -10,5 +10,5 @@ $.ajax({
 }).done(function (data) {
     document.location.href = "../../login_success";
 }).fail(function () {
-
+    document.location.href = "../../404"
 });

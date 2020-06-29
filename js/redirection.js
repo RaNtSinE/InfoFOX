@@ -55,7 +55,7 @@ let brac_id = getAllUrlParams().id;
                 document.location.href = "./activation?id=" + brac_id;
             }
             else {
-                document.location.href = "./login";
+                document.location.href = "./login?id=" + brac_id;
             }
         }
     });

@@ -5,6 +5,52 @@ body
     font-style: normal;
 }
 
+
+.inpBord{
+    width: 300px;
+    height: 28px;
+    overflow: hidden;
+}
+
+.profileName {
+    min-width: 20px;
+    max-width: 257px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    color: #F3F3F3;
+    font-size: 15px;
+    padding: 4px 5px;
+    overflow: hidden;
+    float: left;
+    padding-right: 0px;
+    padding-left: 0;
+    outline: none;
+    margin-left: 4px;
+    overflow: auto;
+}
+
+.inpImg {
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.focused
+{
+    border: 1px solid #F3F3F3;
+    height: 26px;
+}
+
+.focused .profileName
+{
+    padding: 3px 4px;
+}
+
+.focusedImg
+{
+    display: none;
+}
+
 .profileHead {
     width: 100%;
     height: 78px;
@@ -28,6 +74,7 @@ body
     margin-right: auto;
     width: 680px;
     border: 3px solid #093D64;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -115,11 +162,14 @@ body
 }
 
 .profileFrame__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 580px;
     margin-left: auto;
     margin-right: auto;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     margin-bottom: 24px;
@@ -152,10 +202,13 @@ body
     margin-left: auto;
     margin-right: auto;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     margin-bottom: 40px;
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -167,6 +220,8 @@ body
 .profileFrame__addBlock div {
     width: 30px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -194,6 +249,36 @@ body
 .profileFrame__profileBlock a:hover
 {
     color: #C3C3C3;
+}
+
+.wind .wrongF
+{
+    border: 1px solid red;
+}
+
+.wind .wrongF::-webkit-input-placeholder
+{
+    color: red;
+}
+
+.wind .wrongF::-moz-placeholder
+{
+    color: red;
+}
+
+.wind .wrongF:-ms-input-placeholder
+{
+    color: red;
+}
+
+.wind .wrongF::-ms-input-placeholder
+{
+    color: red;
+}
+
+.wind .wrongF::placeholder
+{
+    color: red;
 }
 
 
@@ -227,6 +312,7 @@ body
     text-align: center;
     color: #f3f3f3;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -273,7 +359,7 @@ body
 .open .delete, .open .Ok {display: block;}
 
 .close {
-     display: none;
+    display: none;
     width: 68px;
     float: left;
     font-weight: bold;
@@ -289,6 +375,7 @@ body
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
     background: #F3F3F3;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #093D64;
@@ -296,27 +383,29 @@ body
 }
 
 .emailSave, .passwordSave {
-     display: none;
-     width: 112px;
-     float: right;
-     font-weight: bold;
-     padding: 7px 14px;
-     text-decoration: none;
-     font-family: "Roboto";
-     font-size: 14px;
-     cursor: pointer;
-     margin-right: 128px!important;
-     margin-top: 70px;
-     text-align: center;
-     z-index: 3;
-     text-transform: uppercase;
-     background: transparent;
-     color: #F3F3F3;
-     border: 1px solid #F3F3F3;
-     box-sizing: border-box;
-     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-     border-radius: 5px;
- }
+    display: none;
+    width: 112px;
+    float: right;
+    font-weight: bold;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 128px!important;
+    margin-top: 70px;
+    text-align: center;
+    z-index: 3;
+    text-transform: uppercase;
+    background: transparent;
+    color: #F3F3F3;
+    border: 1px solid #F3F3F3;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
 
 .delete, .Ok {
     display: none;
@@ -334,7 +423,9 @@ body
     z-index: 3;
     text-transform: uppercase;
     border: 1px solid #F3F3F3;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     background: #F3F3F3;
@@ -425,13 +516,13 @@ body
     position: relative;
     height: 92px;
     margin-bottom: 25px;
-    /*overflow-x: auto;*/
 }
 
 .settings {
     position: absolute;
     right: 0;
     margin-right: -30px;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 25px;
 }
@@ -441,6 +532,7 @@ body
     margin-left: 40px;
     width: 535px;
     overflow: auto;
+    white-space: nowrap;
 }
 .braceletDescription p {
     line-height: 18px;
@@ -540,15 +632,48 @@ body
     position: absolute;
     left: 50%;
     margin-right: -50px;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
     transform: translate(-50%);
     margin-top: 71px;
     color: red;
     display: none;
 }
 
-.wind .wrong
+.emailChangeEmail.wrong
+{
+    border: 1px solid red;
+    border: 1px solid red;
+}
+
+.profileFrame__changePassword .wrong
 {
     display: block;
+}
+
+.emailChangeEmail.wrong::-webkit-input-placeholder
+{
+    color: red;
+}
+
+.emailChangeEmail.wrong::-moz-placeholder
+{
+    color: red;
+}
+
+.emailChangeEmail.wrong:-ms-input-placeholder
+{
+    color: red;
+}
+
+.emailChangeEmail.wrong::-ms-input-placeholder
+{
+    color: red;
+}
+
+.emailChangeEmail.wrong::placeholder
+{
+    color: red;
 }
 
 .wind .done
@@ -669,6 +794,17 @@ body
     fill: #C3C3C3;
 }
 
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    color: red;
+    display: block;
+}
+
+.wrongFi
+{
+    border: 1px solid red;
+}
+
 @media(max-width: 770px)
 {
     #profileFrame {
@@ -705,6 +841,13 @@ body
     {
         width: 67vw;
     }
+    .wind
+    {
+        top: 14vw!important;
+    }
+    .profileFrame__changePassword .wind {
+        top: 14vh!important;
+    }
 }
 
 @media(max-width: 630px)
@@ -731,9 +874,9 @@ body
         margin-left: calc(45vw - 145px)!important;
     }
 
-    .profileWind .close
-    {
+    .profileWind .close {
         margin-left: calc(40vw - 61px)!important;
+        margin-top: 20px;
     }
 
     .profileWind .Ok {
@@ -824,5 +967,11 @@ body
     .profileFrame__profileTitle input:focus
     {
         width: 64vw;
+    }
+    .inpBord {
+        width: 63vw;
+    }
+    .profileName {
+        max-width: 53vw;
     }
 }

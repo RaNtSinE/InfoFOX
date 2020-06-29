@@ -12,15 +12,19 @@ label
 #login {
     width: 500px;
     margin-left: calc(49.95vw - 257px);
-    /*background: #C4EAF5;*/
-    /*border: 2px solid #3AB9DA;*/
-    /*box-sizing: border-box;*/
-    /*border-radius: 5px;*/
     margin-top: 100px;
     margin-bottom: 100px;
     height: 469px;
 }
 
+.success
+{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 17px;
+}
 
 #login.loginOpen
 {
@@ -35,6 +39,7 @@ label
     margin-right: auto;
     background: #C4EAF5;
     border: 2px solid #3AB9DA;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
     top: 184px;
@@ -47,6 +52,7 @@ label
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
     top: 210px;
@@ -71,6 +77,7 @@ label
 #forgotPostWindow {
     width: 500px;
     margin-left: calc(49.95vw - 257px);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
     margin-top: 155px;
@@ -179,12 +186,15 @@ label
 
 .almostHide
 {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     opacity: 0;
 }
 
 .enter, .create {
     background: #093d64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     border: none;
@@ -229,6 +239,7 @@ label
 
 .almost-enter a {
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     font-weight: bold;
@@ -253,6 +264,7 @@ label
 
 .almost-cancel a {
     border: 1px solid #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     font-weight: bold;
@@ -260,6 +272,7 @@ label
     text-transform: uppercase;
     color: #093D64;
     padding: 10px 23px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -344,6 +357,7 @@ label
 .back-to-main {
     position: relative;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #F3F3F3;
@@ -371,6 +385,8 @@ label
     width: 207px;
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -476,6 +492,8 @@ label
         left: auto;
         margin-left: calc(37vw - 146px);
         overflow: hidden;
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
         transform: scale(0.9);
     }
 
@@ -518,6 +536,26 @@ label
     border: 1px solid red;
 }
 
+#id_username.wrong::-webkit-input-placeholder, #id_mail.wrong::-webkit-input-placeholder, #id_password.wrong::-webkit-input-placeholder, #id_password_1.wrong::-webkit-input-placeholder, #id_password_2.wrong::-webkit-input-placeholder
+{
+    color: red;
+}
+
+#id_username.wrong::-moz-placeholder, #id_mail.wrong::-moz-placeholder, #id_password.wrong::-moz-placeholder, #id_password_1.wrong::-moz-placeholder, #id_password_2.wrong::-moz-placeholder
+{
+    color: red;
+}
+
+#id_username.wrong:-ms-input-placeholder, #id_mail.wrong:-ms-input-placeholder, #id_password.wrong:-ms-input-placeholder, #id_password_1.wrong:-ms-input-placeholder, #id_password_2.wrong:-ms-input-placeholder
+{
+    color: red;
+}
+
+#id_username.wrong::-ms-input-placeholder, #id_mail.wrong::-ms-input-placeholder, #id_password.wrong::-ms-input-placeholder, #id_password_1.wrong::-ms-input-placeholder, #id_password_2.wrong::-ms-input-placeholder
+{
+    color: red;
+}
+
 #id_username.wrong::placeholder, #id_mail.wrong::placeholder, #id_password.wrong::placeholder, #id_password_1.wrong::placeholder, #id_password_2.wrong::placeholder
 {
     color: red;
@@ -535,8 +573,27 @@ label
     position: absolute;
     color: #EF1010;
     width: calc(500px - 64px);
-    margin-top: 17px;
     margin-left: 30px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+#wrongName, #wrongEmail {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: none;
+}
+
+#wrongName p, #wrongEmail p
+{
+    color: red;
+}
+
+#wrongName.wrongName, #wrongEmail.wrongEmail
+{
+    display: block;
 }
 
 ul li.import-field{
@@ -548,13 +605,17 @@ ul li.import-field{
 @media(max-width: 660px)
 {
     .errorlist li {
-        width: calc(77vw - 64px);
+        width: calc(77vw - 100px);
         margin-top: 7px;
     }
     ul li.import-field {
         margin-top: 72px;
         margin-left: calc(73.5vw - 137px);
         width: 124px;
+    }
+
+    #wrongName,#wrongEmail {
+        width: calc(77vw - 100px);
     }
 
     #messageForg {
@@ -581,8 +642,8 @@ ul li.import-field{
 
     .almost-enter a
     {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: calc(-34vw + 394px);
     }
 
     .almost-cancel a
@@ -652,6 +713,8 @@ ul li.import-field{
 
 .backToMain{
     height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 227.17px;
     margin-left: auto;
@@ -664,6 +727,7 @@ ul li.import-field{
     font-size: 14px;
     color: #F3F3F3;
     background: #093D64;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 12px 40px;
@@ -677,6 +741,8 @@ ul li.import-field{
 .VKlogin {
     position: absolute;
     margin-top: -190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: calc(49.4vw - 125px);
 }

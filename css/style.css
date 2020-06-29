@@ -9,6 +9,8 @@ body {
   font-style: normal;
   overflow-x: hidden;
   font-size: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#093D64), to(#DF8053));
+  background: -o-linear-gradient(left, #093D64 0%, #DF8053 100%);
   background: linear-gradient(90deg, #093D64 0%, #DF8053 100%);
   background-size:101%;
   background-attachment: fixed;
@@ -16,6 +18,22 @@ body {
 
 center {
   display: none!important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #093D64;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #295D84;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #177AC5;
 }
 
 .content
